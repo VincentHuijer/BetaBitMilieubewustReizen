@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="2122-Projectgroep-6d" />
         <module name="2122-projectgroep-6d-final" />
       </profile>
     </annotationProcessing>

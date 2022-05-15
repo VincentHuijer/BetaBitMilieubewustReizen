@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="2122-Projectgroep-6d" />
-        <module name="2122-projectgroep-6d-final" />
+        <module name="PROJ2_KLAS6_GROEP6D" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="PROJ2_KLAS6_GROEP6D" target="16" />
+    </bytecodeTargetLevel>
   </component>
 </project>

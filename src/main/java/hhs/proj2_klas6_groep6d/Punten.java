@@ -12,6 +12,10 @@ public class Punten {
         return aantalPunten;
     }
 
+    public void addPunten(double aantalPunten){
+        this.aantalPunten += aantalPunten;
+    }
+
     public void setAantalPunten(double aantalPunten) {
         this.aantalPunten = aantalPunten;
     }

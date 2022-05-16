@@ -18,4 +18,17 @@ public class Team {
     public String getTeamNaam() {
         return teamNaam;
     }
+
+    public void addTeamLid(Gebruiker gebruiker){
+        teamLeden.add(gebruiker);
+    }
+
+    public void removeTeamLid(Gebruiker gebruiker){
+        for(int i=0; i< teamLeden.size(); i++){
+            if (gebruiker.getId() == teamLeden.get(i).getId()){
+                teamLeden.remove(i);
+            }
+        }
+    }
+
 }

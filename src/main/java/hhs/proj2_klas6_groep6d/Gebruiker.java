@@ -1,6 +1,7 @@
 package hhs.proj2_klas6_groep6d;
 
 public class Gebruiker {
+    private Team team;
     private String voornaam;
     private String achternaam;
     private Adres adres;
@@ -10,10 +11,11 @@ public class Gebruiker {
     private int puntenSaldo;
     private double afstandVanWerkInKm;
 
-    public Gebruiker(String voornaam, String achternaam, Adres adres){
+    public Gebruiker(String voornaam, String achternaam, Adres adres, Team team){
         this.voornaam = voornaam;
         this.achternaam = achternaam;
         this.adres = adres;
+        this.team = team;
         initialiseerGebruiker();
     }
 

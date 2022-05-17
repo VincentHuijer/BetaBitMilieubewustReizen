@@ -37,7 +37,7 @@ public class Punten {
     public double berekenAantalPuntenZakelijkVerkeer(double afstand, String vervoersMiddel){
         double multiplier = 1;
         if(vervoersMiddel.equalsIgnoreCase("Auto") || vervoersMiddel.equalsIgnoreCase("Motor")){
-            multiplier = 1;
+            multiplier = 0;
         }
         else if(vervoersMiddel.equalsIgnoreCase("RegionaalOV")){
             multiplier = 0.69;

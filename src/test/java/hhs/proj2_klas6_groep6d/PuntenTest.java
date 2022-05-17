@@ -19,9 +19,10 @@ class PuntenTest {
     @Test
     public void TestberekenAantalPuntenZakelijkVerkeer() {
         Punten punten = new Punten();
-        assertEquals(20,punten.berekenAantalPuntenZakelijkVerkeer(20,"auto"),0001);
-        assertEquals(0.1,punten.berekenAantalPuntenZakelijkVerkeer(0.1,"motor"),0001);
-        assertEquals(99.9,punten.berekenAantalPuntenZakelijkVerkeer(99.9,"motor"),0001);
+        assertEquals(0,punten.berekenAantalPuntenZakelijkVerkeer(20,"auto"),0001);
+        assertEquals(0,punten.berekenAantalPuntenZakelijkVerkeer(0.1,"motor"),0001);
+        assertEquals(0,punten.berekenAantalPuntenZakelijkVerkeer(99.9,"motor"),0001);
         assertEquals(6.5,punten.berekenAantalPuntenZakelijkVerkeer(9.43,"RegionaalOV"),0001);
+        assertEquals(0.1,punten.berekenAantalPuntenZakelijkVerkeer(0.1,"RegionaalOV"),0001);
     }
 }

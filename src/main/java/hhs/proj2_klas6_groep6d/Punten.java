@@ -30,7 +30,10 @@ public class Punten {
         else if(vervoersMiddel.equalsIgnoreCase("RegionaalOV")){
             multiplier = 0.69;
         }
-        return (Math.round(grootsteAfstandInKm - afstand) + (afstand * multiplier));
+        if (grootsteAfstandInKm < afstand){
+            return -1;
+        }
+        return (Math.round(grootsteAfstandInKm - afstand + (afstand * multiplier)));
     }
 
     //Formule berekenen aantal punten bij zakelijk verkeer (tussen werk en klant).
@@ -42,6 +45,7 @@ public class Punten {
         else if(vervoersMiddel.equalsIgnoreCase("RegionaalOV")){
             multiplier = 0.69;
         }
+
         return (Math.round(afstand * multiplier));
     }
 

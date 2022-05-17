@@ -18,4 +18,8 @@ public class Bedrijf {
     public ArrayList<Team> getTeams() {
         return teams;
     }
+
+    public void addTeams(Team team){
+        teams.add(team);
+    }
 }

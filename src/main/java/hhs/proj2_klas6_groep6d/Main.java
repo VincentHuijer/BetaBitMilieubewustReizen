@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Main extends Application {
     @Override
@@ -16,6 +17,7 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
     }
+    public static Bedrijf bedrijf = new Bedrijf("BetaBit", new ArrayList<>());
 
     public static void main(String[] args) {
         launch();

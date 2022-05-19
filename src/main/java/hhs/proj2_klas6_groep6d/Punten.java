@@ -21,6 +21,10 @@ public class Punten {
         this.aantalPunten = aantalPunten;
     }
 
+    public void removePunten(double aantalPunten){
+        this.aantalPunten -= aantalPunten;
+    }
+
     //Formule voor berekenen aantal punten bij woon werkverkeer.
     public double berekenAantalPuntenWoonWerkVerkeer(double grootsteAfstandInKm, double afstand, String vervoersMiddel){
         double multiplier = 1;

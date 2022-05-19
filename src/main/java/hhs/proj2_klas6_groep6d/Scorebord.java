@@ -23,7 +23,7 @@ public class Scorebord {
     }
 
     public ArrayList<Gebruiker> orderByPoints(){
-        Comparator<Gebruiker> comparator = Comparator.comparingInt(Gebruiker::getPuntenSaldo);
+        Comparator<Gebruiker> comparator = Comparator.comparingDouble(Gebruiker::getPuntenSaldo);
         scorebord.sort(comparator);
         return scorebord;
     }

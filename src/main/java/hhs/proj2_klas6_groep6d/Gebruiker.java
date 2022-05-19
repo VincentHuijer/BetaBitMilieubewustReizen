@@ -1,16 +1,18 @@
 package hhs.proj2_klas6_groep6d;
 
 public class Gebruiker {
+    private static int currentId = 0;
     private Team team;
     private String voornaam;
     private String achternaam;
     private String username;
     private String wachtwoord;
     private Adres adres;
-    private Id id;
+    private int id;
     private double co2Uitstoot;
     private int totaalAantalVerdiendePunten;
-    private int puntenSaldo;
+    private Punten punten;
+    private double puntenSaldo;
     private double afstandVanWerkInKm;
 
     public Gebruiker(String username, String wachtwoord, String voornaam, String achternaam, Adres adres, Team team){
@@ -24,9 +26,9 @@ public class Gebruiker {
     }
 
     public void initialiseerGebruiker(){
-        this.id = new Id();
+        this.id = generateId();
         //afstandVanWerkInKm uitrekenen dmv api
-        this.puntenSaldo = 0;
+        this.puntenSaldo = punten.getAantalPunten();
         this.co2Uitstoot = 0;
     }
 
@@ -42,7 +44,7 @@ public class Gebruiker {
         return achternaam;
     }
 
-    public Id getId() {
+    public int getId() {
         return id;
     }
 
@@ -54,7 +56,7 @@ public class Gebruiker {
         return co2Uitstoot;
     }
 
-    public int getPuntenSaldo() {
+    public double getPuntenSaldo() {
         return puntenSaldo;
     }
 
@@ -72,5 +74,15 @@ public class Gebruiker {
 
     public Team getTeam() {
         return team;
+    }
+
+    public Punten getPunten() {
+        return punten;
+    }
+
+    public int generateId(){
+        int id = currentId;
+        currentId++;
+        return id;
     }
 }

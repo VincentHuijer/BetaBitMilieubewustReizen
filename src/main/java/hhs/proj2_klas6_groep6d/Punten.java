@@ -1,13 +1,14 @@
 package hhs.proj2_klas6_groep6d;
 
+import java.math.RoundingMode;
+
 public class Punten {
     private double aantalPunten;
-
-
+/** waarom moet ik double aantalPunten meegeven voor de class punten? Heeft nog niets te maken met de methodes zoals ik het nu zie. Zowel excuses :-)
     Punten(double aantalPunten){
         this.aantalPunten = aantalPunten;
     }
-
+*/
     public double getAantalPunten() {
         return aantalPunten;
     }
@@ -29,7 +30,10 @@ public class Punten {
         else if(vervoersMiddel.equalsIgnoreCase("RegionaalOV")){
             multiplier = 0.69;
         }
-        return (grootsteAfstandInKm - afstand) + (afstand * multiplier);
+        if (grootsteAfstandInKm < afstand){
+            return -1;
+        }
+        return (Math.round(grootsteAfstandInKm - afstand + (afstand * multiplier)));
     }
 
     //Formule berekenen aantal punten bij zakelijk verkeer (tussen werk en klant).
@@ -41,7 +45,8 @@ public class Punten {
         else if(vervoersMiddel.equalsIgnoreCase("RegionaalOV")){
             multiplier = 0.69;
         }
-        return afstand * multiplier;
+
+        return (Math.round(afstand * multiplier));
     }
 
 

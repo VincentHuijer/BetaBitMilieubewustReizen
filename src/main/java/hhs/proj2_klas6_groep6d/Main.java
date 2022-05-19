@@ -20,6 +20,13 @@ public class Main extends Application {
     public static Bedrijf bedrijf = new Bedrijf("BetaBit", new ArrayList<>());
 
     public static void main(String[] args) {
+        RewardsList rewardsList = new RewardsList();
+        ArrayList<Rewards> arrayRewards = new ArrayList<>();
+        arrayRewards.add(new Rewards("toilet", "twee minuten naar het toilet onder werktijd", 1, 4));
+        arrayRewards.add(new Rewards("koffie", "een koffie betaald door werk", 2, 5));
+        arrayRewards.add(new Rewards("uitje", "een uitje betaald door werk", 3, 70));
+        rewardsList.addRewards(arrayRewards);
+        rewardsList.printRewardLijst();
         launch();
     }
 }

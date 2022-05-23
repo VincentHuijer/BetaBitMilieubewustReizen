@@ -4,11 +4,10 @@ import java.util.ArrayList;
 
 public class Bedrijf {
     private String naam;
-    private ArrayList<Gebruiker> gebruikers = new ArrayList<>();
+    private static ArrayList<Gebruiker> gebruikers = new ArrayList<>();
 
-    public Bedrijf(String naam, ArrayList<Gebruiker> gebruikers){
-        this.naam = naam;
-        this.gebruikers = gebruikers;
+    public Bedrijf(){
+
     }
 
     public String getNaam() {

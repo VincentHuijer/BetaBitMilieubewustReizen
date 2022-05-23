@@ -12,7 +12,8 @@ public class Scorebord {
     }
 
     public void initialiseerScoreBord(){
-        for(Gebruiker gebruiker : Main.bedrijf.getGebruikers()){
+        Bedrijf bedrijf = new Bedrijf();
+        for(Gebruiker gebruiker : bedrijf.getGebruikers()){
             add(gebruiker);
         }
     }

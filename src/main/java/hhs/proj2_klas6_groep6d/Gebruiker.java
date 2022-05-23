@@ -10,14 +10,14 @@ public class Gebruiker {
     private int id;
     private double co2Uitstoot;
     private int totaalAantalVerdiendePunten;
-    private Punten punten;
+    private Punten punten = new Punten();
     private double puntenSaldo;
     private double afstandVanWerkInKm;
 
-    public Gebruiker(String username, String wachtwoord, String voornaam, String achternaam, Adres adres){
+    public Gebruiker(String username, String wachtwoord, String voornaam, String achternaam){
         this.voornaam = voornaam;
         this.achternaam = achternaam;
-        this.adres = adres;
+        //this.adres = adres;
         this.username = username;
         this.wachtwoord = wachtwoord;
         initialiseerGebruiker();

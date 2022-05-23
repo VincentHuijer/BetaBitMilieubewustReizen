@@ -2,7 +2,6 @@ package hhs.proj2_klas6_groep6d;
 
 public class Gebruiker {
     private static int currentId = 0;
-    private Team team;
     private String voornaam;
     private String achternaam;
     private String username;
@@ -15,11 +14,10 @@ public class Gebruiker {
     private double puntenSaldo;
     private double afstandVanWerkInKm;
 
-    public Gebruiker(String username, String wachtwoord, String voornaam, String achternaam, Adres adres, Team team){
+    public Gebruiker(String username, String wachtwoord, String voornaam, String achternaam, Adres adres){
         this.voornaam = voornaam;
         this.achternaam = achternaam;
         this.adres = adres;
-        this.team = team;
         this.username = username;
         this.wachtwoord = wachtwoord;
         initialiseerGebruiker();
@@ -70,10 +68,6 @@ public class Gebruiker {
 
     public String getWachtwoord() {
         return wachtwoord;
-    }
-
-    public Team getTeam() {
-        return team;
     }
 
     public Punten getPunten() {

@@ -12,10 +12,8 @@ public class Scorebord {
     }
 
     public void initialiseerScoreBord(){
-        for(Team team : Main.bedrijf.getTeams()){
-            for(int i = 0; i<team.getTeamLeden().size(); i++){
-                add(team.getTeamLeden().get(i));
-            }
+        for(Gebruiker gebruiker : Main.bedrijf.getGebruikers()){
+            add(gebruiker);
         }
     }
     public void add(Gebruiker gebruiker){

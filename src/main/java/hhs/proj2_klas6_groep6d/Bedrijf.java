@@ -7,7 +7,7 @@ public class Bedrijf {
     private static ArrayList<Gebruiker> gebruikers = new ArrayList<>();
 
     public Bedrijf(){
-
+        gebruikers.add(new Gebruiker("1", "1", "1", "1"));
     }
 
     public String getNaam() {

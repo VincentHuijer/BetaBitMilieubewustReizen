@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class GebruikerTest {
     @Test
     public void addGebruiker(){
-        Gebruiker gebruiker = new Gebruiker("Test_1", "Wachtwoord_1", "Voornaam1", "Achternaam1", new Adres("Straatnaam", 4, "2527AB"), new Team("Teamnaam1", new ArrayList<Gebruiker>()));
+        Gebruiker gebruiker = new Gebruiker("Test_1", "Wachtwoord_1", "Voornaam1", "Achternaam1");
 
         Assertions.assertEquals(gebruiker.getUsername(), "Test_1");
 
@@ -16,6 +16,5 @@ public class GebruikerTest {
 
         Assertions.assertEquals(gebruiker.getAchternaam(), "Achternaam1");
 
-        Assertions.assertEquals(gebruiker.getAdres().toString(), "Straatnaam 4 2527AB");
     }
 }

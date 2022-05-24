@@ -1,14 +1,19 @@
 package hhs.controllersAndScreens;
 
 import hhs.proj2_klas6_groep6d.Gebruiker;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.lang.reflect.Array;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.ResourceBundle;
@@ -76,31 +81,49 @@ public class ReisSysteemController extends Observable implements Initializable{
         setChanged();
         notifyObservers(vervoer);
     }
-    @FXML
-    public void onAutoKnopClick(){
-        vervoersMiddel = "Auto";
+
+    @FXML public void onKnopClick(ActionEvent event){
+        Node node = (Node) event.getSource() ;
+        String data = (String) node.getUserData();
+
+        String vervoer  = data;
+
         setChanged();
-        notifyObservers(vervoersMiddel);
-    }
-    @FXML
-    public void onRegionaalKnopClick(){
-        vervoersMiddel = "RegionaalOV";
-        setChanged();
-        notifyObservers(vervoersMiddel);
-    }
-    @FXML
-    public void onTramKnopClick(){
-        vervoersMiddel = "Tram";
-        setChanged();
-        notifyObservers(vervoersMiddel);
-    }
-    @FXML
-    public void onFietsKnopClick(){
-        vervoersMiddel = "Fiets";
-        setChanged();
-        notifyObservers(vervoersMiddel);
+        notifyObservers(vervoer);
+
+        Button button = (Button) event.getTarget();
+        changeColors(button);
     }
 
+    @FXML
+    public void changeColors(Button clickButton){
+        Stage scene = (Stage) logoutKnop.getScene().getWindow();
+
+        ArrayList<Button> buttons = new ArrayList<>();
+
+        Button autoButton = (Button) scene.getScene().lookup("#autoKnop");
+        Button regionaalOVButton = (Button) scene.getScene().lookup("#regionaalKnop");
+        Button tramButton = (Button) scene.getScene().lookup("#tramKnop");
+        Button lopenButton = (Button) scene.getScene().lookup("#fietsKnop");
+
+        buttons.add(autoButton);
+        buttons.add(regionaalOVButton);
+        buttons.add(tramButton);
+        buttons.add(lopenButton);
+
+        String styling = "";
+
+        for (Button b: buttons){
+            if(b == clickButton){
+                styling += "-fx-border-color: #63D13C;";
+            }else{
+                styling += "-fx-border-color: #FFFFFF;";
+            }
+
+            styling += "-fx-background-color: #FFFFFF; -fx-border-radius: 4;";
+            b.setStyle(styling);
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

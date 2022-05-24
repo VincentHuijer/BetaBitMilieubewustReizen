@@ -15,7 +15,7 @@
       </Text>
       <AnchorPane layoutX="135.0" layoutY="146.0" prefHeight="70.0" prefWidth="200.0">
          <children>
-            <Button fx:id="autoKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onAutoKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
+            <Button fx:id="autoKnop" userData="Auto" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -44,7 +44,7 @@
       </AnchorPane>
       <AnchorPane layoutX="135.0" layoutY="226.0">
          <children>
-            <Button fx:id="regionaalKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onRegionaalKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: #63D13C; -fx-border-radius: 4;">
+            <Button fx:id="regionaalKnop" userData="RegionaalOV" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: #63D13C; -fx-border-radius: 4;">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -68,7 +68,7 @@
       </AnchorPane>
       <AnchorPane layoutX="135.0" layoutY="306.0" prefHeight="70.0" prefWidth="262.0">
          <children>
-            <Button fx:id="tramKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onTramKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
+            <Button fx:id="tramKnop" userData="Tram" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -92,7 +92,7 @@
       </AnchorPane>
       <AnchorPane layoutX="135.0" layoutY="386.0" prefHeight="70.0" prefWidth="262.0">
          <children>
-            <Button fx:id="fietsKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onFietsKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
+            <Button fx:id="fietsKnop" userData="Fiets" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

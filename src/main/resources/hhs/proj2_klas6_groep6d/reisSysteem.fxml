@@ -35,7 +35,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <CheckBox fx:id="elektrischeAutoCheck" layoutX="9.0" layoutY="47.0" mnemonicParsing="false" text="Elektrisch" onAction="#onElektrischeAutoCheckBoxClick">
+            <CheckBox fx:id="elektrischeAutoCheck" layoutX="9.0" layoutY="47.0" mnemonicParsing="false" onAction="#onElektrischeAutoCheckBoxClick" text="Elektrisch">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -212,9 +212,9 @@
       </Pane>
       <AnchorPane layoutX="415.0" layoutY="145.0" prefHeight="70.0" prefWidth="249.0" style="-fx-border-color: black; -fx-background-radius: 4; -fx-border-radius: 4px; -fx-background-color: white;">
          <children>
-            <CheckBox layoutX="14.0" layoutY="13.0" mnemonicParsing="false" selected="true" style="-fx-border-color: black; -fx-border-radius: 4px; -fx-background-radius: 4px; -fx-background-color: white;" />
+            <CheckBox fx:id="woonwerkCheck" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" selected="true" style="-fx-border-color: black; -fx-border-radius: 4px; -fx-background-radius: 4px; -fx-background-color: white;" onAction="#onWoonwerkClick"/>
             <Text layoutX="40.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Woon Werkverkeer" />
-            <CheckBox layoutX="14.0" layoutY="34.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-border-radius: 4px; -fx-background-radius: 4px; -fx-background-color: transparent;" translateY="3.0" />
+            <CheckBox fx:id="zakelijkCheck" layoutX="14.0" layoutY="34.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-border-radius: 4px; -fx-background-radius: 4px; -fx-background-color: transparent;" translateY="3.0" onAction="#onZakelijkClick" />
             <Text layoutX="40.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zakelijk Werkverkeer" translateY="3.0" />
          </children>
       </AnchorPane>

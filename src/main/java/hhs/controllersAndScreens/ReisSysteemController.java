@@ -32,6 +32,22 @@ public class ReisSysteemController extends Observable implements Initializable{
     Button beloningKnop;
     @FXML
     CheckBox elektrischeAutoCheck;
+    @FXML
+    CheckBox woonwerkCheck;
+    @FXML
+    CheckBox zakelijkCheck;
+
+    public void onWoonwerkClick(){
+        zakelijkCheck.setSelected(!woonwerkCheck.isSelected());
+        setChanged();
+        notifyObservers(vervoersMiddel);
+    }
+
+    public void onZakelijkClick(){
+        woonwerkCheck.setSelected(!zakelijkCheck.isSelected());
+        setChanged();
+        notifyObservers(vervoersMiddel);
+    }
 
     public void onElektrischeAutoCheckBoxClick(){
         onTextChanged();

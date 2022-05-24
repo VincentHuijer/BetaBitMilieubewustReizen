@@ -1,6 +1,7 @@
 package hhs.controllersAndScreens;
 
 import hhs.proj2_klas6_groep6d.Gebruiker;
+import hhs.proj2_klas6_groep6d.Punten;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -8,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -41,6 +43,36 @@ public class ReisSysteemController extends Observable implements Initializable{
     CheckBox woonwerkCheck;
     @FXML
     CheckBox zakelijkCheck;
+    @FXML
+    Button addReisKnop;
+    @FXML
+    Text berekenPuntenText;
+    @FXML
+    TextField kmTextField;
+
+    public void onReisKnopClick(){
+        Gebruiker gebruiker = reisSysteemScherm.getLoggedIn();
+        Punten puntenGebruiker = gebruiker.getPunten();
+        double km;
+        double punten = 0;
+        if (kmTextField.getText().equals("")) {
+            km = 0;
+        } else {
+            km = Double.parseDouble(kmTextField.getText());
+        }
+        boolean elektrisch = false;
+        if (elektrischeAutoCheck.isSelected()) {
+            elektrisch = true;
+        }
+        if(woonwerkCheck.isSelected()){
+            punten = gebruiker.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, vervoersMiddel, elektrisch);
+        }else if(zakelijkCheck.isSelected()){
+            punten = gebruiker.getPunten().berekenAantalPuntenZakelijkVerkeer(km, vervoersMiddel, elektrisch);
+        }
+        puntenGebruiker.addPunten(punten);
+        setChanged();
+        notifyObservers(vervoersMiddel);
+    }
 
     public void onWoonwerkClick(){
         zakelijkCheck.setSelected(!woonwerkCheck.isSelected());
@@ -87,6 +119,7 @@ public class ReisSysteemController extends Observable implements Initializable{
         String data = (String) node.getUserData();
 
         String vervoer  = data;
+        vervoersMiddel = data;
 
         setChanged();
         notifyObservers(vervoer);

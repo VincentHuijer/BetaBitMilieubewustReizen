@@ -15,7 +15,7 @@
       </Text>
       <AnchorPane layoutX="135.0" layoutY="146.0" prefHeight="70.0" prefWidth="200.0">
          <children>
-            <Button fx:id="autoKnop" userData="Auto" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
+            <Button fx:id="autoKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;" userData="Auto">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -44,7 +44,7 @@
       </AnchorPane>
       <AnchorPane layoutX="135.0" layoutY="226.0">
          <children>
-            <Button fx:id="regionaalKnop" userData="RegionaalOV" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: #63D13C; -fx-border-radius: 4;">
+            <Button fx:id="regionaalKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: #63D13C; -fx-border-radius: 4;" userData="RegionaalOV">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -68,7 +68,7 @@
       </AnchorPane>
       <AnchorPane layoutX="135.0" layoutY="306.0" prefHeight="70.0" prefWidth="262.0">
          <children>
-            <Button fx:id="tramKnop" userData="Tram" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
+            <Button fx:id="tramKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;" userData="Tram">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -92,7 +92,7 @@
       </AnchorPane>
       <AnchorPane layoutX="135.0" layoutY="386.0" prefHeight="70.0" prefWidth="262.0">
          <children>
-            <Button fx:id="fietsKnop" userData="Fiets" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
+            <Button fx:id="fietsKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;" userData="Fiets">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -140,7 +140,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <Button layoutX="16.0" layoutY="69.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="221.0" style="-fx-background-color: #63D13C;" text="REIS TOEVOEGEN" textFill="WHITE">
+            <Button fx:id="addReisKnop" layoutX="16.0" layoutY="69.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="221.0" style="-fx-background-color: #63D13C;" text="REIS TOEVOEGEN" textFill="WHITE" onAction="#onReisKnopClick">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>

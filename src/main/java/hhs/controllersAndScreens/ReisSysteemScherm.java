@@ -52,6 +52,8 @@ public class ReisSysteemScherm implements Observer {
         TextField textField = (TextField) scene.lookup("#kmTextField");
         CheckBox woonWerk = (CheckBox) scene.lookup("#woonwerkCheck");
         CheckBox zakelijk = (CheckBox) scene.lookup("#zakelijkCheck");
+        Text puntensaldo = (Text) scene.lookup("#puntensaldoText");
+        puntensaldo.setText(String.format("%.0f PUNTEN", loggedIn.getPunten().getAantalPunten()));
         double km;
         if (textField.getText().equals("")) {
             km = 0;
@@ -63,16 +65,17 @@ public class ReisSysteemScherm implements Observer {
         if (elektrischeCheck.isSelected()) {
             elektrisch = true;
         }
+        String punten;
         if (woonWerk.isSelected()) {
             //Hier nog code maken om te bepalen hoe ver van werk de medewerker woont die verst weg woont.
-            String punten = String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch));
+            punten = String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch));
             text.setText(punten);
             autoPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "Auto", elektrisch)));
             regionaalPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "RegionaalOV", elektrisch)));
             tramPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "Tram", elektrisch)));
             fietsPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "Fiets", elektrisch)));
         } else if (zakelijk.isSelected()) {
-            String punten = String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch));
+            punten = String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch));
             text.setText(punten);
             autoPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Auto", elektrisch)));
             regionaalPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "RegionaalOV", elektrisch)));

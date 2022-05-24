@@ -15,7 +15,7 @@
       </Text>
       <AnchorPane layoutX="135.0" layoutY="146.0" prefHeight="70.0" prefWidth="200.0">
          <children>
-            <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
+            <Button fx:id="autoKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onAutoKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -30,7 +30,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <Text disable="true" layoutX="190.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="38 Punten" textAlignment="CENTER" wrappingWidth="64.731201171875">
+            <Text fx:id="autoPuntenText" disable="true" layoutX="190.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="38 Punten" textAlignment="CENTER" wrappingWidth="64.731201171875">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -39,7 +39,7 @@
       </AnchorPane>
       <AnchorPane layoutX="135.0" layoutY="226.0">
          <children>
-            <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: #63D13C; -fx-border-radius: 4;">
+            <Button fx:id="regionaalKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onRegionaalKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: #63D13C; -fx-border-radius: 4;">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -54,7 +54,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <Text disable="true" layoutX="190.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="46 Punten" textAlignment="CENTER" wrappingWidth="64.731201171875">
+            <Text fx:id="regionaalPuntenText" disable="true" layoutX="190.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="46 Punten" textAlignment="CENTER" wrappingWidth="64.731201171875">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -63,7 +63,7 @@
       </AnchorPane>
       <AnchorPane layoutX="135.0" layoutY="306.0" prefHeight="70.0" prefWidth="262.0">
          <children>
-            <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
+            <Button fx:id="tramKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onTramKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -78,7 +78,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <Text disable="true" layoutX="190.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50 Punten" textAlignment="CENTER" wrappingWidth="64.731201171875">
+            <Text fx:id="tramPuntenText" disable="true" layoutX="190.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50 Punten" textAlignment="CENTER" wrappingWidth="64.731201171875">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -87,7 +87,7 @@
       </AnchorPane>
       <AnchorPane layoutX="135.0" layoutY="386.0" prefHeight="70.0" prefWidth="262.0">
          <children>
-            <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
+            <Button fx:id="fietsKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onFietsKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -102,7 +102,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <Text disable="true" layoutX="190.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50 Punten" textAlignment="CENTER" wrappingWidth="64.731201171875">
+            <Text fx:id="fietsPuntenText" disable="true" layoutX="190.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50 Punten" textAlignment="CENTER" wrappingWidth="64.731201171875">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -113,7 +113,7 @@
          <children>
             <AnchorPane layoutX="14.0" layoutY="17.0" prefHeight="40.0" prefWidth="99.0" style="-fx-background-color: #F6F6F6; -fx-background-radius: 4;">
                <children>
-                  <TextField layoutY="2.0" prefHeight="37.0" prefWidth="58.0" style="-fx-background-color: transparent;">
+                  <TextField fx:id="kmTextField" layoutY="2.0" prefHeight="37.0" prefWidth="58.0" style="-fx-background-color: transparent;" onKeyReleased="#onTextChanged">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -130,7 +130,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
-            <Text fill="#63d13c" layoutX="150.0" layoutY="8.0" strokeType="OUTSIDE" strokeWidth="0.0" text="46 Punten" textAlignment="RIGHT" wrappingWidth="85.0" y="35.0">
+            <Text fx:id="berekenPuntenText" fill="#63d13c" layoutX="150.0" layoutY="8.0" strokeType="OUTSIDE" strokeWidth="0.0" text="46 Punten" textAlignment="RIGHT" wrappingWidth="85.0" y="35.0">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -152,7 +152,7 @@
                   <Image url="@images/logo.jpeg" />
                </image>
             </ImageView>
-            <Text layoutX="264.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welkom GEBRUIKERSNAAM" textAlignment="RIGHT" wrappingWidth="421.99688720703125">
+            <Text fx:id="welkomText" layoutX="264.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welkom GEBRUIKERSNAAM" textAlignment="RIGHT" wrappingWidth="421.99688720703125">
                <font>
                   <Font size="16.0" />
                </font>
@@ -186,7 +186,7 @@
                </cursor>
             </Button>
             <AnchorPane layoutX="5.0" layoutY="380.0" />
-            <Button fx:id="logoutKnop" layoutY="445.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="UITLOGGEN" textFill="WHITE" onAction="#onLogoutClick">
+            <Button fx:id="logoutKnop" layoutY="445.0" mnemonicParsing="false" onAction="#onLogoutClick" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="UITLOGGEN" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>

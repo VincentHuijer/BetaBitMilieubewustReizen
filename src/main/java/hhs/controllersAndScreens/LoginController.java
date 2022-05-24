@@ -33,8 +33,9 @@ public class LoginController {
                 errorText.setText("");
                 Stage stage = (Stage) loginKnop.getScene().getWindow();
                 stage.close();
-                ReisSysteemScherm reisSysteemScherm = new ReisSysteemScherm(gebruiker);
-                reisSysteemScherm.start(new Stage());
+                ReisSysteemScherm reisSysteemScherm = new ReisSysteemScherm();
+                reisSysteemScherm.setLoggedIn(gebruiker);
+                reisSysteemScherm.start();
             }
         }
         errorText.setText("Wrong username or password!");

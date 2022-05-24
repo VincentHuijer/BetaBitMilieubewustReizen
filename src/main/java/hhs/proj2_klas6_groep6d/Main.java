@@ -17,7 +17,6 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
     }
-    public static Bedrijf bedrijf = new Bedrijf("BetaBit", new ArrayList<>());
 
     public static void main(String[] args) {
         RewardsList rewardsList = new RewardsList();

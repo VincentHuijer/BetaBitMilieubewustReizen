@@ -12,10 +12,9 @@ public class Scorebord {
     }
 
     public void initialiseerScoreBord(){
-        for(Team team : Main.bedrijf.getTeams()){
-            for(int i = 0; i<team.getTeamLeden().size(); i++){
-                add(team.getTeamLeden().get(i));
-            }
+        Bedrijf bedrijf = new Bedrijf();
+        for(Gebruiker gebruiker : bedrijf.getGebruikers()){
+            add(gebruiker);
         }
     }
     public void add(Gebruiker gebruiker){
@@ -23,7 +22,7 @@ public class Scorebord {
     }
 
     public ArrayList<Gebruiker> orderByPoints(){
-        Comparator<Gebruiker> comparator = Comparator.comparingInt(Gebruiker::getPuntenSaldo);
+        Comparator<Gebruiker> comparator = Comparator.comparingDouble(Gebruiker::getPuntenSaldo);
         scorebord.sort(comparator);
         return scorebord;
     }

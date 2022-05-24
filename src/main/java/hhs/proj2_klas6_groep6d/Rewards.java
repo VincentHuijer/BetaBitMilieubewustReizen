@@ -6,14 +6,14 @@ public final class Rewards {
     private String naam;
     private String beschrijving;
     private int rewardID;
-    private int punten;
+    private int prijsInPunten;
 
-    public Rewards(String naam, String beschrijving, int rewardID, int punten) {
+    public Rewards(String naam, String beschrijving, int rewardID, int prijsInPunten) {
 
         this.naam = naam;
         this.beschrijving = beschrijving;
         this.rewardID = rewardID;
-        this.punten = punten;
+        this.prijsInPunten = prijsInPunten;
     }
 
     public String getNaam() {
@@ -29,7 +29,18 @@ public final class Rewards {
     }
 
     public int getPunten() {
-        return punten;
+        return prijsInPunten;
+    }
+
+    public void select(Gebruiker gebruiker){
+        Punten puntenGebruiker = gebruiker.getPunten();
+        if(puntenGebruiker.getAantalPunten() >= prijsInPunten){
+            puntenGebruiker.removePunten(prijsInPunten);
+            //Iets toevoegen om te laten weten dat de transactie is gelukt.
+        }
+        else{
+            //Gebruiker laten weten dat hij/zij niet genoeg punten heeft.
+        }
     }
 
 }

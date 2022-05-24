@@ -4,6 +4,7 @@ import hhs.proj2_klas6_groep6d.Gebruiker;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -29,6 +30,12 @@ public class ReisSysteemController extends Observable implements Initializable{
     Button fietsKnop;
     @FXML
     Button beloningKnop;
+    @FXML
+    CheckBox elektrischeAutoCheck;
+
+    public void onElektrischeAutoCheckBoxClick(){
+        onTextChanged();
+    }
 
     @FXML
     public void onBeloningKnopClick() throws Exception {

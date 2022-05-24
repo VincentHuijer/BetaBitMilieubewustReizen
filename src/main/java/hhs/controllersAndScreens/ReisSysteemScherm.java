@@ -38,7 +38,9 @@ public class ReisSysteemScherm implements Observer {
     public void setLoggedIn(Gebruiker gebruiker){
         loggedIn = gebruiker;
     }
-
+    public Gebruiker getLoggedIn(){
+        return loggedIn;
+    }
     @Override
     public void update(Observable o, Object arg) {
         Text text = (Text) scene.lookup("#berekenPuntenText");

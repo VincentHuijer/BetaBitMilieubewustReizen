@@ -27,6 +27,18 @@ public class ReisSysteemController extends Observable implements Initializable{
     Button tramKnop;
     @FXML
     Button fietsKnop;
+    @FXML
+    Button beloningKnop;
+
+    @FXML
+    public void onBeloningKnopClick() throws Exception {
+        Gebruiker gebruiker = reisSysteemScherm.getLoggedIn();
+        Stage stage = (Stage) beloningKnop.getScene().getWindow();
+        stage.close();
+        BeloningScherm beloningScherm = new BeloningScherm();
+        beloningScherm.setLoggedIn(gebruiker);
+        beloningScherm.start();
+    }
 
     @FXML
     public void onLogoutClick() throws Exception {

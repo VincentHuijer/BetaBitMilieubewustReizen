@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="700.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hhs.controllersAndScreens.BeloningController">
+   <children>
+      <AnchorPane layoutX="98.0" layoutY="57.0" prefHeight="473.0" prefWidth="601.0">
+         <children>
+            <Pane layoutX="28.0" layoutY="77.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
+               <children>
+                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Text layoutX="138.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KWGA-129J" wrappingWidth="108.00000000000011">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="306.0" layoutY="77.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
+               <children>
+                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Text layoutX="138.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KWGA-129J" wrappingWidth="108.00000000000011">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="29.0" layoutY="198.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
+               <children>
+                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Text layoutX="138.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KWGA-129J" wrappingWidth="108.00000000000011">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="307.0" layoutY="198.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
+               <children>
+                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Text layoutX="138.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KWGA-129J" wrappingWidth="108.00000000000011">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="29.0" layoutY="321.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
+               <children>
+                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Text layoutX="138.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KWGA-129J" wrappingWidth="108.00000000000011">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="307.0" layoutY="321.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
+               <children>
+                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Text layoutX="138.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KWGA-129J" wrappingWidth="108.00000000000011">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Text layoutX="124.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PUNTEN INWISSELEN" wrappingWidth="570.0">
+         <font>
+            <Font name="Arial Bold" size="32.0" />
+         </font>
+      </Text>
+      <Pane prefHeight="56.0" prefWidth="700.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="132.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.jpeg" />
+               </image>
+            </ImageView>
+            <Text fx:id="welkomText" layoutX="264.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welkom GEBRUIKERSNAAM" textAlignment="RIGHT" wrappingWidth="421.99688720703125">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutY="56.0" prefHeight="473.0" prefWidth="99.0" style="-fx-background-color: white;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="OVERZICHT">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="reisschermKnop" layoutY="28.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="REIS TOEVOEGEN" onAction="#onReisSchermKnop">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutY="56.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="BELONINGEN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <AnchorPane layoutX="5.0" layoutY="380.0" />
+            <Button fx:id="logoutKnop" layoutY="445.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="LOGOUT" textFill="WHITE" onAction="#onLogoutClick">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Pane layoutX="7.0" layoutY="410.0" prefHeight="30.0" prefWidth="85.0" style="-fx-border-color: #63D13C; -fx-border-width: 1.5px; -fx-border-radius: 4px;">
+               <children>
+                  <Text fx:id="puntensaldoText" fill="#63d13c" layoutX="-1.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="999 PUNTEN" textAlignment="CENTER" wrappingWidth="84.5999755859375">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</Pane>

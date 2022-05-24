@@ -113,7 +113,7 @@
          <children>
             <AnchorPane layoutX="14.0" layoutY="17.0" prefHeight="40.0" prefWidth="99.0" style="-fx-background-color: #F6F6F6; -fx-background-radius: 4;">
                <children>
-                  <TextField fx:id="kmTextField" layoutY="2.0" prefHeight="37.0" prefWidth="58.0" style="-fx-background-color: transparent;" onKeyReleased="#onTextChanged">
+                  <TextField fx:id="kmTextField" layoutY="2.0" onKeyReleased="#onTextChanged" prefHeight="37.0" prefWidth="58.0" style="-fx-background-color: transparent;">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -177,7 +177,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutY="56.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c; -fx-border-radius: 0px; -fx-background-radius: 0px;" text="BELONINGEN" textFill="WHITE">
+            <Button fx:id="beloningKnop" layoutY="56.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c; -fx-border-radius: 0px; -fx-background-radius: 0px;" text="BELONINGEN" textFill="WHITE" onAction="#onBeloningKnopClick">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>

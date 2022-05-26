@@ -22,7 +22,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                  <Button fx:id="beloning1Knop" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloning1KnopClick">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -203,7 +203,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="reisschermKnop" layoutY="28.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="REIS TOEVOEGEN" onAction="#onReisSchermKnop">
+            <Button fx:id="reisschermKnop" layoutY="28.0" mnemonicParsing="false" onAction="#onReisSchermKnop" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="REIS TOEVOEGEN">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
@@ -220,7 +220,7 @@
                </cursor>
             </Button>
             <AnchorPane layoutX="5.0" layoutY="380.0" />
-            <Button fx:id="logoutKnop" layoutY="445.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="LOGOUT" textFill="WHITE" onAction="#onLogoutClick">
+            <Button fx:id="logoutKnop" layoutY="445.0" mnemonicParsing="false" onAction="#onLogoutClick" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="LOGOUT" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>

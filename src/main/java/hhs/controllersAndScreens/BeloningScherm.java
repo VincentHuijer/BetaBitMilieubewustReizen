@@ -2,17 +2,30 @@ package hhs.controllersAndScreens;
 
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.Main;
+import hhs.proj2_klas6_groep6d.Rewards;
+import hhs.proj2_klas6_groep6d.RewardsList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class BeloningScherm{
+import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
+
+public class BeloningScherm implements Observer {
+    private static RewardsList rewardsList = new RewardsList();
     private static Gebruiker loggedIn;
     private static Scene scene;
     private static Stage stage;
     public void start() throws Exception {
+        if(rewardsList.getRewardsLijst().size() == 0){
+            ArrayList<Rewards> toAdd = new ArrayList<>();
+            toAdd.add(new Rewards("Appel", "Is een appel", 1, 100));
+            toAdd.add(new Rewards("Peer", "Is een peer", 2, 125));
+            rewardsList.addRewards(toAdd);
+        }
         if(stage == null){
             stage = new Stage();
         }
@@ -33,5 +46,15 @@ public class BeloningScherm{
 
     public static Gebruiker getLoggedIn() {
         return loggedIn;
+    }
+
+    public static RewardsList getRewardsList() {
+        return rewardsList;
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        Text puntensaldo = (Text) scene.lookup("#puntensaldoText");
+        puntensaldo.setText(String.format("%.0f PUNTEN", loggedIn.getPunten().getAantalPunten()));
     }
 }

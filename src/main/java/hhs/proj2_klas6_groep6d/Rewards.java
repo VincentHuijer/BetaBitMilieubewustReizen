@@ -6,9 +6,9 @@ public final class Rewards {
     private String naam;
     private String beschrijving;
     private int rewardID;
-    private int prijsInPunten;
+    private double prijsInPunten;
 
-    public Rewards(String naam, String beschrijving, int rewardID, int prijsInPunten) {
+    public Rewards(String naam, String beschrijving, int rewardID, double prijsInPunten) {
 
         this.naam = naam;
         this.beschrijving = beschrijving;
@@ -28,7 +28,7 @@ public final class Rewards {
         return rewardID;
     }
 
-    public int getPunten() {
+    public double getPunten() {
         return prijsInPunten;
     }
 

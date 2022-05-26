@@ -22,8 +22,13 @@ public class BeloningController extends Observable implements Initializable {
     @FXML
     Button beloning1Knop;
 
+    @FXML
     public void onBeloning1KnopClick(){
-        double prijsInPunten = rewardsList.getRewardsLijst().get(0).getPunten();
+        claimReward(1); //Nummer is gelijk aan knopnummer. Links boven is 1, rechts boven 2 etc.
+    }
+
+    private void claimReward(int nummer){
+        double prijsInPunten = rewardsList.getRewardsLijst().get(nummer-1).getPunten();
         if(gebruiker.getPunten().getAantalPunten() >= prijsInPunten){
             gebruiker.getPunten().removePunten(prijsInPunten);
             setChanged();

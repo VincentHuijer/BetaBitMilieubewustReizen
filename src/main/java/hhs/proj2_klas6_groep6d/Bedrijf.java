@@ -8,6 +8,7 @@ public class Bedrijf {
 
     public Bedrijf(){
         gebruikers.add(new Gebruiker("1", "1", "1", "1"));
+        gebruikers.add(new Admin("admin", "admin", "admin", "admin"));
     }
 
     public String getNaam() {

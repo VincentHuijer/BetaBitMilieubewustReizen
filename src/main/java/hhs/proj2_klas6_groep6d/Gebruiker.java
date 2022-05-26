@@ -74,6 +74,10 @@ public class Gebruiker {
         return punten;
     }
 
+    public boolean isAdmin(){
+        return false;
+    }
+
     public int generateId(){
         int id = currentId;
         currentId++;

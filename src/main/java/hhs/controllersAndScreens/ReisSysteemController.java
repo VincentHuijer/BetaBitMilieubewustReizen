@@ -1,5 +1,6 @@
 package hhs.controllersAndScreens;
 
+import hhs.proj2_klas6_groep6d.Admin;
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.Punten;
 import javafx.event.ActionEvent;
@@ -95,9 +96,14 @@ public class ReisSysteemController extends Observable implements Initializable{
         Gebruiker gebruiker = reisSysteemScherm.getLoggedIn();
         Stage stage = (Stage) beloningKnop.getScene().getWindow();
         stage.close();
-        BeloningScherm beloningScherm = new BeloningScherm();
-        beloningScherm.setLoggedIn(gebruiker);
-        beloningScherm.start();
+        if(!gebruiker.isAdmin()) {
+            BeloningScherm beloningScherm = new BeloningScherm();
+            beloningScherm.setLoggedIn(gebruiker);
+            beloningScherm.start();
+        }
+        else if(gebruiker.isAdmin()){
+
+        }
     }
 
     @FXML

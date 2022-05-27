@@ -57,6 +57,18 @@ public class BeloningAdminController implements Initializable {
     Button logoutKnop;
     @FXML
     Button reisschermKnop;
+    @FXML
+    Button delete1;
+    @FXML
+    Button delete2;
+    @FXML
+    Button delete3;
+    @FXML
+    Button delete4;
+    @FXML
+    Button delete5;
+    @FXML
+    Button delete6;
 
     public void onReisschermKnop() throws Exception {
         Stage stage = (Stage) reisschermKnop.getScene().getWindow();
@@ -72,6 +84,31 @@ public class BeloningAdminController implements Initializable {
         LoginScherm loginScherm = new LoginScherm();
         loginScherm.start(new Stage());
         stage.close();
+    }
+
+    public void onDelete(ActionEvent event){
+        Node node = (Node) event.getSource();
+        String data = (String) node.getUserData();
+        int rewardNummer = Integer.parseInt(data);
+        if(rewardNummer == 1){
+            alleRewards.remove(0);
+            refresh();
+        }else if(rewardNummer == 2){
+            alleRewards.remove(1);
+            refresh();
+        }else if(rewardNummer == 3){
+            alleRewards.remove(2);
+            refresh();
+        }else if(rewardNummer == 4){
+            alleRewards.remove(3);
+            refresh();
+        }else if(rewardNummer == 5){
+            alleRewards.remove(4);
+            refresh();
+        }else if(rewardNummer == 6){
+            alleRewards.remove(5);
+            refresh();
+        }
     }
 
     public void onConfirm(ActionEvent event){
@@ -121,36 +158,77 @@ public class BeloningAdminController implements Initializable {
     public void setDisabled(){
         int size = alleRewards.size();
         if(size == 0){
+            delete2.setDisable(true);
+            delete3.setDisable(true);
+            delete4.setDisable(true);
+            delete5.setDisable(true);
+            delete6.setDisable(true);
             confirm2.setDisable(true);
             confirm3.setDisable(true);
             confirm4.setDisable(true);
             confirm5.setDisable(true);
             confirm6.setDisable(true);
         }else if(size ==1){
+            delete2.setDisable(true);
+            delete3.setDisable(true);
+            delete4.setDisable(true);
+            delete5.setDisable(true);
+            delete6.setDisable(true);
             confirm2.setDisable(false);
             confirm3.setDisable(true);
             confirm4.setDisable(true);
             confirm5.setDisable(true);
             confirm6.setDisable(true);
         }else if(size ==2){
+            delete2.setDisable(false);
+            delete3.setDisable(true);
+            delete4.setDisable(true);
+            delete5.setDisable(true);
+            delete6.setDisable(true);
             confirm2.setDisable(false);
             confirm3.setDisable(false);
             confirm4.setDisable(true);
             confirm5.setDisable(true);
             confirm6.setDisable(true);
         }else if(size ==3){
+            delete2.setDisable(false);
+            delete3.setDisable(false);
+            delete4.setDisable(true);
+            delete5.setDisable(true);
+            delete6.setDisable(true);
             confirm2.setDisable(false);
             confirm3.setDisable(false);
             confirm4.setDisable(false);
             confirm5.setDisable(true);
             confirm6.setDisable(true);
         }else if(size ==4){
+            delete2.setDisable(false);
+            delete3.setDisable(false);
+            delete4.setDisable(false);
+            delete5.setDisable(true);
+            delete6.setDisable(true);
             confirm2.setDisable(false);
             confirm3.setDisable(false);
             confirm4.setDisable(false);
             confirm5.setDisable(false);
             confirm6.setDisable(true);
+        }else if(size ==5){
+            delete2.setDisable(false);
+            delete3.setDisable(false);
+            delete4.setDisable(false);
+            delete5.setDisable(false);
+            delete6.setDisable(true);
+            confirm2.setDisable(false);
+            confirm3.setDisable(false);
+            confirm4.setDisable(false);
+            confirm5.setDisable(false);
+            confirm6.setDisable(false);
         }else{
+            delete2.setDisable(false);
+            delete3.setDisable(false);
+            delete4.setDisable(false);
+            delete5.setDisable(false);
+            delete6.setDisable(false);
             confirm2.setDisable(false);
             confirm3.setDisable(false);
             confirm4.setDisable(false);
@@ -160,6 +238,29 @@ public class BeloningAdminController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        generate();
+        setDisabled();
+    }
+    public void refresh(){
+        clear();
+        generate();
+        setDisabled();
+    }
+    public void clear(){
+        beloning1TF.setText("");
+        beloning1TFP.setText("");
+        beloning2TF.setText("");
+        beloning2TFP.setText("");
+        beloning3TF.setText("");
+        beloning3TFP.setText("");
+        beloning4TF.setText("");
+        beloning4TFP.setText("");
+        beloning5TF.setText("");
+        beloning5TFP.setText("");
+        beloning6TF.setText("");
+        beloning6TFP.setText("");
+    }
+    public void generate(){
         int size = alleRewards.size();
         if(size >= 6){
             System.out.println("Er zitten meer dan 6 rewards in de reward lijst. @BeloningAdminController");
@@ -195,6 +296,5 @@ public class BeloningAdminController implements Initializable {
             }
 
         }
-        setDisabled();
     }
 }

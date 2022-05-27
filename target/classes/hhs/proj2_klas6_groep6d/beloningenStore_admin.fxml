@@ -36,7 +36,7 @@
                         <Font size="11.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="confirm11" layoutX="138.0" layoutY="74.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="1">
+                  <Button fx:id="delete1" layoutX="138.0" layoutY="74.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="1">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>
@@ -72,7 +72,7 @@
                         <Font size="11.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="confirm111" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="1">
+                  <Button fx:id="delete2" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="2">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>
@@ -108,7 +108,7 @@
                         <Font size="11.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="confirm1121" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="1">
+                  <Button fx:id="delete4" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="4">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>
@@ -144,7 +144,7 @@
                         <Font size="11.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="confirm112" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="1">
+                  <Button fx:id="delete3" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="3">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>
@@ -180,7 +180,7 @@
                         <Font size="11.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="confirm1122" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="1">
+                  <Button fx:id="delete5" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="5">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>
@@ -216,7 +216,7 @@
                         <Font size="11.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="confirm11221" layoutX="139.0" layoutY="74.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="1">
+                  <Button fx:id="delete6" layoutX="139.0" layoutY="74.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="6">
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font>

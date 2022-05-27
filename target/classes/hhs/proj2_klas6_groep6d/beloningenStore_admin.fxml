@@ -36,6 +36,14 @@
                         <Font size="11.0" />
                      </font>
                   </TextField>
+                  <Button fx:id="confirm11" layoutX="138.0" layoutY="74.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="1">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
             </Pane>
             <Pane layoutX="307.0" layoutY="77.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
@@ -64,6 +72,14 @@
                         <Font size="11.0" />
                      </font>
                   </TextField>
+                  <Button fx:id="confirm111" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="1">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
             </Pane>
             <Pane layoutX="307.0" layoutY="198.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
@@ -92,6 +108,14 @@
                         <Font size="11.0" />
                      </font>
                   </TextField>
+                  <Button fx:id="confirm1121" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="1">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
             </Pane>
             <Pane layoutX="28.0" layoutY="198.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
@@ -120,6 +144,14 @@
                         <Font size="11.0" />
                      </font>
                   </TextField>
+                  <Button fx:id="confirm112" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="1">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
             </Pane>
             <Pane layoutX="28.0" layoutY="321.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
@@ -148,6 +180,14 @@
                         <Font size="11.0" />
                      </font>
                   </TextField>
+                  <Button fx:id="confirm1122" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="1">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
             </Pane>
             <Pane layoutX="307.0" layoutY="321.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
@@ -176,6 +216,14 @@
                         <Font size="11.0" />
                      </font>
                   </TextField>
+                  <Button fx:id="confirm11221" layoutX="139.0" layoutY="74.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="1">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
             </Pane>
          </children>
@@ -209,7 +257,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="reisschermKnop" layoutY="28.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-radius: 0px; -fx-background-radius: 0px;" text="REIS TOEVOEGEN" onAction="#onReisschermKnop">
+            <Button fx:id="reisschermKnop" layoutY="28.0" mnemonicParsing="false" onAction="#onReisschermKnop" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-radius: 0px; -fx-background-radius: 0px;" text="REIS TOEVOEGEN">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>

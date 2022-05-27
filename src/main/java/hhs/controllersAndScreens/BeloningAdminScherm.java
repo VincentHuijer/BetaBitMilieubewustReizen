@@ -24,7 +24,8 @@ public class BeloningAdminScherm {
 
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("beloningenStore_admin.fxml"));
         scene = new Scene(fxmlLoader.load(), 700, 530);
-
+        Text welkomText = (Text) scene.lookup("#welkomText");
+        welkomText.setText("Welkom " + loggedIn.getUsername());
         stage.setTitle("BeloningenAdmin");
         stage.setScene(scene);
         stage.show();

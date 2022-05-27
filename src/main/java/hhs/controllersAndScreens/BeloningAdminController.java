@@ -1,5 +1,6 @@
 package hhs.controllersAndScreens;
 
+import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.Rewards;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -54,6 +55,17 @@ public class BeloningAdminController implements Initializable {
     Button confirm6;
     @FXML
     Button logoutKnop;
+    @FXML
+    Button reisschermKnop;
+
+    public void onReisschermKnop() throws Exception {
+        Stage stage = (Stage) reisschermKnop.getScene().getWindow();
+        Gebruiker gebruiker = beloningAdminScherm.getLoggedIn();
+        stage.close();
+        ReisSysteemScherm reisSysteemScherm = new ReisSysteemScherm();
+        reisSysteemScherm.setLoggedIn(gebruiker);
+        reisSysteemScherm.start();
+    }
 
     public void onLogoutClick() throws Exception {
         Stage stage = (Stage) logoutKnop.getScene().getWindow();
@@ -103,10 +115,49 @@ public class BeloningAdminController implements Initializable {
             Rewards reward6 = new Rewards(beloning6TF.getText(), "", 1, Double.parseDouble(beloning6TFP.getText()));
             alleRewards.add(rewardNummer-1, reward6);
         }
-
+        setDisabled();
     }
 
-
+    public void setDisabled(){
+        int size = alleRewards.size();
+        if(size == 0){
+            confirm2.setDisable(true);
+            confirm3.setDisable(true);
+            confirm4.setDisable(true);
+            confirm5.setDisable(true);
+            confirm6.setDisable(true);
+        }else if(size ==1){
+            confirm2.setDisable(false);
+            confirm3.setDisable(true);
+            confirm4.setDisable(true);
+            confirm5.setDisable(true);
+            confirm6.setDisable(true);
+        }else if(size ==2){
+            confirm2.setDisable(false);
+            confirm3.setDisable(false);
+            confirm4.setDisable(true);
+            confirm5.setDisable(true);
+            confirm6.setDisable(true);
+        }else if(size ==3){
+            confirm2.setDisable(false);
+            confirm3.setDisable(false);
+            confirm4.setDisable(false);
+            confirm5.setDisable(true);
+            confirm6.setDisable(true);
+        }else if(size ==4){
+            confirm2.setDisable(false);
+            confirm3.setDisable(false);
+            confirm4.setDisable(false);
+            confirm5.setDisable(false);
+            confirm6.setDisable(true);
+        }else{
+            confirm2.setDisable(false);
+            confirm3.setDisable(false);
+            confirm4.setDisable(false);
+            confirm5.setDisable(false);
+            confirm6.setDisable(false);
+        }
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         int size = alleRewards.size();
@@ -125,20 +176,25 @@ public class BeloningAdminController implements Initializable {
             else if(i==2){
                 beloning3TF.setText(alleRewards.get(i).getNaam());
                 beloning3TFP.setText(String.format("%.0f", alleRewards.get(i).getPunten()));
+
             }
             else if(i==3){
                 beloning4TF.setText(alleRewards.get(i).getNaam());
                 beloning4TFP.setText(String.format("%.0f", alleRewards.get(i).getPunten()));
+
             }
             else if(i==4){
                 beloning5TF.setText(alleRewards.get(i).getNaam());
                 beloning5TFP.setText(String.format("%.0f", alleRewards.get(i).getPunten()));
+
             }
             else if(i==5){
                 beloning6TF.setText(alleRewards.get(i).getNaam());
                 beloning6TFP.setText(String.format("%.0f", alleRewards.get(i).getPunten()));
+
             }
 
         }
+        setDisabled();
     }
 }

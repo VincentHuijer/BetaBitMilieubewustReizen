@@ -22,7 +22,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button fx:id="beloning1Knop" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" onAction="#onBeloning1KnopClick" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                  <Button fx:id="beloning1Knop" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" onAction="#onBeloningKnopClick" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" userData="1">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -49,7 +49,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                  <Button fx:id="beloning2Knop" disable="false" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="2">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -76,7 +76,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                  <Button fx:id="beloning3Knop" disable="false" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="3">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -103,7 +103,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                  <Button fx:id="beloning4Knop" disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="4">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -130,7 +130,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                  <Button fx:id="beloning5Knop" disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="5">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -157,7 +157,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                  <Button fx:id="beloning6Knop" disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="6">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>

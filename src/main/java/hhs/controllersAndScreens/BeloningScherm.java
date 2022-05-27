@@ -21,10 +21,7 @@ public class BeloningScherm implements Observer {
     private static Stage stage;
     public void start() throws Exception {
         if(rewardsList.getRewardsLijst().size() == 0){
-            ArrayList<Rewards> toAdd = new ArrayList<>();
-            toAdd.add(new Rewards("Appel", "Is een appel", 1, 100));
-            toAdd.add(new Rewards("Peer", "Is een peer", 2, 125));
-            rewardsList.addRewards(toAdd);
+            System.out.println("reward list empty @beloningscherm");
         }
         if(stage == null){
             stage = new Stage();

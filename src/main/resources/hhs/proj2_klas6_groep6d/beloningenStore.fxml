@@ -12,17 +12,17 @@
          <children>
             <Pane layoutX="28.0" layoutY="77.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
                <children>
-                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                  <Text fx:id="naam1" layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="21.0" />
                      </font>
                   </Text>
-                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                  <Text fx:id="punt1" fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button fx:id="beloning1Knop" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloning1KnopClick">
+                  <Button fx:id="beloning1Knop" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" onAction="#onBeloning1KnopClick" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -39,12 +39,12 @@
             </Pane>
             <Pane layoutX="306.0" layoutY="77.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
                <children>
-                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                  <Text fx:id="naam2" layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="21.0" />
                      </font>
                   </Text>
-                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                  <Text fx:id="punt2" fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -66,12 +66,12 @@
             </Pane>
             <Pane layoutX="29.0" layoutY="198.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
                <children>
-                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                  <Text fx:id="naam3" layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="21.0" />
                      </font>
                   </Text>
-                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                  <Text fx:id="punt3" fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -93,12 +93,12 @@
             </Pane>
             <Pane layoutX="307.0" layoutY="198.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
                <children>
-                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                  <Text fx:id="naam4" layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="21.0" />
                      </font>
                   </Text>
-                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                  <Text fx:id="punt4" fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -120,12 +120,12 @@
             </Pane>
             <Pane layoutX="29.0" layoutY="321.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
                <children>
-                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                  <Text fx:id="naam5" layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="21.0" />
                      </font>
                   </Text>
-                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                  <Text fx:id="punt5" fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -147,12 +147,12 @@
             </Pane>
             <Pane layoutX="307.0" layoutY="321.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
                <children>
-                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                  <Text fx:id="naam6" layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="21.0" />
                      </font>
                   </Text>
-                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                  <Text fx:id="punt6" fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>

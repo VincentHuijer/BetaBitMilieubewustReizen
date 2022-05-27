@@ -102,7 +102,9 @@ public class ReisSysteemController extends Observable implements Initializable{
             beloningScherm.start();
         }
         else if(gebruiker.isAdmin()){
-
+            BeloningAdminScherm beloningAdminScherm = new BeloningAdminScherm();
+            beloningAdminScherm.setLoggedIn(gebruiker);
+            beloningAdminScherm.start();
         }
     }
 

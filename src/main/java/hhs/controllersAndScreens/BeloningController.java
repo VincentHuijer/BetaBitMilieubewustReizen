@@ -73,6 +73,25 @@ public class BeloningController extends Observable implements Initializable {
     private void claimReward(int nummer){
         double prijsInPunten = rewardsList.getRewardsLijst().get(nummer-1).getPunten();
         if(gebruiker.getPunten().getAantalPunten() >= prijsInPunten){
+            if(nummer == 1){
+                beloning1Knop.setText("GEKOCHT");
+                beloning1Knop.setDisable(true);
+            }else if(nummer == 2){
+                beloning2Knop.setText("GEKOCHT");
+                beloning2Knop.setDisable(true);
+            }else if(nummer == 3){
+                beloning3Knop.setText("GEKOCHT");
+                beloning3Knop.setDisable(true);
+            }else if(nummer == 4){
+                beloning4Knop.setText("GEKOCHT");
+                beloning4Knop.setDisable(true);
+            }else if(nummer == 5){
+                beloning5Knop.setText("GEKOCHT");
+                beloning5Knop.setDisable(true);
+            }else if(nummer == 6){
+                beloning6Knop.setText("GEKOCHT");
+                beloning6Knop.setDisable(true);
+            }
             gebruiker.getPunten().removePunten(prijsInPunten);
             setChanged();
             notifyObservers();
@@ -99,10 +118,7 @@ public class BeloningController extends Observable implements Initializable {
         loginScherm.start(new Stage());
         stage.close();
     }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        addObserver(beloningScherm);
+    private void refresh(){
         int size = alleRewards.size();
         for(int i =0; i<6; i++){
             if(i==0 && size>0){
@@ -155,5 +171,10 @@ public class BeloningController extends Observable implements Initializable {
                 beloning6Knop.setDisable(true);
             }
         }
+    }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        addObserver(beloningScherm);
+        refresh();
     }
 }

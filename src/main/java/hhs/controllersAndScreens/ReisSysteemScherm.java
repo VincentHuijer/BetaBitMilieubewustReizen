@@ -80,7 +80,7 @@ public class ReisSysteemScherm implements Observer {
             fietsPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "Fiets", elektrisch)));
 
             alternatief.setText("Voor meer punten kunt u met de duurzamere optie gaan want dan krijgt u "
-                    + (loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch) - loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch))
+                    + (loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch) - loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch))
                     + " punten meer.");
 
         } else if (zakelijk.isSelected()) {
@@ -91,7 +91,10 @@ public class ReisSysteemScherm implements Observer {
             tramPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Tram", elektrisch)));
             fietsPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Fiets", elektrisch)));
 
-            alternatief.setText("Voor meer punten kunt u met het OV gaan want dan krijgt u " + (loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch) - loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch)) + " punten meer.");
+            alternatief.setText("Voor meer punten kunt u met de duurzamere optie gaan want dan krijgt u\n "
+                    + (loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer( km, arg.toString(), elektrisch) - loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch))
+                    + " punten meer.");
+
         }
     }
 }

@@ -140,7 +140,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <Button fx:id="addReisKnop" layoutX="16.0" layoutY="69.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="221.0" style="-fx-background-color: #63D13C;" text="REIS TOEVOEGEN" textFill="WHITE" onAction="#onReisKnopClick">
+            <Button fx:id="addReisKnop" layoutX="16.0" layoutY="69.0" mnemonicParsing="false" onAction="#onReisKnopClick" prefHeight="36.0" prefWidth="221.0" style="-fx-background-color: #63D13C;" text="REIS TOEVOEGEN" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
@@ -218,5 +218,6 @@
             <Text layoutX="40.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zakelijk Werkverkeer" translateY="3.0" />
          </children>
       </AnchorPane>
+      <Text fx:id="AlternatieveText" fill="#63d13c" layoutX="420.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="verbetering" />
    </children>
 </Pane>

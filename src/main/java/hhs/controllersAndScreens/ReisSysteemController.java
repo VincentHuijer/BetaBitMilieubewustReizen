@@ -3,6 +3,7 @@ package hhs.controllersAndScreens;
 import hhs.proj2_klas6_groep6d.Admin;
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.Punten;
+import hhs.proj2_klas6_groep6d.Reis;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -13,13 +14,14 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
+import javafx.util.converter.LocalDateTimeStringConverter;
+import java.text.SimpleDateFormat;
 import java.lang.reflect.Array;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Observable;
-import java.util.Observer;
-import java.util.ResourceBundle;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.util.*;
 
 public class ReisSysteemController extends Observable implements Initializable{
     ReisSysteemScherm reisSysteemScherm = new ReisSysteemScherm();
@@ -52,6 +54,9 @@ public class ReisSysteemController extends Observable implements Initializable{
     TextField kmTextField;
 
     public void onReisKnopClick(){
+        Reis reis = null;
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        LocalDateTime now = LocalDateTime.now();
         Gebruiker gebruiker = reisSysteemScherm.getLoggedIn();
         Punten puntenGebruiker = gebruiker.getPunten();
         double km;
@@ -67,9 +72,12 @@ public class ReisSysteemController extends Observable implements Initializable{
         }
         if(woonwerkCheck.isSelected()){
             punten = gebruiker.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, vervoersMiddel, elektrisch);
+            reis = new Reis(new Date(dtf.format(now)), punten, km, vervoersMiddel);
         }else if(zakelijkCheck.isSelected()){
             punten = gebruiker.getPunten().berekenAantalPuntenZakelijkVerkeer(km, vervoersMiddel, elektrisch);
+            reis = new Reis(new Date(dtf.format(now)), punten, km, vervoersMiddel);
         }
+        gebruiker.getAlleReizen().add(reis);
         puntenGebruiker.addPunten(punten);
         setChanged();
         notifyObservers(vervoersMiddel);

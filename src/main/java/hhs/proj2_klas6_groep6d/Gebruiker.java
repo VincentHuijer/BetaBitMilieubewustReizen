@@ -1,7 +1,10 @@
 package hhs.proj2_klas6_groep6d;
 
+import java.util.ArrayList;
+
 public class Gebruiker {
     private static int currentId = 0;
+    private ArrayList<Reis> alleReizen = new ArrayList<>();
     private String voornaam;
     private String achternaam;
     private String username;
@@ -76,6 +79,10 @@ public class Gebruiker {
 
     public boolean isAdmin(){
         return false;
+    }
+
+    public ArrayList<Reis> getAlleReizen() {
+        return alleReizen;
     }
 
     public int generateId(){

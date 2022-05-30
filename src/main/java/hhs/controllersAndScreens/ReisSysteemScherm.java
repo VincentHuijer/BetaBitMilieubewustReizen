@@ -50,22 +50,37 @@ public class ReisSysteemScherm implements Observer {
         Text tramPuntenText = (Text) scene.lookup("#tramPuntenText");
         Text fietsPuntenText = (Text) scene.lookup("#fietsPuntenText");
         TextField textField = (TextField) scene.lookup("#kmTextField");
+        CheckBox woonWerk = (CheckBox) scene.lookup("#woonwerkCheck");
+        CheckBox zakelijk = (CheckBox) scene.lookup("#zakelijkCheck");
+        Text puntensaldo = (Text) scene.lookup("#puntensaldoText");
+        puntensaldo.setText(String.format("%.0f PUNTEN", loggedIn.getPunten().getAantalPunten()));
         double km;
-        if(textField.getText().equals("")){
+        if (textField.getText().equals("")) {
             km = 0;
-        }else{
+        } else {
             km = Double.parseDouble(textField.getText());
         }
         boolean elektrisch = false;
         CheckBox elektrischeCheck = (CheckBox) scene.lookup("#elektrischeAutoCheck");
-        if(elektrischeCheck.isSelected()){
+        if (elektrischeCheck.isSelected()) {
             elektrisch = true;
         }
-        String punten = String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch));
-        text.setText(punten);
-        autoPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Auto", elektrisch)));
-        regionaalPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "RegionaalOV", elektrisch)));
-        tramPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Tram", elektrisch)));
-        fietsPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Fiets", elektrisch)));
+        String punten;
+        if (woonWerk.isSelected()) {
+            //Hier nog code maken om te bepalen hoe ver van werk de medewerker woont die verst weg woont.
+            punten = String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch));
+            text.setText(punten);
+            autoPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "Auto", elektrisch)));
+            regionaalPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "RegionaalOV", elektrisch)));
+            tramPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "Tram", elektrisch)));
+            fietsPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "Fiets", elektrisch)));
+        } else if (zakelijk.isSelected()) {
+            punten = String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch));
+            text.setText(punten);
+            autoPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Auto", elektrisch)));
+            regionaalPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "RegionaalOV", elektrisch)));
+            tramPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Tram", elektrisch)));
+            fietsPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Fiets", elektrisch)));
+        }
     }
 }

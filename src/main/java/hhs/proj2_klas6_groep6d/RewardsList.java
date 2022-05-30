@@ -24,4 +24,8 @@ public class RewardsList {
             System.out.println(rewardsLijst.get(i).getNaam());
         }
     }
+
+    public ArrayList<Rewards> getRewardsLijst() {
+        return rewardsLijst;
+    }
 }

@@ -12,17 +12,17 @@
          <children>
             <Pane layoutX="28.0" layoutY="77.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
                <children>
-                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                  <Text fx:id="naam1" layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="21.0" />
                      </font>
                   </Text>
-                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                  <Text fx:id="punt1" fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                  <Button fx:id="beloning1Knop" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" onAction="#onBeloningKnopClick" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" userData="1">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -39,17 +39,17 @@
             </Pane>
             <Pane layoutX="306.0" layoutY="77.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
                <children>
-                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                  <Text fx:id="naam2" layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="21.0" />
                      </font>
                   </Text>
-                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                  <Text fx:id="punt2" fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                  <Button fx:id="beloning2Knop" disable="false" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="2">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -66,17 +66,17 @@
             </Pane>
             <Pane layoutX="29.0" layoutY="198.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
                <children>
-                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                  <Text fx:id="naam3" layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="21.0" />
                      </font>
                   </Text>
-                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                  <Text fx:id="punt3" fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                  <Button fx:id="beloning3Knop" disable="false" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="3">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -93,17 +93,17 @@
             </Pane>
             <Pane layoutX="307.0" layoutY="198.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
                <children>
-                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                  <Text fx:id="naam4" layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="21.0" />
                      </font>
                   </Text>
-                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                  <Text fx:id="punt4" fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                  <Button fx:id="beloning4Knop" disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="4">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -120,17 +120,17 @@
             </Pane>
             <Pane layoutX="29.0" layoutY="321.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
                <children>
-                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                  <Text fx:id="naam5" layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="21.0" />
                      </font>
                   </Text>
-                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                  <Text fx:id="punt5" fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                  <Button fx:id="beloning5Knop" disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="5">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -147,17 +147,17 @@
             </Pane>
             <Pane layoutX="307.0" layoutY="321.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
                <children>
-                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                  <Text fx:id="naam6" layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="21.0" />
                      </font>
                   </Text>
-                  <Text fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
+                  <Text fx:id="punt6" fill="#63d13c" layoutX="18.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="212 Punten" wrappingWidth="241.06597900390625">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE">
+                  <Button fx:id="beloning6Knop" disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="6">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -203,7 +203,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="reisschermKnop" layoutY="28.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="REIS TOEVOEGEN" onAction="#onReisSchermKnop">
+            <Button fx:id="reisschermKnop" layoutY="28.0" mnemonicParsing="false" onAction="#onReisSchermKnop" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="REIS TOEVOEGEN">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
@@ -220,7 +220,7 @@
                </cursor>
             </Button>
             <AnchorPane layoutX="5.0" layoutY="380.0" />
-            <Button fx:id="logoutKnop" layoutY="445.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="LOGOUT" textFill="WHITE" onAction="#onLogoutClick">
+            <Button fx:id="logoutKnop" layoutY="445.0" mnemonicParsing="false" onAction="#onLogoutClick" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="LOGOUT" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>

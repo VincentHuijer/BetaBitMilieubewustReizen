@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="700.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hhs.controllersAndScreens.BeloningAdminController">
+   <children>
+      <AnchorPane layoutX="98.0" layoutY="57.0" prefHeight="473.0" prefWidth="601.0">
+         <children>
+            <Pane layoutX="28.0" layoutY="77.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
+               <children>
+                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#63d13c" layoutX="75.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Punten" wrappingWidth="234.66595458984375">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="confirm1" layoutX="19.0" layoutY="74.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="OPSLAAN" textFill="WHITE" userData="1">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="beloning1TF" layoutX="18.0" layoutY="10.0" prefHeight="25.0" prefWidth="228.0" style="-fx-border-color: #63d13c; -fx-border-radius: 4px;" />
+                  <TextField fx:id="beloning1TFP" layoutX="18.0" layoutY="43.0" prefHeight="7.0" prefWidth="47.0" style="-fx-border-color: #63d13c; -fx-border-radius: 4px;">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="delete1" layoutX="138.0" layoutY="74.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="1">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="307.0" layoutY="77.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
+               <children>
+                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#63d13c" layoutX="75.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Punten" wrappingWidth="234.66595458984375">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="confirm2" layoutX="19.0" layoutY="74.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="OPSLAAN" textFill="WHITE" userData="2">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="beloning2TF" layoutX="18.0" layoutY="10.0" prefHeight="25.0" prefWidth="228.0" style="-fx-border-color: #63d13c; -fx-border-radius: 4px;" />
+                  <TextField fx:id="beloning2TFP" layoutX="18.0" layoutY="43.0" prefHeight="7.0" prefWidth="47.0" style="-fx-border-color: #63d13c; -fx-border-radius: 4px;">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="delete2" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="2">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="307.0" layoutY="198.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
+               <children>
+                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#63d13c" layoutX="75.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Punten" wrappingWidth="234.66595458984375">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="confirm4" layoutX="19.0" layoutY="74.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="OPSLAAN" textFill="WHITE" userData="4">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="beloning4TF" layoutX="18.0" layoutY="10.0" prefHeight="25.0" prefWidth="228.0" style="-fx-border-color: #63d13c; -fx-border-radius: 4px;" />
+                  <TextField fx:id="beloning4TFP" layoutX="18.0" layoutY="43.0" prefHeight="7.0" prefWidth="47.0" style="-fx-border-color: #63d13c; -fx-border-radius: 4px;">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="delete4" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="4">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="28.0" layoutY="198.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
+               <children>
+                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#63d13c" layoutX="75.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Punten" wrappingWidth="234.66595458984375">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="confirm3" layoutX="19.0" layoutY="74.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="OPSLAAN" textFill="WHITE" userData="3">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="beloning3TF" layoutX="18.0" layoutY="10.0" prefHeight="25.0" prefWidth="228.0" style="-fx-border-color: #63d13c; -fx-border-radius: 4px;" />
+                  <TextField fx:id="beloning3TFP" layoutX="18.0" layoutY="43.0" prefHeight="7.0" prefWidth="47.0" style="-fx-border-color: #63d13c; -fx-border-radius: 4px;">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="delete3" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="3">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="28.0" layoutY="321.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
+               <children>
+                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#63d13c" layoutX="75.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Punten" wrappingWidth="234.66595458984375">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="confirm5" layoutX="19.0" layoutY="74.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="OPSLAAN" textFill="WHITE" userData="5">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="beloning5TF" layoutX="18.0" layoutY="10.0" prefHeight="25.0" prefWidth="228.0" style="-fx-border-color: #63d13c; -fx-border-radius: 4px;" />
+                  <TextField fx:id="beloning5TFP" layoutX="18.0" layoutY="43.0" prefHeight="7.0" prefWidth="47.0" style="-fx-border-color: #63d13c; -fx-border-radius: 4px;">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="delete5" layoutX="138.0" layoutY="73.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="5">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="307.0" layoutY="321.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
+               <children>
+                  <Text layoutX="17.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EEN BELONING NAAM" wrappingWidth="241.06597900390625">
+                     <font>
+                        <Font name="Arial Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#63d13c" layoutX="75.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Punten" wrappingWidth="234.66595458984375">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="confirm6" layoutX="19.0" layoutY="74.0" mnemonicParsing="false" onAction="#onConfirm" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="OPSLAAN" textFill="WHITE" userData="6">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="beloning6TF" layoutX="18.0" layoutY="10.0" prefHeight="25.0" prefWidth="228.0" style="-fx-border-color: #63d13c; -fx-border-radius: 4px;" />
+                  <TextField fx:id="beloning6TFP" layoutX="18.0" layoutY="43.0" prefHeight="7.0" prefWidth="47.0" style="-fx-border-color: #63d13c; -fx-border-radius: 4px;">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="delete6" layoutX="139.0" layoutY="74.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #63d13c; -fx-border-radius: 4px;" text="VERWIJDEREN" userData="6">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Text layoutX="124.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PUNTEN INWISSELEN" wrappingWidth="570.0">
+         <font>
+            <Font name="Arial Bold" size="32.0" />
+         </font>
+      </Text>
+      <Pane prefHeight="56.0" prefWidth="700.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="132.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.jpeg" />
+               </image>
+            </ImageView>
+            <Text fx:id="welkomText" layoutX="264.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welkom GEBRUIKERSNAAM" textAlignment="RIGHT" wrappingWidth="421.99688720703125">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutY="56.0" prefHeight="473.0" prefWidth="99.0" style="-fx-background-color: white;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="OVERZICHT">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="reisschermKnop" layoutY="28.0" mnemonicParsing="false" onAction="#onReisschermKnop" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-radius: 0px; -fx-background-radius: 0px;" text="REIS TOEVOEGEN">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutY="56.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="BELONINGEN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <AnchorPane layoutX="5.0" layoutY="380.0" />
+            <Button fx:id="logoutKnop" layoutY="445.0" mnemonicParsing="false" onAction="#onLogoutClick" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c; -fx-border-radius: 0px; -fx-background-radius: 0px;" text="LOGOUT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</Pane>

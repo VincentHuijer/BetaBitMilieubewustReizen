@@ -15,7 +15,7 @@
       </Text>
       <AnchorPane layoutX="135.0" layoutY="146.0" prefHeight="70.0" prefWidth="200.0">
          <children>
-            <Button fx:id="autoKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onAutoKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
+            <Button fx:id="autoKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;" userData="Auto">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -35,7 +35,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <CheckBox fx:id="elektrischeAutoCheck" layoutX="9.0" layoutY="47.0" mnemonicParsing="false" text="Elektrisch" onAction="#onElektrischeAutoCheckBoxClick">
+            <CheckBox fx:id="elektrischeAutoCheck" layoutX="9.0" layoutY="47.0" mnemonicParsing="false" onAction="#onElektrischeAutoCheckBoxClick" text="Elektrisch">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -44,7 +44,7 @@
       </AnchorPane>
       <AnchorPane layoutX="135.0" layoutY="226.0">
          <children>
-            <Button fx:id="regionaalKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onRegionaalKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: #63D13C; -fx-border-radius: 4;">
+            <Button fx:id="regionaalKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: #63D13C; -fx-border-radius: 4;" userData="RegionaalOV">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -68,7 +68,7 @@
       </AnchorPane>
       <AnchorPane layoutX="135.0" layoutY="306.0" prefHeight="70.0" prefWidth="262.0">
          <children>
-            <Button fx:id="tramKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onTramKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
+            <Button fx:id="tramKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;" userData="Tram">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -92,7 +92,7 @@
       </AnchorPane>
       <AnchorPane layoutX="135.0" layoutY="386.0" prefHeight="70.0" prefWidth="262.0">
          <children>
-            <Button fx:id="fietsKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onFietsKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;">
+            <Button fx:id="fietsKnop" minWidth="-Infinity" mnemonicParsing="false" onAction="#onKnopClick" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: white; -fx-border-color: transparent; -fx-border-radius: 4;" userData="Fiets">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -140,7 +140,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <Button layoutX="16.0" layoutY="69.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="221.0" style="-fx-background-color: #63D13C;" text="REIS TOEVOEGEN" textFill="WHITE">
+            <Button fx:id="addReisKnop" layoutX="16.0" layoutY="69.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="221.0" style="-fx-background-color: #63D13C;" text="REIS TOEVOEGEN" textFill="WHITE" onAction="#onReisKnopClick">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
@@ -174,7 +174,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutY="28.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="REIS TOEVOEGEN">
+            <Button layoutY="28.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c; -fx-border-radius: 0px; -fx-background-radius: 0px;" text="REIS TOEVOEGEN" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
@@ -182,7 +182,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="beloningKnop" layoutY="56.0" mnemonicParsing="false" onAction="#onBeloningKnopClick" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="BELONINGEN" textFill="WHITE">
+            <Button fx:id="beloningKnop" layoutY="56.0" mnemonicParsing="false" onAction="#onBeloningKnopClick" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-radius: 0px; -fx-background-radius: 0px;" text="BELONINGEN">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
@@ -212,9 +212,9 @@
       </Pane>
       <AnchorPane layoutX="415.0" layoutY="145.0" prefHeight="70.0" prefWidth="249.0" style="-fx-border-color: black; -fx-background-radius: 4; -fx-border-radius: 4px; -fx-background-color: white;">
          <children>
-            <CheckBox layoutX="14.0" layoutY="13.0" mnemonicParsing="false" selected="true" style="-fx-border-color: black; -fx-border-radius: 4px; -fx-background-radius: 4px; -fx-background-color: white;" />
+            <CheckBox fx:id="woonwerkCheck" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#onWoonwerkClick" selected="true" style="-fx-border-color: black; -fx-border-radius: 4px; -fx-background-radius: 4px; -fx-background-color: white;" />
             <Text layoutX="40.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Woon Werkverkeer" />
-            <CheckBox layoutX="14.0" layoutY="34.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-border-radius: 4px; -fx-background-radius: 4px; -fx-background-color: transparent;" translateY="3.0" />
+            <CheckBox fx:id="zakelijkCheck" layoutX="14.0" layoutY="34.0" mnemonicParsing="false" onAction="#onZakelijkClick" style="-fx-border-color: black; -fx-border-radius: 4px; -fx-background-radius: 4px; -fx-background-color: transparent;" translateY="3.0" />
             <Text layoutX="40.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zakelijk Werkverkeer" translateY="3.0" />
          </children>
       </AnchorPane>

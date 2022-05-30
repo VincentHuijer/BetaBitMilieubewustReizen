@@ -22,7 +22,7 @@ public class ReisSysteemScherm implements Observer {
     private static Stage stage;
 
     public void start() throws Exception {
-        if(stage == null){
+        if (stage == null) {
             stage = new Stage();
         }
 
@@ -36,15 +36,19 @@ public class ReisSysteemScherm implements Observer {
         stage.setScene(scene);
         stage.show();
     }
-    public void setLoggedIn(Gebruiker gebruiker){
+
+    public void setLoggedIn(Gebruiker gebruiker) {
         loggedIn = gebruiker;
     }
-    public Gebruiker getLoggedIn(){
+
+    public Gebruiker getLoggedIn() {
         return loggedIn;
     }
+
     @Override
     public void update(Observable o, Object arg) {
         Text text = (Text) scene.lookup("#berekenPuntenText");
+        Text alternatief = (Text) scene.lookup("#AlternatieveText");
         Text autoPuntenText = (Text) scene.lookup("#autoPuntenText");
         Text regionaalPuntenText = (Text) scene.lookup("#regionaalPuntenText");
         Text tramPuntenText = (Text) scene.lookup("#tramPuntenText");
@@ -74,6 +78,11 @@ public class ReisSysteemScherm implements Observer {
             regionaalPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "RegionaalOV", elektrisch)));
             tramPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "Tram", elektrisch)));
             fietsPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "Fiets", elektrisch)));
+
+            alternatief.setText("Voor meer punten kunt u met de duurzamere optie gaan want dan krijgt u "
+                    + (loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch) - loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch))
+                    + " punten meer.");
+
         } else if (zakelijk.isSelected()) {
             punten = String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch));
             text.setText(punten);
@@ -81,6 +90,9 @@ public class ReisSysteemScherm implements Observer {
             regionaalPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "RegionaalOV", elektrisch)));
             tramPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Tram", elektrisch)));
             fietsPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Fiets", elektrisch)));
+
+            alternatief.setText("Voor meer punten kunt u met het OV gaan want dan krijgt u " + (loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch) - loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch)) + " punten meer.");
         }
     }
 }
+

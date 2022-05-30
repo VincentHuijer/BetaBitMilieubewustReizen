@@ -218,6 +218,6 @@
             <Text layoutX="40.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zakelijk Werkverkeer" translateY="3.0" />
          </children>
       </AnchorPane>
-      <Text fx:id="AlternatieveText" fill="#63d13c" layoutX="420.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="verbetering" />
+      <Text fx:id="AlternatieveText" layoutX="420.0" layoutY="360.0" strokeType="INSIDE" strokeWidth="0.0"  wrappingWidth="250.0" text="vul een waarde in." />
    </children>
 </Pane>

@@ -1,0 +1,3 @@
+.table:row-selection:unconstrained-resize .column-header-background .nested-column-header .table-column .label{
+    -fx-text-fill: #FFFFFF;
+}

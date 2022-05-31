@@ -16,6 +16,7 @@ public class Gebruiker {
     private Punten punten = new Punten();
     private double puntenSaldo;
     private double afstandVanWerkInKm;
+    private double totaalKm = 0;
 
     public Gebruiker(String username, String wachtwoord, String voornaam, String achternaam){
         this.voornaam = voornaam;
@@ -83,6 +84,17 @@ public class Gebruiker {
 
     public ArrayList<Reis> getAlleReizen() {
         return alleReizen;
+    }
+    public void berekenTotaalKM(){
+        double sum = 0;
+        for(Reis reis : alleReizen){
+            sum += reis.getAfstand();
+        }
+        this.totaalKm = sum;
+    }
+
+    public double getTotaalKm() {
+        return totaalKm;
     }
 
     public int generateId(){

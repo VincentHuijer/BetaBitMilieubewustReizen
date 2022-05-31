@@ -1,16 +1,22 @@
 package hhs.Controllers;
 
 import hhs.Schermen.LoginScherm;
+import hhs.Schermen.ScorebordScherm;
 import hhs.proj2_klas6_groep6d.*;
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class RegisterController {
+import java.net.URL;
+import java.util.Observable;
+import java.util.ResourceBundle;
+
+public class RegisterController{
     @FXML
     Button registerKnop;
     @FXML
@@ -54,4 +60,5 @@ public class RegisterController {
             loginScherm.start(new Stage());
         }
     }
+
 }

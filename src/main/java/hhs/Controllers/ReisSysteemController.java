@@ -85,6 +85,7 @@ public class ReisSysteemController extends Observable implements Initializable{
             reis = new Reis(new Date(dtf.format(now)), punten, km, vervoersMiddel);
         }
         gebruiker.getAlleReizen().add(reis);
+        gebruiker.berekenTotaalKM();
         puntenGebruiker.addPunten(punten);
         setChanged();
         notifyObservers(vervoersMiddel);

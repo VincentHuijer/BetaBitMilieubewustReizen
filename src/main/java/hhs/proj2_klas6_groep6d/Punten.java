@@ -59,5 +59,8 @@ public class Punten {
         return (Math.round(afstand * multiplier));
     }
 
-
+    @Override
+    public String toString() {
+        return aantalPunten + "";
+    }
 }

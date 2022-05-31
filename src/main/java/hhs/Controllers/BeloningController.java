@@ -3,6 +3,7 @@ package hhs.Controllers;
 import hhs.Schermen.BeloningScherm;
 import hhs.Schermen.LoginScherm;
 import hhs.Schermen.ReisSysteemScherm;
+import hhs.Schermen.ScorebordScherm;
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.Rewards;
 import hhs.proj2_klas6_groep6d.RewardsList;
@@ -64,6 +65,17 @@ public class BeloningController extends Observable implements Initializable {
     Button beloning5Knop;
     @FXML
     Button beloning6Knop;
+    @FXML
+    Button scorebordKnop;
+
+    @FXML
+    public void onScorebordKnopClick() throws Exception {
+        ScorebordScherm scorebordScherm = new ScorebordScherm();
+        scorebordScherm.setLoggedIn(gebruiker);
+        Stage stage = (Stage) scorebordKnop.getScene().getWindow();
+        stage.close();
+        scorebordScherm.start();
+    }
 
     @FXML
     public void onBeloningKnopClick(ActionEvent event){
@@ -72,7 +84,7 @@ public class BeloningController extends Observable implements Initializable {
         int rewardNummer = Integer.parseInt(data);
         claimReward(rewardNummer); //Nummer is gelijk aan knopnummer. Links boven is 1, rechts boven 2 etc.
     }
-
+    @FXML
     private void claimReward(int nummer){
         double prijsInPunten = rewardsList.getRewardsLijst().get(nummer-1).getPunten();
         if(gebruiker.getPunten().getAantalPunten() >= prijsInPunten){

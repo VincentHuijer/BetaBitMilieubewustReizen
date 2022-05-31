@@ -89,7 +89,7 @@
                         <Font name="System Bold" size="24.0" />
                     </font>
                 </Text>
-                <TableView id="table" fx:id="tableView" editable="true" layoutX="45.0" layoutY="96.0" prefHeight="282.0" prefWidth="515.0" styleClass="table" stylesheets="@css/scorebord.css">
+                <TableView id="table" fx:id="tableView" editable="true" layoutX="45.0" layoutY="96.0" prefHeight="282.0" prefWidth="515.0" styleClass="table" stylesheets="@../../scorebord.css">
                     <columns>
                         <TableColumn id="Gebruikersnaam" prefWidth="136.0" resizable="false" sortable="false" style="-fx-background-color: #63d13c; -fx-text-fill: #ffffff; -fx-fill: #FFFFFF;" text="Gebruikersnaam" />
                         <TableColumn id="Punten" fx:id="Punten" minWidth="2.39996337890625" prefWidth="133.60003662109375" resizable="false" style="-fx-background-color: #63d13c; -fx-text-fill: #ffffff; -fx-fill: #FFFFFF;" text="Punten" />

@@ -1,9 +1,6 @@
 package hhs.Controllers;
 
-import hhs.Schermen.BeloningAdminScherm;
-import hhs.Schermen.BeloningScherm;
-import hhs.Schermen.LoginScherm;
-import hhs.Schermen.ReisSysteemScherm;
+import hhs.Schermen.*;
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.Punten;
 import hhs.proj2_klas6_groep6d.Reis;
@@ -24,6 +21,7 @@ import java.util.*;
 
 public class ReisSysteemController extends Observable implements Initializable{
     ReisSysteemScherm reisSysteemScherm = new ReisSysteemScherm();
+    Gebruiker gebruiker = reisSysteemScherm.getLoggedIn();
     private String vervoersMiddel = "Auto";
     @FXML
     Button logoutKnop;
@@ -51,6 +49,16 @@ public class ReisSysteemController extends Observable implements Initializable{
     Text berekenPuntenText;
     @FXML
     TextField kmTextField;
+    @FXML
+    Button scorebordKnop;
+
+    public void onScorebordKnopClick() throws Exception {
+        ScorebordScherm scorebordScherm = new ScorebordScherm();
+        scorebordScherm.setLoggedIn(gebruiker);
+        Stage stage = (Stage) scorebordKnop.getScene().getWindow();
+        stage.close();
+        scorebordScherm.start();
+    }
 
     public void onReisKnopClick(){
         Reis reis = null;
@@ -100,7 +108,6 @@ public class ReisSysteemController extends Observable implements Initializable{
 
     @FXML
     public void onBeloningKnopClick() throws Exception {
-        Gebruiker gebruiker = reisSysteemScherm.getLoggedIn();
         Stage stage = (Stage) beloningKnop.getScene().getWindow();
         stage.close();
         if(!gebruiker.isAdmin()) {

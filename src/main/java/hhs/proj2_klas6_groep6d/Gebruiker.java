@@ -9,13 +9,13 @@ public class Gebruiker {
     private String achternaam;
     private String username;
     private String wachtwoord;
-    private Adres adres;
-    private int id;
+    private Adres adres; // Eventueel later nodig voor API met afstand berekenen
+    private int id; // Medewerkers van betabit krijgen vanuit het bedrijf al een id. Dit onderdeel schrappen we misschien nog.
     private double co2Uitstoot;
-    private int totaalAantalVerdiendePunten;
+    private int totaalAantalVerdiendePunten; // Nodig voor scorebord
     private Punten punten = new Punten();
     private double puntenSaldo;
-    private double afstandVanWerkInKm;
+    private double afstandVanWerkInKm; // Eventueel later nodig voor API met afstand berekenen
     private double totaalKm = 0;
 
     public Gebruiker(String username, String wachtwoord, String voornaam, String achternaam){
@@ -29,9 +29,9 @@ public class Gebruiker {
 
     public void initialiseerGebruiker(){
         this.id = generateId();
-        //afstandVanWerkInKm uitrekenen dmv api
+        //afstandVanWerkInKm eventueel uitrekenen dmv api voor afstand
         this.puntenSaldo = punten.getAantalPunten();
-        this.co2Uitstoot = 0;
+        this.co2Uitstoot = 0; //Hier moet nog een methode voor gemaakt worden.
     }
 
     public Adres getAdres() {

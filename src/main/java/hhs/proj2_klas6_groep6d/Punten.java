@@ -4,11 +4,7 @@ import java.math.RoundingMode;
 
 public class Punten {
     private double aantalPunten;
-/** waarom moet ik double aantalPunten meegeven voor de class punten? Heeft nog niets te maken met de methodes zoals ik het nu zie. Zowel excuses :-)
-    Punten(double aantalPunten){
-        this.aantalPunten = aantalPunten;
-    }
-*/
+
     public double getAantalPunten() {
         return aantalPunten;
     }

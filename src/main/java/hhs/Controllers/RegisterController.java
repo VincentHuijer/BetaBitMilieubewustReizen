@@ -1,12 +1,12 @@
-package hhs.controllersAndScreens;
+package hhs.Controllers;
 
+import hhs.Schermen.LoginScherm;
 import hhs.proj2_klas6_groep6d.*;
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 

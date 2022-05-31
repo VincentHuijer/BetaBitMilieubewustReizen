@@ -1,5 +1,8 @@
-package hhs.controllersAndScreens;
+package hhs.Controllers;
 
+import hhs.Schermen.BeloningAdminScherm;
+import hhs.Schermen.LoginScherm;
+import hhs.Schermen.ReisSysteemScherm;
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.Rewards;
 import javafx.event.ActionEvent;

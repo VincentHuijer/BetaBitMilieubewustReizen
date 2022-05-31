@@ -1,5 +1,7 @@
-package hhs.controllersAndScreens;
+package hhs.Controllers;
 
+import hhs.Schermen.RegisterScherm;
+import hhs.Schermen.ReisSysteemScherm;
 import hhs.proj2_klas6_groep6d.Bedrijf;
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import javafx.fxml.FXML;

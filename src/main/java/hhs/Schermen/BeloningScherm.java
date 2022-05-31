@@ -1,16 +1,13 @@
-package hhs.controllersAndScreens;
+package hhs.Schermen;
 
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.Main;
-import hhs.proj2_klas6_groep6d.Rewards;
 import hhs.proj2_klas6_groep6d.RewardsList;
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 

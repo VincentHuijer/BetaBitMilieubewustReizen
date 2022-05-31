@@ -1,11 +1,13 @@
-package hhs.controllersAndScreens;
+package hhs.Controllers;
 
-import hhs.proj2_klas6_groep6d.Admin;
+import hhs.Schermen.BeloningAdminScherm;
+import hhs.Schermen.BeloningScherm;
+import hhs.Schermen.LoginScherm;
+import hhs.Schermen.ReisSysteemScherm;
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.Punten;
 import hhs.proj2_klas6_groep6d.Reis;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -14,13 +16,10 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.util.converter.LocalDateTimeStringConverter;
-import java.text.SimpleDateFormat;
-import java.lang.reflect.Array;
+
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
 import java.util.*;
 
 public class ReisSysteemController extends Observable implements Initializable{

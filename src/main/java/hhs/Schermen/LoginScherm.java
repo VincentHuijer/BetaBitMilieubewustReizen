@@ -1,4 +1,4 @@
-package hhs.controllersAndScreens;
+package hhs.Schermen;
 
 import hhs.proj2_klas6_groep6d.Main;
 import javafx.application.Application;

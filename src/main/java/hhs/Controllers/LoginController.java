@@ -27,7 +27,7 @@ public class LoginController {
     @FXML
     public void onLoginClick() throws Exception {
         if(gebruikersnaamField.getText().equals("") || wachtwoordField.getText().equals("")){
-            errorText.setText("Please fill in all fields!");
+            errorText.setText("Vul alle velden in!");
         }
         Bedrijf bedrijf = new Bedrijf();
         for(Gebruiker gebruiker : bedrijf.getGebruikers()){
@@ -40,7 +40,7 @@ public class LoginController {
                 reisSysteemScherm.start();
             }
         }
-        errorText.setText("Wrong username or password!");
+        errorText.setText("Verkeerd wachtwoord of gebruikersnaam!");
     }
 
     @FXML

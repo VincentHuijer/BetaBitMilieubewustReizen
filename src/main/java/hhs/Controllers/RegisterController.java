@@ -39,15 +39,15 @@ public class RegisterController{
     public void onRegisterClick() throws Exception {
         if(voornaamField.getText().equals("") || achternaamField.getText().equals("") || gebruikersnaamField.getText().equals("") ||
         wachtwoordField.getText().equals("") || herhaalField.getText().equals("") || MedIDField.getText().equals("")){
-            errorText.setText("Please fill in all fields!");
+            errorText.setText("Vul alle velden in!");
         }else if(!wachtwoordField.getText().equals(herhaalField.getText())){
-            errorText.setText("Passwords don't match!");
+            errorText.setText("Wachtwoorden komen niet overeen!");
         }
         else{
             Bedrijf bedrijf = new Bedrijf();
             for(Gebruiker gebruiker : bedrijf.getGebruikers()){
                 if(gebruiker.getUsername().equals(gebruikersnaamField.getText())){
-                    errorText.setText("Username already exists!");
+                    errorText.setText("Gebruikersnaam bestaat al!");
                     return;
                 }
             }

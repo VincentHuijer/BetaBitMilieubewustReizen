@@ -42,7 +42,7 @@ public class ReisSysteemScherm implements Observer {
     }
 
     @Override
-    public void update(Observable o, Object arg) {
+    public void update(Observable o, Object arg) { // Zorgt ervoor dat de gebruiker de juiste hoeveelheid punten en de juiste informatie te zien krijgt als hij/zij een bepaalde hoeveelheid kilometers invult.
         Text text = (Text) scene.lookup("#berekenPuntenText");
         Text alternatief = (Text) scene.lookup("#AlternatieveText");
         Text autoPuntenText = (Text) scene.lookup("#autoPuntenText");
@@ -105,13 +105,13 @@ public class ReisSysteemScherm implements Observer {
             }
         }
     }
-    public void alternatiefWoonWerkVerkeer(String vervoersmiddel, double km, boolean elektrisch, Object arg){
+    public void alternatiefWoonWerkVerkeer(String vervoersmiddel, double km, boolean elektrisch, Object arg){ //Zet tekst neer om gebruiker op de hoogte te stellen van een betere optie die meer punten oplevert
         Text alternatief = (Text) scene.lookup("#AlternatieveText");
         alternatief.setText("Voor meer punten kunt u met de duurzamere optie gaan want dan krijgt u "
                 + (loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100,km,vervoersmiddel, elektrisch) - loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch))
                 + " punten meer.");
     }
-    public void alternatiefZakelijkVerkeer(String vervoersmiddel, double km, boolean elektrisch, Object arg){
+    public void alternatiefZakelijkVerkeer(String vervoersmiddel, double km, boolean elektrisch, Object arg){ //Zet tekst neer om gebruiker op de hoogte te stellen van een betere optie die meer punten oplevert
         Text alternatief = (Text) scene.lookup("#AlternatieveText");
         alternatief.setText("Voor meer punten kunt u met de duurzamere optie gaan want dan krijgt u "
                 + (loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km,vervoersmiddel, elektrisch) - loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch))

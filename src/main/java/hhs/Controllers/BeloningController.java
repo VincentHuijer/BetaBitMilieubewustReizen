@@ -69,7 +69,7 @@ public class BeloningController extends Observable implements Initializable {
     Button scorebordKnop;
 
     @FXML
-    public void onScorebordKnopClick() throws Exception {
+    public void onScorebordKnopClick() throws Exception { // Opent scorebord scherm
         ScorebordScherm scorebordScherm = new ScorebordScherm();
         scorebordScherm.setLoggedIn(gebruiker);
         Stage stage = (Stage) scorebordKnop.getScene().getWindow();
@@ -78,14 +78,14 @@ public class BeloningController extends Observable implements Initializable {
     }
 
     @FXML
-    public void onBeloningKnopClick(ActionEvent event){
+    public void onBeloningKnopClick(ActionEvent event){ // Geeft gekozen reward door aan claimreward methode.
         Node node = (Node) event.getSource();
         String data = (String) node.getUserData();
         int rewardNummer = Integer.parseInt(data);
         claimReward(rewardNummer); //Nummer is gelijk aan knopnummer. Links boven is 1, rechts boven 2 etc.
     }
     @FXML
-    private void claimReward(int nummer){
+    private void claimReward(int nummer){ //Controleert of gebruiker genoeg punten heeft. Zo ja, dan koopt de gebruiker deze reward.
         double prijsInPunten = rewardsList.getRewardsLijst().get(nummer-1).getPunten();
         if(gebruiker.getPunten().getAantalPunten() >= prijsInPunten){
             if(nummer == 1){
@@ -117,7 +117,7 @@ public class BeloningController extends Observable implements Initializable {
     }
 
     @FXML
-    public void onReisSchermKnop() throws Exception {
+    public void onReisSchermKnop() throws Exception { // Opent reis scherm.
         Stage stage = (Stage) reisschermKnop.getScene().getWindow();
         Gebruiker gebruiker = beloningScherm.getLoggedIn();
         stage.close();
@@ -127,13 +127,13 @@ public class BeloningController extends Observable implements Initializable {
     }
 
     @FXML
-    public void onLogoutClick() throws Exception {
+    public void onLogoutClick() throws Exception { // Logt gebruiker uit.
         Stage stage = (Stage) logoutKnop.getScene().getWindow();
         LoginScherm loginScherm = new LoginScherm();
         loginScherm.start(new Stage());
         stage.close();
     }
-    private void refresh(){
+    private void refresh(){ // Herlaad alle rewards en vult de velden die erbij horen in.
         int size = alleRewards.size();
         for(int i =0; i<6; i++){
             if(i==0 && size>0){
@@ -188,7 +188,7 @@ public class BeloningController extends Observable implements Initializable {
         }
     }
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle) { // Toevoegen observer aan beloningscherm om aantal punten gebruiker live te updaten.
         addObserver(beloningScherm);
         refresh();
     }

@@ -77,7 +77,7 @@ public class BeloningAdminController implements Initializable {
     @FXML
     Button scorebordKnop;
 
-    public void onScorebordKnopClick() throws Exception {
+    public void onScorebordKnopClick() throws Exception { // Opent scorebord scherm
         ScorebordScherm scorebordScherm = new ScorebordScherm();
         scorebordScherm.setLoggedIn(gebruiker);
         Stage stage = (Stage) scorebordKnop.getScene().getWindow();
@@ -85,7 +85,7 @@ public class BeloningAdminController implements Initializable {
         scorebordScherm.start();
     }
 
-    public void onReisschermKnop() throws Exception {
+    public void onReisschermKnop() throws Exception { // Opent reis scherm
         Stage stage = (Stage) reisschermKnop.getScene().getWindow();
         stage.close();
         ReisSysteemScherm reisSysteemScherm = new ReisSysteemScherm();
@@ -93,14 +93,14 @@ public class BeloningAdminController implements Initializable {
         reisSysteemScherm.start();
     }
 
-    public void onLogoutClick() throws Exception {
+    public void onLogoutClick() throws Exception { // Logt gebruiker uit
         Stage stage = (Stage) logoutKnop.getScene().getWindow();
         LoginScherm loginScherm = new LoginScherm();
         loginScherm.start(new Stage());
         stage.close();
     }
 
-    public void onDelete(ActionEvent event){
+    public void onDelete(ActionEvent event){ //Verwijdert reward waarbij op "verwijderen" is geklikt en schuift alle rewards op zodat alles netjes achter elkaar is gevuld.
         Node node = (Node) event.getSource();
         String data = (String) node.getUserData();
         int rewardNummer = Integer.parseInt(data);
@@ -125,7 +125,7 @@ public class BeloningAdminController implements Initializable {
         }
     }
 
-    public void onConfirm(ActionEvent event){
+    public void onConfirm(ActionEvent event){ //Voegt ingevulde reward toe aan arraylist met rewards.
         Node node = (Node) event.getSource() ;
         String data = (String) node.getUserData();
         int rewardNummer = Integer.parseInt(data);
@@ -169,7 +169,7 @@ public class BeloningAdminController implements Initializable {
         setDisabled();
     }
 
-    public void setDisabled(){
+    public void setDisabled(){ // Zet knoppen die op dat moment niet te gebruiken zijn uit. Je kan dan niet op ze klikken. Dit voorkomt errors.
         int size = alleRewards.size();
         if(size == 0){
             delete2.setDisable(true);
@@ -260,7 +260,7 @@ public class BeloningAdminController implements Initializable {
         generate();
         setDisabled();
     }
-    public void clear(){
+    public void clear(){//Maakt alle velden in admin scherm leeg.
         beloning1TF.setText("");
         beloning1TFP.setText("");
         beloning2TF.setText("");
@@ -274,7 +274,7 @@ public class BeloningAdminController implements Initializable {
         beloning6TF.setText("");
         beloning6TFP.setText("");
     }
-    public void generate(){
+    public void generate(){// Genereert alle rewards die in de arraylist zitten en laat ze zien in het admin scherm.
         int size = alleRewards.size();
         if(size >= 6){
             System.out.println("Er zitten meer dan 6 rewards in de reward lijst. @BeloningAdminController");

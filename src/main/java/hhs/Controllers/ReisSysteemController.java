@@ -52,7 +52,7 @@ public class ReisSysteemController extends Observable implements Initializable{
     @FXML
     Button scorebordKnop;
 
-    public void onScorebordKnopClick() throws Exception {
+    public void onScorebordKnopClick() throws Exception { // Opent scorebord scherm
         ScorebordScherm scorebordScherm = new ScorebordScherm();
         scorebordScherm.setLoggedIn(gebruiker);
         Stage stage = (Stage) scorebordKnop.getScene().getWindow();
@@ -60,7 +60,7 @@ public class ReisSysteemController extends Observable implements Initializable{
         scorebordScherm.start();
     }
 
-    public void onReisKnopClick(){
+    public void onReisKnopClick(){ // Maakt een reis aan die aan de gebruiker wordt toegevoegd op het moment dat hij/zij een reis toevoegt. Geeft ook de juiste hoeveelheid punten aan gebruiker.
         Reis reis = null;
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         LocalDateTime now = LocalDateTime.now();
@@ -91,13 +91,13 @@ public class ReisSysteemController extends Observable implements Initializable{
         notifyObservers(vervoersMiddel);
     }
 
-    public void onWoonwerkClick(){
+    public void onWoonwerkClick(){ // Toepassing observer pattern
         zakelijkCheck.setSelected(!woonwerkCheck.isSelected());
         setChanged();
         notifyObservers(vervoersMiddel);
     }
 
-    public void onZakelijkClick(){
+    public void onZakelijkClick(){ // Toepassing observer pattern
         woonwerkCheck.setSelected(!zakelijkCheck.isSelected());
         setChanged();
         notifyObservers(vervoersMiddel);
@@ -108,7 +108,7 @@ public class ReisSysteemController extends Observable implements Initializable{
     }
 
     @FXML
-    public void onBeloningKnopClick() throws Exception {
+    public void onBeloningKnopClick() throws Exception { // Opent beloning scherm. Als gebruiker een admin is opent het het admin scherm voor beloningen.
         Stage stage = (Stage) beloningKnop.getScene().getWindow();
         stage.close();
         if(!gebruiker.isAdmin()) {
@@ -124,20 +124,20 @@ public class ReisSysteemController extends Observable implements Initializable{
     }
 
     @FXML
-    public void onLogoutClick() throws Exception {
+    public void onLogoutClick() throws Exception { // Logt gebruiker uit.
         Stage stage = (Stage) logoutKnop.getScene().getWindow();
         LoginScherm loginScherm = new LoginScherm();
         loginScherm.start(new Stage());
         stage.close();
     }
     @FXML
-    public void onTextChanged(){
+    public void onTextChanged(){ // Toepassing observer pattern
         String vervoer = vervoersMiddel;
         setChanged();
         notifyObservers(vervoer);
     }
 
-    @FXML public void onKnopClick(ActionEvent event){
+    @FXML public void onKnopClick(ActionEvent event){ // Kiezen van gebruikt vervoersmiddel.
         Node node = (Node) event.getSource() ;
         String data = (String) node.getUserData();
 
@@ -152,7 +152,7 @@ public class ReisSysteemController extends Observable implements Initializable{
     }
 
     @FXML
-    public void changeColors(Button clickButton){
+    public void changeColors(Button clickButton){ // Veranderen kleur knoppen bij kiezen.
         Stage scene = (Stage) logoutKnop.getScene().getWindow();
 
         ArrayList<Button> buttons = new ArrayList<>();
@@ -184,5 +184,5 @@ public class ReisSysteemController extends Observable implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         addObserver(reisSysteemScherm);
-    }
+    } // Toevoegen observer aan reissysteemscherm.
 }

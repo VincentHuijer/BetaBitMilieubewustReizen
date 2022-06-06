@@ -89,11 +89,10 @@ public class ReisSysteemScherm implements Observer {
                 tramPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "Tram", elektrisch)));
                 fietsPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "Fiets", elektrisch)));
             } else {
-                double uitstoot = new CO2(km).getUitstoot();
-                autoPuntenText.setText(String.format("%.0f gram CO2", uitstoot));
-                regionaalPuntenText.setText(String.format("%.0f gram CO2", uitstoot));
-                tramPuntenText.setText(String.format("%.0f gram CO2", uitstoot));
-                fietsPuntenText.setText(String.format("%.0f gram CO2", uitstoot));
+                autoPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Auto").getUitstoot()));
+                regionaalPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "RegionaalOV").getUitstoot()));
+                tramPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Tram").getUitstoot()));
+                fietsPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Fiets").getUitstoot()));
             }
 
             if (arg.toString().equalsIgnoreCase("auto")) {
@@ -115,11 +114,10 @@ public class ReisSysteemScherm implements Observer {
                 tramPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Tram", elektrisch)));
                 fietsPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Fiets", elektrisch)));
             } else {
-                double uitstoot = new CO2(km).getUitstoot();
-                autoPuntenText.setText(String.format("%.0f gram CO2", uitstoot));
-                regionaalPuntenText.setText(String.format("%.0f gram CO2", uitstoot));
-                tramPuntenText.setText(String.format("%.0f gram CO2", uitstoot));
-                fietsPuntenText.setText(String.format("%.0f gram CO2", uitstoot));
+                autoPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Auto").getUitstoot()));
+                regionaalPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "RegionaalOV").getUitstoot()));
+                tramPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Tram").getUitstoot()));
+                fietsPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Fiets").getUitstoot()));
             }
             if (arg.toString().equalsIgnoreCase("auto")) {
                 alternatiefZakelijkVerkeer("regionaalOV", km, elektrisch, arg);

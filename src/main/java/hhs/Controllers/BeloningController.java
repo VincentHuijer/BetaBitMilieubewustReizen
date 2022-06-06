@@ -95,7 +95,7 @@ public class BeloningController extends Observable implements Initializable {
     @FXML
     private void claimReward(int nummer){ //Controleert of gebruiker genoeg punten heeft. Zo ja, dan koopt de gebruiker deze reward.
         double prijsInPunten = rewardsList.getRewardsLijst().get(nummer-1).getPunten();
-        if(gebruiker.getPunten().getAantalPunten() >= prijsInPunten){
+        if(claimRewardCheck(nummer)){
             if(nummer == 1){
                 beloning1Knop.setText("GEKOCHT");
                 beloning1Knop.setDisable(true);
@@ -121,6 +121,15 @@ public class BeloningController extends Observable implements Initializable {
         }
         else{
             return;
+        }
+    }
+
+    public boolean claimRewardCheck(int nummer){
+        double prijsInPunten = rewardsList.getRewardsLijst().get(nummer-1).getPunten();
+        if(gebruiker.getPunten().getAantalPunten() >= prijsInPunten){
+            return true;
+        }else{
+            return false;
         }
     }
 

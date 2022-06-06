@@ -117,7 +117,7 @@
                 </Text>
             </children>
         </AnchorPane>
-        <Text layoutX="125.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JUNI" translateY="10.0" wrappingWidth="530.6007995605469" y="-5.0">
+        <Text fx:id="currentMonthTitle" layoutX="125.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JUNI" translateY="10.0" wrappingWidth="530.6007995605469" y="-5.0">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
@@ -127,7 +127,7 @@
                 <Font name="System Bold" size="24.0" />
             </font>
         </Text>
-        <Text layoutX="126.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEI" translateY="10.0" wrappingWidth="530.6007995605469" y="-5.0">
+        <Text fx:id="lastMonthTitle" layoutX="126.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEI" translateY="10.0" wrappingWidth="530.6007995605469" y="-5.0">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>

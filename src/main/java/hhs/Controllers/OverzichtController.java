@@ -46,10 +46,20 @@ public class OverzichtController implements Initializable {
     @FXML
     Text oldKM;
 
+    @FXML
+    Text currentMonthTitle;
+    @FXML
+    Text lastMonthTitle;
+
     public void init(){
         Date date = new Date();
         int lastMonth = date.getMonth();
         int currentMonth = lastMonth + 1;
+
+        String[] maanden = {"Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"};
+
+        currentMonthTitle.setText(maanden[currentMonth - 1].toUpperCase());
+        lastMonthTitle.setText(maanden[lastMonth - 1].toUpperCase());
 
         alleGebruikersScorebord.clear();
         Bedrijf bedrijf = new Bedrijf();

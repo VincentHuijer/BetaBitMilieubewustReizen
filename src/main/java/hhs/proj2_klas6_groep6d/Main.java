@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Main extends Application {
+public class Main extends Application {//Applicatie kan gestart worden vanaf LoginScherm class
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
@@ -16,7 +16,7 @@ public class Main extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
-    }
+    }//Dit verwijderen in Master
 
     public static void main(String[] args) {
         RewardsList rewardsList = new RewardsList();
@@ -27,5 +27,5 @@ public class Main extends Application {
         rewardsList.addRewards(arrayRewards);
         rewardsList.printRewardLijst();
         launch();
-    }
+    }//Verwijderen in master
 }

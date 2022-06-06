@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="700.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hhs.controllersAndScreens.BeloningController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="700.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hhs.Controllers.BeloningController">
    <children>
       <AnchorPane layoutX="98.0" layoutY="57.0" prefHeight="473.0" prefWidth="601.0">
          <children>
@@ -49,7 +49,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button fx:id="beloning2Knop" disable="false" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="2">
+                  <Button fx:id="beloning2Knop" disable="false" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" onAction="#onBeloningKnopClick" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" userData="2">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -76,7 +76,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button fx:id="beloning3Knop" disable="false" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="3">
+                  <Button fx:id="beloning3Knop" disable="false" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" onAction="#onBeloningKnopClick" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" userData="3">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -103,7 +103,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button fx:id="beloning4Knop" disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="4">
+                  <Button fx:id="beloning4Knop" disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" onAction="#onBeloningKnopClick" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" userData="4">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -130,7 +130,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button fx:id="beloning5Knop" disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="5">
+                  <Button fx:id="beloning5Knop" disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" onAction="#onBeloningKnopClick" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" userData="5">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -157,7 +157,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Button fx:id="beloning6Knop" disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" onAction="#onBeloningKnopClick" userData="6">
+                  <Button fx:id="beloning6Knop" disable="true" layoutX="17.0" layoutY="64.0" mnemonicParsing="false" onAction="#onBeloningKnopClick" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #63d13c;" text="INWISSELEN" textFill="WHITE" userData="6">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -195,7 +195,7 @@
       </Pane>
       <Pane layoutY="56.0" prefHeight="473.0" prefWidth="99.0" style="-fx-background-color: white;">
          <children>
-            <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="OVERZICHT">
+            <Button fx:id="overzichtKnop" mnemonicParsing="false" onAction="#onOverzichtKnopClick" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="OVERZICHT">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
@@ -212,6 +212,14 @@
                </cursor>
             </Button>
             <Button layoutY="56.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #63d13c;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="BELONINGEN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="scorebordKnop" layoutY="84.0" mnemonicParsing="false" onAction="#onScorebordKnopClick" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: white;  -fx-border-radius: 0px; -fx-background-radius: 0px;" text="SCOREBORD">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>

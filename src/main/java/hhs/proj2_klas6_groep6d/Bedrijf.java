@@ -7,8 +7,10 @@ public class Bedrijf {
     private static ArrayList<Gebruiker> gebruikers = new ArrayList<>();
 
     public Bedrijf(){
-        gebruikers.add(new Gebruiker("1", "1", "1", "1"));
-        gebruikers.add(new Admin("admin", "admin", "admin", "admin"));
+        if(gebruikers.size() == 0) {
+            gebruikers.add(new Gebruiker("1", "1", "1", "1"));
+            gebruikers.add(new Admin("admin", "admin", "admin", "admin"));
+        }
     }
 
     public String getNaam() {

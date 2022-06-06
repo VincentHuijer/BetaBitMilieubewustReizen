@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Scorebord {
+public class Scorebord {//Deze code is niet van toepassing omdat we in javafx een andere manier hebben gevonden om een scorebord te laten zien.
     private ArrayList<Gebruiker> scorebord = new ArrayList<>();
     public Scorebord(){
         initialiseerScoreBord();

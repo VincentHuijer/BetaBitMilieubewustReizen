@@ -32,15 +32,6 @@ public final class Rewards {
         return prijsInPunten;
     }
 
-    public void select(Gebruiker gebruiker){
-        Punten puntenGebruiker = gebruiker.getPunten();
-        if(puntenGebruiker.getAantalPunten() >= prijsInPunten){
-            puntenGebruiker.removePunten(prijsInPunten);
-            //Iets toevoegen om te laten weten dat de transactie is gelukt.
-        }
-        else{
-            //Gebruiker laten weten dat hij/zij niet genoeg punten heeft.
-        }
-    }
+
 
 }

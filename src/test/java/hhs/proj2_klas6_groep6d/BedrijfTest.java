@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BedrijfTest {
-    //private static ArrayList<Gebruiker> gebruikers = new ArrayList<>();
-
 
     @Test
     public void testAddGebruiker() {
@@ -19,8 +17,6 @@ public class BedrijfTest {
         bedrijf.addGebruiker(testGebruiker);
         //TODO In de bedrijf class zit al een testGebruiker/testAdmin met als parameters voor alles 1. Daarom is de actual 2 nadat we een gebruiker toevoegen.
         assertEquals(2, bedrijf.getGebruikers().size());
-
-
     }
 
     @Test

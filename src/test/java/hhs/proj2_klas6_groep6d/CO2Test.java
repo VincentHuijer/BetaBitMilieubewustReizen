@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class CO2Test {
     @Test
-    public void berekenCO2(){
+    public void berekenCO2() {
         CO2 auto = new CO2(10, "auto");
         CO2 bus = new CO2(10, "RegionaalOV");
 
@@ -14,5 +14,4 @@ public class CO2Test {
         Assertions.assertEquals(auto.getUitstoot(), autoUitstoot);
         Assertions.assertEquals(bus.getUitstoot(), busUitstoot);
     }
-
 }

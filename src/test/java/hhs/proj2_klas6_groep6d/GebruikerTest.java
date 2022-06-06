@@ -1,11 +1,10 @@
 package hhs.proj2_klas6_groep6d;
-import java.util.ArrayList;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class GebruikerTest {
     @Test
-    public void addGebruiker(){
+    public void testGebruikerData(){
         Gebruiker gebruiker = new Gebruiker("Test_1", "Wachtwoord_1", "Voornaam1", "Achternaam1");
 
         Assertions.assertEquals(gebruiker.getUsername(), "Test_1");

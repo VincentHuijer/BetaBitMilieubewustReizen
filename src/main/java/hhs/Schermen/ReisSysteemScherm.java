@@ -15,9 +15,9 @@ import java.util.Observable;
 import java.util.Observer;
 
 public class ReisSysteemScherm implements Observer {
-    private static Gebruiker loggedIn;
-    private static Scene scene;
-    private static Stage stage;
+    protected static Gebruiker loggedIn;
+    protected static Scene scene;
+    protected static Stage stage;
 
     public void start() throws Exception {
         if (stage == null) {
@@ -95,15 +95,8 @@ public class ReisSysteemScherm implements Observer {
                 fietsPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Fiets").getUitstoot()));
             }
 
-            if (arg.toString().equalsIgnoreCase("auto")) {
-                alternatiefWoonWerkVerkeer("regionaalOV", km, elektrisch, arg);
-            } else if (arg.toString().equalsIgnoreCase("RegionaalOV")) {
-                alternatiefWoonWerkVerkeer("tram", km, elektrisch, arg);
+            new WoonWerkReis(km, elektrisch,arg);
 
-            } else if (arg.toString().equalsIgnoreCase("Tram")) {
-                alternatief.setText("");
-
-            }
         } else if (zakelijk.isSelected()) {
             punten = String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch));
             text.setText(punten);
@@ -120,27 +113,13 @@ public class ReisSysteemScherm implements Observer {
                 fietsPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Fiets").getUitstoot()));
             }
             if (arg.toString().equalsIgnoreCase("auto")) {
-                alternatiefZakelijkVerkeer("regionaalOV", km, elektrisch, arg);
+                new ZakelijkeReis().alternatiefZakelijkVerkeer("regionaalOV", km, elektrisch, arg);
             } else if (arg.toString().equalsIgnoreCase("RegionaalOV")) {
-                alternatiefZakelijkVerkeer("tram", km, elektrisch, arg);
+                new ZakelijkeReis().alternatiefZakelijkVerkeer("tram", km, elektrisch, arg);
             } else if (arg.toString().equalsIgnoreCase("Tram")) {
                 alternatief.setText("");
             }
         }
-    }
-
-    public void alternatiefWoonWerkVerkeer(String vervoersmiddel, double km, boolean elektrisch, Object arg) { //Zet tekst neer om gebruiker op de hoogte te stellen van een betere optie die meer punten oplevert
-        Text alternatief = (Text) scene.lookup("#AlternatieveText");
-        alternatief.setText("Voor meer punten kunt u met de duurzamere optie gaan want dan krijgt u "
-                + (loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, vervoersmiddel, elektrisch) - loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch))
-                + " punten meer.");
-    }
-
-    public void alternatiefZakelijkVerkeer(String vervoersmiddel, double km, boolean elektrisch, Object arg) { //Zet tekst neer om gebruiker op de hoogte te stellen van een betere optie die meer punten oplevert
-        Text alternatief = (Text) scene.lookup("#AlternatieveText");
-        alternatief.setText("Voor meer punten kunt u met de duurzamere optie gaan want dan krijgt u "
-                + (loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, vervoersmiddel, elektrisch) - loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch))
-                + " punten meer.");
     }
 }
 

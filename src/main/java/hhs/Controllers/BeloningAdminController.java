@@ -1,9 +1,6 @@
 package hhs.Controllers;
 
-import hhs.Schermen.BeloningAdminScherm;
-import hhs.Schermen.LoginScherm;
-import hhs.Schermen.ReisSysteemScherm;
-import hhs.Schermen.ScorebordScherm;
+import hhs.Schermen.*;
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.Rewards;
 import javafx.event.ActionEvent;
@@ -76,6 +73,17 @@ public class BeloningAdminController implements Initializable {
     Button delete6;
     @FXML
     Button scorebordKnop;
+    @FXML
+    Button overzichtKnop;
+
+    @FXML
+    public void onOverzichtKnopClick() throws Exception { // Opent overzicht scherm
+        OverzichtScherm overzichtScherm = new OverzichtScherm();
+        overzichtScherm.setLoggedIn(gebruiker);
+        Stage stage = (Stage) overzichtKnop.getScene().getWindow();
+        stage.close();
+        overzichtScherm.start();
+    }
 
     public void onScorebordKnopClick() throws Exception { // Opent scorebord scherm
         ScorebordScherm scorebordScherm = new ScorebordScherm();

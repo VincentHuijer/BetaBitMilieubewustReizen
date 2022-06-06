@@ -42,7 +42,17 @@ public class ScorebordController implements Initializable {
     private TableColumn<Gebruiker, Double> CO2_Uitstoot = new TableColumn<>("CO2 Uitstoot");
     @FXML
     private TableColumn<Gebruiker, Double> Totaal_KM = new TableColumn<>("Totaal KM");
+    @FXML
+    Button overzichtKnop;
 
+    @FXML
+    public void onOverzichtKnopClick() throws Exception { // Opent overzicht scherm
+        OverzichtScherm overzichtScherm = new OverzichtScherm();
+        overzichtScherm.setLoggedIn(gebruiker);
+        Stage stage = (Stage) overzichtKnop.getScene().getWindow();
+        stage.close();
+        overzichtScherm.start();
+    }
 
     public void onBeloningKnopClick() throws Exception {
         Stage stage = (Stage) beloningKnop.getScene().getWindow();

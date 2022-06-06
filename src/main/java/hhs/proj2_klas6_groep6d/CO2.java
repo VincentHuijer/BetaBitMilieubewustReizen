@@ -15,6 +15,6 @@ public class CO2 {
 
     private double berekenUitstoot(){
         //formule voor t berekenen van de CO2 uitstoot
-        return 0.0;
+        return 1.0;
     }
 }

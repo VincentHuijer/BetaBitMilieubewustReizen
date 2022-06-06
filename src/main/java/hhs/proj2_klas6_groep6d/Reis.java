@@ -7,12 +7,18 @@ public class Reis {
     private double punten;
     private double afstand;
     private String vervoersMiddel;
+    private CO2 cO2;
 
     public Reis(Date date, double punten, double afstand, String vervoersMiddel){
         this.date = date;
         this.punten = punten;
         this.afstand = afstand;
+        this.cO2 = new CO2(afstand);
         this.vervoersMiddel = vervoersMiddel;
+    }
+
+    public CO2 getCO2(){
+        return this.cO2;
     }
 
     public Date getDate() {

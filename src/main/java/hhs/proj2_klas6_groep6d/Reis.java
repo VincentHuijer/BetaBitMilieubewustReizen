@@ -8,13 +8,15 @@ public class Reis {
     private double afstand;
     private String vervoersMiddel;
     private CO2 cO2;
+    protected Gebruiker loggedIn;
 
-    public Reis(Date date, double punten, double afstand, String vervoersMiddel){
+    public Reis(Date date, double punten, double afstand, String vervoersMiddel, Gebruiker loggedIn) {
         this.date = date;
         this.punten = punten;
         this.afstand = afstand;
+        this.cO2 = new CO2(afstand);
         this.vervoersMiddel = vervoersMiddel;
-        this.cO2 = new CO2(afstand, vervoersMiddel);
+        this.loggedIn = loggedIn;
     }
 
     public CO2 getCO2(){

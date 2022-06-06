@@ -1,16 +1,17 @@
 package hhs.Schermen;
 
-import hhs.proj2_klas6_groep6d.CO2;
-import hhs.proj2_klas6_groep6d.Gebruiker;
-import hhs.proj2_klas6_groep6d.Main;
+import hhs.proj2_klas6_groep6d.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -37,9 +38,12 @@ public class ReisSysteemScherm implements Observer {
         viewSwitch.getItems().add("CO2");
         viewSwitch.getItems().add("Punten");
 
+//        DatePicker datePicker = (DatePicker) scene.lookup("#datePicker");
+//        datePicker.setValue(LocalDate.now());
         stage.setTitle("ReisSysteem");
         stage.setScene(scene);
         stage.show();
+
     }
 
     public void setLoggedIn(Gebruiker gebruiker) {
@@ -62,6 +66,7 @@ public class ReisSysteemScherm implements Observer {
         CheckBox woonWerk = (CheckBox) scene.lookup("#woonwerkCheck");
         CheckBox zakelijk = (CheckBox) scene.lookup("#zakelijkCheck");
         Text puntensaldo = (Text) scene.lookup("#puntensaldoText");
+
 
         ChoiceBox choicebox = (ChoiceBox) scene.lookup("#viewSwitch");
 
@@ -95,7 +100,8 @@ public class ReisSysteemScherm implements Observer {
                 fietsPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Fiets").getUitstoot()));
             }
 
-            new WoonWerkReis(km, elektrisch,arg);
+            Double puntenDouble = loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
+            new WoonWerkReis(new Date(),puntenDouble,km,arg.toString(), loggedIn);
 
         } else if (zakelijk.isSelected()) {
             punten = String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch));

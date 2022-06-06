@@ -1,6 +1,7 @@
 package hhs.proj2_klas6_groep6d;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Gebruiker {
     private static int currentId = 0;
@@ -18,6 +19,10 @@ public class Gebruiker {
     private double afstandVanWerkInKm; // Eventueel later nodig voor API met afstand berekenen
     private double totaalKm = 0;
 
+    private double MonthtotaalKm;
+    private double Monthco2Uitstoot;
+    private double Monthpunten;
+
     public Gebruiker(String username, String wachtwoord, String voornaam, String achternaam){
         this.voornaam = voornaam;
         this.achternaam = achternaam;
@@ -25,6 +30,45 @@ public class Gebruiker {
         this.username = username;
         this.wachtwoord = wachtwoord;
         initialiseerGebruiker();
+    }
+
+    public double getMonthtotaalKm() {
+        int month = new Date().getMonth();
+
+        double count = 0;
+        for(Reis trip: alleReizen){
+            if(trip.getDate().getMonth() == month){
+                count += trip.getAfstand();
+            }
+        }
+
+        return count;
+    }
+
+    public double getMonthco2Uitstoot() {
+        int month = new Date().getMonth();
+
+        double count = 0;
+        for(Reis trip: alleReizen){
+            if(trip.getDate().getMonth() == month){
+                count += trip.getCO2().getUitstoot();
+            }
+        }
+
+        return count;
+    }
+
+    public double getMonthpunten() {
+        int month = new Date().getMonth();
+
+        double count = 0;
+        for(Reis trip: alleReizen){
+            if(trip.getDate().getMonth() == month){
+                count += trip.getPunten();
+            }
+        }
+
+        return count;
     }
 
     public void initialiseerGebruiker(){

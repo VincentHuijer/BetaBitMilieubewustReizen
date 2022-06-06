@@ -13,6 +13,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.util.Date;
+
 public class ScorebordScherm {
     private static Gebruiker loggedIn;
     private static Scene scene;
@@ -29,6 +31,11 @@ public class ScorebordScherm {
         welkomText.setText("Welkom " + loggedIn.getUsername());
         Text punten = (Text) scene.lookup("#puntensaldoText");
         punten.setText(String.format("%.0f PUNTEN", loggedIn.getPunten().getAantalPunten()));
+
+        String[] maanden = {"Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"};
+        Text scorebordTitel = (Text) scene.lookup("#scorebordTitel");
+        scorebordTitel.setText("OVERZICHT - " + maanden[new Date().getMonth()].toUpperCase());
+
         stage.setTitle("Scorebord");
         stage.setScene(scene);
         stage.show();

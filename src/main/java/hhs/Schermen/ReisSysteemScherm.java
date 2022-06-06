@@ -38,8 +38,9 @@ public class ReisSysteemScherm implements Observer {
         viewSwitch.getItems().add("CO2");
         viewSwitch.getItems().add("Punten");
 
-//        DatePicker datePicker = (DatePicker) scene.lookup("#datePicker");
-//        datePicker.setValue(LocalDate.now());
+        DatePicker datePicker = (DatePicker) scene.lookup("#datePicker");
+        datePicker.setValue(LocalDate.now());
+
         stage.setTitle("ReisSysteem");
         stage.setScene(scene);
         stage.show();

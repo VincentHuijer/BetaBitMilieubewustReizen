@@ -105,9 +105,9 @@ public class ScorebordController implements Initializable {
     public void update() {
         fillList();
         Gebruikersnaam.setCellValueFactory(new PropertyValueFactory<>("username"));
-        Punten.setCellValueFactory(new PropertyValueFactory<>("punten"));
-        CO2_Uitstoot.setCellValueFactory(new PropertyValueFactory<>("co2Uitstoot"));
-        Totaal_KM.setCellValueFactory(new PropertyValueFactory<>("totaalKm"));
+        Punten.setCellValueFactory(new PropertyValueFactory<>("Monthpunten"));
+        CO2_Uitstoot.setCellValueFactory(new PropertyValueFactory<>("Monthco2Uitstoot"));
+        Totaal_KM.setCellValueFactory(new PropertyValueFactory<>("MonthtotaalKm"));
         tableView.getItems().setAll(alleGebruikersScorebord);
     }
 }

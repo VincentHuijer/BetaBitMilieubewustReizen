@@ -79,7 +79,7 @@
         <Pane layoutX="99.0" layoutY="57.0" prefHeight="16.0" prefWidth="602.0" />
         <Pane layoutX="99.0" layoutY="51.0" prefHeight="473.0" prefWidth="602.0">
             <children>
-                <Text layoutX="44.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCOREBORD">
+                <Text fx:id="scorebordTitel" layoutX="44.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCOREBORD">
                     <font>
                         <Font name="System Bold" size="24.0" />
                     </font>

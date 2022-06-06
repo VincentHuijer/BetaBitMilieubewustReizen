@@ -8,10 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -56,6 +53,9 @@ public class ReisSysteemController extends Observable implements Initializable{
     Button overzichtKnop;
 
     @FXML
+    DatePicker datePicker;
+
+    @FXML
     public void onOverzichtKnopClick() throws Exception { // Opent overzicht scherm
         OverzichtScherm overzichtScherm = new OverzichtScherm();
         overzichtScherm.setLoggedIn(gebruiker);
@@ -91,10 +91,10 @@ public class ReisSysteemController extends Observable implements Initializable{
         }
         if(woonwerkCheck.isSelected()){
             punten = gebruiker.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, vervoersMiddel, elektrisch);
-            reis = new Reis(new Date(dtf.format(now)), punten, km, vervoersMiddel, gebruiker);
+            reis = new Reis(new Date(dtf.format(datePicker.getValue())), punten, km, vervoersMiddel, gebruiker);
         }else if(zakelijkCheck.isSelected()){
             punten = gebruiker.getPunten().berekenAantalPuntenZakelijkVerkeer(km, vervoersMiddel, elektrisch);
-            reis = new Reis(new Date(dtf.format(now)), punten, km, vervoersMiddel, gebruiker);
+            reis = new Reis(new Date(dtf.format(datePicker.getValue())), punten, km, vervoersMiddel, gebruiker);
         }
         gebruiker.getAlleReizen().add(reis);
         gebruiker.berekenTotaalKM();

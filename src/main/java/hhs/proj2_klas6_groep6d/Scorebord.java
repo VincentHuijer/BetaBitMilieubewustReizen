@@ -6,29 +6,29 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Scorebord {//Deze code is niet van toepassing omdat we in javafx een andere manier hebben gevonden om een scorebord te laten zien.
-    private ArrayList<Gebruiker> scorebord = new ArrayList<>();
+    private ArrayList<Persoon> scorebord = new ArrayList<>();
     public Scorebord(){
         initialiseerScoreBord();
     }
 
     public void initialiseerScoreBord(){
         Bedrijf bedrijf = new Bedrijf();
-        for(Gebruiker gebruiker : bedrijf.getGebruikers()){
+        for(Persoon gebruiker : bedrijf.getGebruikers()){
             add(gebruiker);
         }
     }
-    public void add(Gebruiker gebruiker){
+    public void add(Persoon gebruiker){
         scorebord.add(gebruiker);
     }
 
-    public ArrayList<Gebruiker> orderByPoints(){
-        Comparator<Gebruiker> comparator = Comparator.comparingDouble(Gebruiker::getPuntenSaldo);
+    public ArrayList<Persoon> orderByPoints(){
+        Comparator<Persoon> comparator = Comparator.comparingDouble(Persoon::getPuntenSaldo);
         scorebord.sort(comparator);
         return scorebord;
     }
 
-    public ArrayList<Gebruiker> orderByCo2Uitstoot(){
-        Comparator<Gebruiker> comparator = Comparator.comparingDouble(Gebruiker :: getCo2Uitstoot);
+    public ArrayList<Persoon> orderByCo2Uitstoot(){
+        Comparator<Persoon> comparator = Comparator.comparingDouble(Persoon :: getCo2Uitstoot);
         scorebord.sort(comparator);
         return scorebord;
     }

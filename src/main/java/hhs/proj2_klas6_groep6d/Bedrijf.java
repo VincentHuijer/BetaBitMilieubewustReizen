@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Bedrijf {
     private String naam;
-    private static ArrayList<Gebruiker> gebruikers = new ArrayList<>();
+    private static ArrayList<Persoon> gebruikers = new ArrayList<>();
 
     public Bedrijf(){
         if(gebruikers.size() == 0) {
@@ -17,15 +17,15 @@ public class Bedrijf {
         return naam;
     }
 
-    public ArrayList<Gebruiker> getGebruikers() {
+    public ArrayList<Persoon> getGebruikers() {
         return gebruikers;
     }
 
-    public void addGebruiker(Gebruiker gebruiker){
+    public void addGebruiker(Persoon gebruiker){
         gebruikers.add(gebruiker);
     }
 
-    public void removeGebruiker(Gebruiker gebruiker){
+    public void removeGebruiker(Persoon gebruiker){
         for(int i=0; i< gebruikers.size(); i++){
             if (gebruiker.getId() == gebruikers.get(i).getId()){
                 gebruikers.remove(i);

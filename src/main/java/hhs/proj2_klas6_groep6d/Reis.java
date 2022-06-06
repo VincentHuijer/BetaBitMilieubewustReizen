@@ -8,9 +8,9 @@ public class Reis {
     private double afstand;
     private String vervoersMiddel;
     private CO2 cO2;
-    protected Gebruiker loggedIn;
+    protected Persoon loggedIn;
 
-    public Reis(Date date, double punten, double afstand, String vervoersMiddel, Gebruiker loggedIn) {
+    public Reis(Date date, double punten, double afstand, String vervoersMiddel, Persoon loggedIn) {
         this.date = date;
         this.punten = punten;
         this.afstand = afstand;

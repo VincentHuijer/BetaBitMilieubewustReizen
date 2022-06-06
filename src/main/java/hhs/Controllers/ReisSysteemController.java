@@ -1,7 +1,9 @@
 package hhs.Controllers;
 
 import hhs.Schermen.*;
+import hhs.proj2_klas6_groep6d.Persoon;
 import hhs.proj2_klas6_groep6d.Gebruiker;
+import hhs.proj2_klas6_groep6d.Persoon;
 import hhs.proj2_klas6_groep6d.Punten;
 import hhs.proj2_klas6_groep6d.Reis;
 import javafx.event.ActionEvent;
@@ -19,7 +21,7 @@ import java.util.*;
 
 public class ReisSysteemController extends Observable implements Initializable{
     ReisSysteemScherm reisSysteemScherm = new ReisSysteemScherm();
-    Gebruiker gebruiker = reisSysteemScherm.getLoggedIn();
+    Persoon gebruiker = reisSysteemScherm.getLoggedIn();
     private String vervoersMiddel = "Auto";
     @FXML
     Button logoutKnop;
@@ -76,7 +78,7 @@ public class ReisSysteemController extends Observable implements Initializable{
         Reis reis = null;
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         LocalDateTime now = LocalDateTime.now();
-        Gebruiker gebruiker = reisSysteemScherm.getLoggedIn();
+        Persoon gebruiker = reisSysteemScherm.getLoggedIn();
         Punten puntenGebruiker = gebruiker.getPunten();
         double km;
         double punten = 0;

@@ -16,7 +16,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 public class ReisSysteemScherm implements Observer {
-    protected static Gebruiker loggedIn;
+    protected static Persoon loggedIn;
     protected static Scene scene;
     protected static Stage stage;
 
@@ -47,11 +47,11 @@ public class ReisSysteemScherm implements Observer {
 
     }
 
-    public void setLoggedIn(Gebruiker gebruiker) {
+    public void setLoggedIn(Persoon gebruiker) {
         loggedIn = gebruiker;
     }
 
-    public Gebruiker getLoggedIn() {
+    public Persoon getLoggedIn() {
         return loggedIn;
     }
 

@@ -2,6 +2,7 @@ package hhs.Controllers;
 
 import hhs.Schermen.*;
 import hhs.proj2_klas6_groep6d.Gebruiker;
+import hhs.proj2_klas6_groep6d.Persoon;
 import hhs.proj2_klas6_groep6d.Rewards;
 import hhs.proj2_klas6_groep6d.RewardsList;
 import javafx.event.ActionEvent;
@@ -20,7 +21,7 @@ import java.util.ResourceBundle;
 public class BeloningController extends Observable implements Initializable {
     BeloningScherm beloningScherm = new BeloningScherm();
     RewardsList rewardsList = beloningScherm.getRewardsList();
-    Gebruiker gebruiker = beloningScherm.getLoggedIn();
+    Persoon gebruiker = beloningScherm.getLoggedIn();
     ArrayList<Rewards> alleRewards = beloningScherm.getRewardsList().getRewardsLijst();
     @FXML
     Button reisschermKnop;
@@ -136,7 +137,7 @@ public class BeloningController extends Observable implements Initializable {
     @FXML
     public void onReisSchermKnop() throws Exception { // Opent reis scherm.
         Stage stage = (Stage) reisschermKnop.getScene().getWindow();
-        Gebruiker gebruiker = beloningScherm.getLoggedIn();
+        Persoon gebruiker = beloningScherm.getLoggedIn();
         stage.close();
         ReisSysteemScherm reisSysteemScherm = new ReisSysteemScherm();
         reisSysteemScherm.setLoggedIn(gebruiker);

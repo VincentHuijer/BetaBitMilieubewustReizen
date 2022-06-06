@@ -3,7 +3,7 @@ package hhs.proj2_klas6_groep6d;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Gebruiker {
+public class Gebruiker extends Persoon {
     private static int currentId = 0;
     private ArrayList<Reis> alleReizen = new ArrayList<>();
     private String voornaam;
@@ -24,6 +24,7 @@ public class Gebruiker {
     private double Monthpunten;
 
     public Gebruiker(String username, String wachtwoord, String voornaam, String achternaam){
+        super(username, wachtwoord, voornaam, achternaam);
         this.voornaam = voornaam;
         this.achternaam = achternaam;
         //this.adres = adres;
@@ -82,14 +83,17 @@ public class Gebruiker {
         return adres;
     }
 
+    @Override
     public String getVoornaam() {
         return voornaam;
     }
 
+    @Override
     public String getAchternaam() {
         return achternaam;
     }
 
+    @Override
     public int getId() {
         return id;
     }
@@ -98,6 +102,7 @@ public class Gebruiker {
         return afstandVanWerkInKm;
     }
 
+    @Override
     public double getCo2Uitstoot() {
         double count = 0;
         for(Reis trip: alleReizen){
@@ -107,6 +112,7 @@ public class Gebruiker {
         return count;
     }
 
+    @Override
     public double getPuntenSaldo() {
         return puntenSaldo;
     }
@@ -115,25 +121,31 @@ public class Gebruiker {
         return totaalAantalVerdiendePunten;
     }
 
+    @Override
     public String getUsername() {
         return username;
     }
 
+    @Override
     public String getWachtwoord() {
         return wachtwoord;
     }
 
+    @Override
     public Punten getPunten() {
         return punten;
     }
 
+    @Override
     public boolean isAdmin(){
         return false;
     }
 
+    @Override
     public ArrayList<Reis> getAlleReizen() {
         return alleReizen;
     }
+    @Override
     public void berekenTotaalKM(){
         double sum = 0;
         for(Reis reis : alleReizen){

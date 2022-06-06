@@ -4,6 +4,7 @@ import hhs.Controllers.ScorebordController;
 import hhs.proj2_klas6_groep6d.Bedrijf;
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.Main;
+import hhs.proj2_klas6_groep6d.Persoon;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +17,7 @@ import javafx.stage.Stage;
 import java.util.Date;
 
 public class ScorebordScherm {
-    private static Gebruiker loggedIn;
+    private static Persoon loggedIn;
     private static Scene scene;
     private static Stage stage;
 
@@ -41,11 +42,11 @@ public class ScorebordScherm {
         stage.show();
     }
 
-    public static void setLoggedIn(Gebruiker loggedIn) {
+    public static void setLoggedIn(Persoon loggedIn) {
         ScorebordScherm.loggedIn = loggedIn;
     }
 
-    public static Gebruiker getLoggedIn() {
+    public static Persoon getLoggedIn() {
         return loggedIn;
     }
 }

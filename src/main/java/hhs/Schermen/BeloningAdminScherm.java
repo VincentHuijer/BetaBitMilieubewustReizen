@@ -2,6 +2,7 @@ package hhs.Schermen;
 
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.Main;
+import hhs.proj2_klas6_groep6d.Persoon;
 import hhs.proj2_klas6_groep6d.RewardsList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,7 +12,7 @@ import javafx.stage.Stage;
 public class BeloningAdminScherm {
 
     private static RewardsList rewardsList = BeloningScherm.getRewardsList();
-    private static Gebruiker loggedIn;
+    private static Persoon loggedIn;
     private static Scene scene;
     private static Stage stage;
     public void start() throws Exception {
@@ -28,11 +29,11 @@ public class BeloningAdminScherm {
         stage.show();
     }
 
-    public static void setLoggedIn(Gebruiker loggedIn) {
+    public static void setLoggedIn(Persoon loggedIn) {
         BeloningAdminScherm.loggedIn = loggedIn;
     }
 
-    public static Gebruiker getLoggedIn() {
+    public static Persoon getLoggedIn() {
         return loggedIn;
     }
 

@@ -3,6 +3,7 @@ package hhs.Controllers;
 import hhs.Schermen.*;
 import hhs.proj2_klas6_groep6d.Bedrijf;
 import hhs.proj2_klas6_groep6d.Gebruiker;
+import hhs.proj2_klas6_groep6d.Persoon;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,8 +24,8 @@ import java.util.ResourceBundle;
 
 public class ScorebordController implements Initializable {
     ScorebordScherm scorebordScherm = new ScorebordScherm();
-    Gebruiker gebruiker = scorebordScherm.getLoggedIn();
-    ObservableList<Gebruiker> alleGebruikersScorebord = FXCollections.observableArrayList();
+    Persoon gebruiker = scorebordScherm.getLoggedIn();
+    ObservableList<Persoon> alleGebruikersScorebord = FXCollections.observableArrayList();
 
     @FXML
     Button logoutKnop;
@@ -33,7 +34,7 @@ public class ScorebordController implements Initializable {
     @FXML
     Button reisSchermKnop;
     @FXML
-    private TableView<Gebruiker> tableView = new TableView<>();
+    private TableView<Persoon> tableView = new TableView<>();
     @FXML
     private TableColumn<Gebruiker, String> Gebruikersnaam = new TableColumn<>("Gebruikersnaam");
     @FXML

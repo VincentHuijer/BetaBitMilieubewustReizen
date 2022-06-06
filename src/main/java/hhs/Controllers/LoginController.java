@@ -4,6 +4,7 @@ import hhs.Schermen.RegisterScherm;
 import hhs.Schermen.ReisSysteemScherm;
 import hhs.proj2_klas6_groep6d.Bedrijf;
 import hhs.proj2_klas6_groep6d.Gebruiker;
+import hhs.proj2_klas6_groep6d.Persoon;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -30,7 +31,7 @@ public class LoginController {
             errorText.setText("Vul alle velden in!");
         }
         Bedrijf bedrijf = new Bedrijf();
-        for(Gebruiker gebruiker : bedrijf.getGebruikers()){
+        for(Persoon gebruiker : bedrijf.getGebruikers()){
             if(gebruiker.getUsername().equals(gebruikersnaamField.getText()) && gebruiker.getWachtwoord().equals(wachtwoordField.getText())){
                 errorText.setText("");
                 Stage stage = (Stage) loginKnop.getScene().getWindow();

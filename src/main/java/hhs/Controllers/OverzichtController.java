@@ -3,6 +3,7 @@ package hhs.Controllers;
 import hhs.Schermen.*;
 import hhs.proj2_klas6_groep6d.Bedrijf;
 import hhs.proj2_klas6_groep6d.Gebruiker;
+import hhs.proj2_klas6_groep6d.Persoon;
 import hhs.proj2_klas6_groep6d.Reis;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -20,8 +21,8 @@ import java.util.ResourceBundle;
 
 public class OverzichtController implements Initializable {
     OverzichtScherm overzichtScherm = new OverzichtScherm();
-    Gebruiker gebruiker = overzichtScherm.getLoggedIn();
-    ObservableList<Gebruiker> alleGebruikersScorebord = FXCollections.observableArrayList();
+    Persoon gebruiker = overzichtScherm.getLoggedIn();
+    ObservableList<Persoon> alleGebruikersScorebord = FXCollections.observableArrayList();
 
     @FXML
     Button logoutKnop;
@@ -76,19 +77,19 @@ public class OverzichtController implements Initializable {
         Stats currentMonthStats = getMonthStats(currentMonth, alleGebruikersScorebord);
         Stats lastMonthStats = getMonthStats(lastMonth, alleGebruikersScorebord);
 
-        currentCO2.setText(currentMonthStats.uitstoot + " g");
-        currentPunten.setText(currentMonthStats.punten + "");
-        currentKM.setText(currentMonthStats.km + " KM");
+        currentCO2.setText(String.format("%.2f g",currentMonthStats.uitstoot));
+        currentPunten.setText(String.format("%.0f",currentMonthStats.punten));
+        currentKM.setText(String.format("%.1f KM",currentMonthStats.km));
 
-        oldCO2.setText(lastMonthStats.uitstoot + " g");
-        oldPunten.setText(lastMonthStats.punten + "");
-        oldKM.setText(lastMonthStats.km + " KM");
+        oldCO2.setText(String.format("%.2f g",lastMonthStats.uitstoot));
+        oldPunten.setText(String.format("%.0f",lastMonthStats.punten));
+        oldKM.setText(String.format("%.1f KM",lastMonthStats.km));
     }
 
-    public Stats getMonthStats(int month, ObservableList<Gebruiker> alleGebruikersScorebord){
+    public Stats getMonthStats(int month, ObservableList<Persoon> alleGebruikersScorebord){
         Stats stats = new Stats();
 
-        for(Gebruiker user: alleGebruikersScorebord){
+        for(Persoon user: alleGebruikersScorebord){
             for(Reis trip: user.getAlleReizen()){
                 if((trip.getDate().getMonth() + 1) == month){
                     stats.km += trip.getAfstand();
@@ -109,7 +110,7 @@ public class OverzichtController implements Initializable {
     @FXML
     public void onReisSchermKnopClick() throws Exception { // Opent reis scherm.
         Stage stage = (Stage) reisSchermKnop.getScene().getWindow();
-        Gebruiker gebruiker = overzichtScherm.getLoggedIn();
+        Persoon gebruiker = overzichtScherm.getLoggedIn();
         stage.close();
         ReisSysteemScherm reisSysteemScherm = new ReisSysteemScherm();
         reisSysteemScherm.setLoggedIn(gebruiker);

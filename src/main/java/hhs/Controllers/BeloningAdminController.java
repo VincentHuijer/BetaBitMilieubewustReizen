@@ -2,6 +2,7 @@ package hhs.Controllers;
 
 import hhs.Schermen.*;
 import hhs.proj2_klas6_groep6d.Gebruiker;
+import hhs.proj2_klas6_groep6d.Persoon;
 import hhs.proj2_klas6_groep6d.Rewards;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,7 +19,7 @@ import java.util.ResourceBundle;
 public class BeloningAdminController implements Initializable {
     BeloningAdminScherm beloningAdminScherm = new BeloningAdminScherm();
     ArrayList<Rewards> alleRewards = beloningAdminScherm.getRewardsList().getRewardsLijst();
-    Gebruiker gebruiker = beloningAdminScherm.getLoggedIn();
+    Persoon gebruiker = beloningAdminScherm.getLoggedIn();
     @FXML
     TextField beloning1TF;
     @FXML

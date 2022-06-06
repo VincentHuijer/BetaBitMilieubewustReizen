@@ -2,6 +2,7 @@ package hhs.Schermen;
 
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.Main;
+import hhs.proj2_klas6_groep6d.Persoon;
 import hhs.proj2_klas6_groep6d.RewardsList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,7 +13,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 public class OverzichtScherm implements Observer {
-    private static Gebruiker loggedIn;
+    private static Persoon loggedIn;
     private static Scene scene;
     private static Stage stage;
     public void start() throws Exception {
@@ -30,11 +31,11 @@ public class OverzichtScherm implements Observer {
         stage.setScene(scene);
         stage.show();
     }
-    public void setLoggedIn(Gebruiker gebruiker){
+    public void setLoggedIn(Persoon gebruiker){
         loggedIn = gebruiker;
     }
 
-    public static Gebruiker getLoggedIn() {
+    public static Persoon getLoggedIn() {
         return loggedIn;
     }
 

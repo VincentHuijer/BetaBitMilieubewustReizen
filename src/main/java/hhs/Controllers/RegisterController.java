@@ -45,7 +45,7 @@ public class RegisterController{
         }
         else{
             Bedrijf bedrijf = new Bedrijf();
-            for(Gebruiker gebruiker : bedrijf.getGebruikers()){
+            for(Persoon gebruiker : bedrijf.getGebruikers()){
                 if(gebruiker.getUsername().equals(gebruikersnaamField.getText())){
                     errorText.setText("Gebruikersnaam bestaat al!");
                     return;

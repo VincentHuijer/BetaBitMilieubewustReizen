@@ -55,7 +55,12 @@ public class Gebruiker {
     }
 
     public double getCo2Uitstoot() {
-        return co2Uitstoot;
+        double count = 0;
+        for(Reis trip: alleReizen){
+            count += trip.getCO2().getUitstoot();
+        }
+
+        return count;
     }
 
     public double getPuntenSaldo() {

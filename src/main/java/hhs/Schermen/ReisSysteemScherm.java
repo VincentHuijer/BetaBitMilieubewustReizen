@@ -102,7 +102,7 @@ public class ReisSysteemScherm implements Observer {
             }
 
             Double puntenDouble = loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
-            new WoonWerkReis(new Date(),puntenDouble,km,arg.toString(), loggedIn);
+            new WoonWerkReis(new Date(),puntenDouble,km,arg.toString(), loggedIn).kiesAlternatiefVervoer(alternatief, km, elektrisch, arg);;
 
         } else if (zakelijk.isSelected()) {
             punten = String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch));

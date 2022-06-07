@@ -19,18 +19,13 @@ public class CO2 {
         //formule voor t berekenen van de CO2 uitstoot
 
         if(vervoersmiddel.equalsIgnoreCase("auto")){
-            return 1;
+            return this.km * 224;
         }
         if(vervoersmiddel.equalsIgnoreCase("RegionaalOV")){
-            return 2;
-        }
-        if(vervoersmiddel.equalsIgnoreCase("Tram")){
-            return 3;
-        }
-        if(vervoersmiddel.equalsIgnoreCase("Fiets")){
-            return 4;
+            return this.km * 116;
+            //Bus
         }
 
-        return 1.0;
+        return 0;
     }
 }

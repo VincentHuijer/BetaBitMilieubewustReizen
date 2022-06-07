@@ -119,13 +119,8 @@ public class ReisSysteemScherm implements Observer {
                 tramPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Tram").getUitstoot()));
                 fietsPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Fiets").getUitstoot()));
             }
-            if (arg.toString().equalsIgnoreCase("auto")) {
-                new ZakelijkeReis().alternatiefZakelijkVerkeer("regionaalOV", km, elektrisch, arg);
-            } else if (arg.toString().equalsIgnoreCase("RegionaalOV")) {
-                new ZakelijkeReis().alternatiefZakelijkVerkeer("tram", km, elektrisch, arg);
-            } else if (arg.toString().equalsIgnoreCase("Tram")) {
-                alternatief.setText("");
-            }
+            Double puntenDouble = loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
+            new ZakelijkeReis(new Date(), puntenDouble, km, arg.toString() ,loggedIn).kiesAlternatiefVervoer(alternatief, km, elektrisch, arg);
         }
     }
 }

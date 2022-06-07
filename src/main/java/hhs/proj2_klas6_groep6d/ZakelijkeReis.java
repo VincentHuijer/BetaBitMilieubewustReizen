@@ -6,7 +6,7 @@ import javafx.scene.text.Text;
 import java.util.Date;
 
 public class ZakelijkeReis extends Reis {
-    public ZakelijkeReis(Date date, double punten, double afstand, String vervoersMiddel, Gebruiker loggedIn){
+    public ZakelijkeReis(Date date, double punten, double afstand, String vervoersMiddel, Persoon loggedIn){
         super(date, punten, afstand, vervoersMiddel, loggedIn);
     }
 

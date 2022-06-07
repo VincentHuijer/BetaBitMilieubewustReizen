@@ -42,9 +42,7 @@ public abstract class Persoon {
         return monthtotaalKm;
     }
 
-    public boolean isAdmin(){
-        return false;
-    }
+    public abstract boolean isAdmin();
 
     public void berekenTotaalKM(){
         double sum = 0;

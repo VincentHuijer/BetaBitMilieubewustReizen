@@ -17,10 +17,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Observable;
-import java.util.Observer;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class ScorebordController implements Initializable {
     ScorebordScherm scorebordScherm = new ScorebordScherm();
@@ -40,7 +37,9 @@ public class ScorebordController implements Initializable {
     @FXML
     private TableColumn<Gebruiker, Double> Punten = new TableColumn<>("Punten");
     @FXML
-    private TableColumn<Gebruiker, Double> CO2_Uitstoot = new TableColumn<>("CO2 Uitstoot");
+    private TableColumn<Gebruiker, Double> Old = new TableColumn<>("CO2 Old");
+    @FXML
+    private TableColumn<Gebruiker, Double> Current = new TableColumn<>("CO2 Current");
     @FXML
     private TableColumn<Gebruiker, Double> Totaal_KM = new TableColumn<>("Totaal KM");
     @FXML
@@ -101,13 +100,19 @@ public class ScorebordController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         update();
+        String[] maanden = {"Jan", "Feb", "Maa", "Apr", "Mei", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"};
+        int month = new Date().getMonth();
+
+        Old.setText("CO2 " + maanden[month - 1]);
+        Current.setText("CO2 " + maanden[month]);
     }
 
     public void update() {
         fillList();
         Gebruikersnaam.setCellValueFactory(new PropertyValueFactory<>("username"));
         Punten.setCellValueFactory(new PropertyValueFactory<>("Monthpunten"));
-        CO2_Uitstoot.setCellValueFactory(new PropertyValueFactory<>("Monthco2Uitstoot"));
+        Old.setCellValueFactory(new PropertyValueFactory<>("OldMonthco2Uitstoot"));
+        Current.setCellValueFactory(new PropertyValueFactory<>("Monthco2Uitstoot"));
         Totaal_KM.setCellValueFactory(new PropertyValueFactory<>("MonthtotaalKm"));
         tableView.getItems().setAll(alleGebruikersScorebord);
     }

@@ -20,6 +20,7 @@ public class Gebruiker extends Persoon {
     private double totaalKm = 0;
 
     private double MonthtotaalKm;
+    private double OldMonthco2Uitstoot;
     private double Monthco2Uitstoot;
     private double Monthpunten;
 
@@ -48,6 +49,20 @@ public class Gebruiker extends Persoon {
 
     public double getMonthco2Uitstoot() {
         int month = new Date().getMonth();
+
+        double count = 0;
+        for(Reis trip: alleReizen){
+            if(trip.getDate().getMonth() == month){
+                count += trip.getCO2().getUitstoot();
+            }
+        }
+
+        return count;
+    }
+
+
+    public double getOldMonthco2Uitstoot() {
+        int month = new Date().getMonth()-1;
 
         double count = 0;
         for(Reis trip: alleReizen){

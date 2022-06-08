@@ -44,7 +44,6 @@ public class ReisSysteemScherm implements Observer {
         stage.setTitle("ReisSysteem");
         stage.setScene(scene);
         stage.show();
-
     }
 
     public void setLoggedIn(Persoon gebruiker) {
@@ -83,45 +82,15 @@ public class ReisSysteemScherm implements Observer {
         if (elektrischeCheck.isSelected()) {
             elektrisch = true;
         }
-        String punten;
         if (woonWerk.isSelected()) {
-            //Hier nog code maken om te bepalen hoe ver van werk de medewerker woont die verst weg woont.
-            punten = String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch));
-            text.setText(punten);
-
-            if (choicebox.getValue().toString().equalsIgnoreCase("punten")) {
-                autoPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "Auto", elektrisch)));
-                regionaalPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "RegionaalOV", elektrisch)));
-                tramPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "Tram", elektrisch)));
-                fietsPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, "Fiets", elektrisch)));
-            } else {
-                autoPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Auto").getUitstoot()));
-                regionaalPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "RegionaalOV").getUitstoot()));
-                tramPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Tram").getUitstoot()));
-                fietsPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Fiets").getUitstoot()));
-            }
-
+            //TODO Hier nog code maken om te bepalen hoe ver van werk de medewerker woont die verst weg woont.
             Double puntenDouble = loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
-            new WoonWerkReis(new Date(),puntenDouble,km,arg.toString(), loggedIn).kiesAlternatiefVervoer(alternatief, km, elektrisch, arg);;
-
+            new WoonWerkReisText().setText(choicebox, autoPuntenText, regionaalPuntenText, tramPuntenText, fietsPuntenText, text, km, elektrisch, arg, loggedIn);
+            new WoonWerkReis(new Date(),puntenDouble,km,arg.toString(), loggedIn).kiesAlternatiefVervoer(alternatief, km, elektrisch, arg);
         } else if (zakelijk.isSelected()) {
-            punten = String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, arg.toString(), elektrisch));
-            text.setText(punten);
-
-            if (choicebox.getValue().toString().equalsIgnoreCase("punten")) {
-                autoPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Auto", elektrisch)));
-                regionaalPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "RegionaalOV", elektrisch)));
-                tramPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Tram", elektrisch)));
-                fietsPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Fiets", elektrisch)));
-            } else {
-                autoPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Auto").getUitstoot()));
-                regionaalPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "RegionaalOV").getUitstoot()));
-                tramPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Tram").getUitstoot()));
-                fietsPuntenText.setText(String.format("%.0f gram CO2", new CO2(km, "Fiets").getUitstoot()));
-            }
             Double puntenDouble = loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
+            new ZakelijkeReisText().setText(choicebox,autoPuntenText,regionaalPuntenText,tramPuntenText,fietsPuntenText,text,km,elektrisch,arg,loggedIn);
             new ZakelijkeReis(new Date(), puntenDouble, km, arg.toString() ,loggedIn).kiesAlternatiefVervoer(alternatief, km, elektrisch, arg);
         }
     }
 }
-

@@ -1,8 +1,6 @@
 package hhs.proj2_klas6_groep6d;
 
-import hhs.Schermen.TypeReis;
 import javafx.scene.text.Text;
-
 import java.util.Date;
 
 public class ZakelijkeReis extends Reis {

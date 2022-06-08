@@ -1,14 +1,15 @@
 package hhs.proj2_klas6_groep6d;
-
-
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-
 import java.util.Date;
 
 public class WoonWerkReis extends Reis {
     public WoonWerkReis(Date date, double punten, double afstand, String vervoersMiddel, Persoon loggedIn){
         super(date, punten, afstand, vervoersMiddel, loggedIn);
     }
+
+
 
     public void kiesAlternatiefVervoer(Text alternatief, double km, boolean elektrisch, Object arg) { //
         if (arg.toString().equalsIgnoreCase("auto")) {

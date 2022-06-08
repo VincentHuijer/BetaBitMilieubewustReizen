@@ -31,6 +31,4 @@ class ReisTest {
         Reis reis = new Reis(date,25.4, 132.4,"auto", gebruiker);
         assertEquals("auto", reis.getVervoersMiddel());
     }
-
-
 }

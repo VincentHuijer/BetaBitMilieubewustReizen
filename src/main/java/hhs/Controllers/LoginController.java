@@ -12,6 +12,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class LoginController {
+    private Bedrijf bedrijf = new Bedrijf();
     @FXML
     Button loginKnop;
     @FXML
@@ -30,9 +31,8 @@ public class LoginController {
         if(gebruikersnaamField.getText().equals("") || wachtwoordField.getText().equals("")){
             errorText.setText("Vul alle velden in!");
         }
-        Bedrijf bedrijf = new Bedrijf();
         for(Persoon gebruiker : bedrijf.getGebruikers()){
-            if(gebruiker.getUsername().equals(gebruikersnaamField.getText()) && gebruiker.getWachtwoord().equals(wachtwoordField.getText())){
+            if(auth(gebruiker, wachtwoordField.getText(), gebruikersnaamField.getText())){
                 errorText.setText("");
                 Stage stage = (Stage) loginKnop.getScene().getWindow();
                 stage.close();
@@ -42,6 +42,9 @@ public class LoginController {
             }
         }
         errorText.setText("Verkeerd wachtwoord of gebruikersnaam!");
+    }
+    private boolean auth(Persoon gebruiker, String password, String username){
+        return gebruiker.getUsername().equals(username) && gebruiker.getWachtwoord().equals(password);
     }
 
     @FXML

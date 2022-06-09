@@ -45,7 +45,7 @@ public class LoginController {
         }
         errorText.setText("Account wordt niet herkend!");
     }
-    private boolean auth(Persoon gebruiker, String password, String username, int MedID){
+    public boolean auth(Persoon gebruiker, String password, String username, int MedID){
         return gebruiker.getUsername().equals(username) && gebruiker.getWachtwoord().equals(password) && gebruiker.getId() == MedID;
     }
 

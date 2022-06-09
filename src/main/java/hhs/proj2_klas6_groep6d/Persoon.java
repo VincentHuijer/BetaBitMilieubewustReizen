@@ -16,11 +16,12 @@ public abstract class Persoon {
     protected double puntenSaldo;
 
 
-    public Persoon(String username, String wachtwoord, String voornaam, String achternaam) {
+    public Persoon(String username, String wachtwoord, String voornaam, String achternaam, int id) {
         this.username = username;
         this.wachtwoord = wachtwoord;
         this.voornaam = voornaam;
         this.achternaam = achternaam;
+        this.id = id;
     }
 
 

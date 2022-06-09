@@ -49,10 +49,13 @@ public class RegisterController{
                 if(gebruiker.getUsername().equals(gebruikersnaamField.getText())){
                     errorText.setText("Gebruikersnaam bestaat al!");
                     return;
+                }else if(gebruiker.getId() == Integer.parseInt(MedIDField.getText())){
+                    errorText.setText("MedID is al in gebruik!");
+                    return;
                 }
             }
             errorText.setText("");
-            Gebruiker gebruiker = new Gebruiker(gebruikersnaamField.getText(), wachtwoordField.getText(), voornaamField.getText(), achternaamField.getText());
+            Gebruiker gebruiker = new Gebruiker(gebruikersnaamField.getText(), wachtwoordField.getText(), voornaamField.getText(), achternaamField.getText(), Integer.parseInt(MedIDField.getText()));
             bedrijf.addGebruiker(gebruiker);
             LoginScherm loginScherm = new LoginScherm();
             Stage stage = (Stage) registerKnop.getScene().getWindow();

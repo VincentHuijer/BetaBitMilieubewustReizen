@@ -2,8 +2,8 @@ package hhs.proj2_klas6_groep6d;
 
 public class Admin extends Persoon {
 
-    public Admin(String username, String wachtwoord, String voornaam, String achternaam) {
-        super(username, wachtwoord, voornaam, achternaam);
+    public Admin(String username, String wachtwoord, String voornaam, String achternaam, int id) {
+        super(username, wachtwoord, voornaam, achternaam, id);
     }
 
     @Override

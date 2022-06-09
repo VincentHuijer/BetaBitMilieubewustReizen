@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class GebruikerTest {
     @Test
     public void testGebruikerData(){
-        Gebruiker gebruiker = new Gebruiker("Test_1", "Wachtwoord_1", "Voornaam1", "Achternaam1");
+        Gebruiker gebruiker = new Gebruiker("Test_1", "Wachtwoord_1", "Voornaam1", "Achternaam1", -5);
 
         Assertions.assertEquals(gebruiker.getUsername(), "Test_1");
 

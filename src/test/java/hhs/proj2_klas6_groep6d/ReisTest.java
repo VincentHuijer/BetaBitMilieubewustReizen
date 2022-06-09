@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ReisTest {
     @Test
     void testGetAfstand() {
-        Gebruiker gebruiker = new Gebruiker("testGebruiker", "testWachtwoord", "testVoornaam", "testAchternaam");
+        Gebruiker gebruiker = new Gebruiker("testGebruiker", "testWachtwoord", "testVoornaam", "testAchternaam", -6);
         Date date = new Date();
         Reis reis = new Reis(date,25.4, 132.4,"auto", gebruiker);
         assertEquals(132.4, reis.getAfstand());
@@ -17,7 +17,7 @@ class ReisTest {
 
     @Test
     void testGetPunten() {
-        Gebruiker gebruiker = new Gebruiker("testGebruiker", "testWachtwoord", "testVoornaam", "testAchternaam");
+        Gebruiker gebruiker = new Gebruiker("testGebruiker", "testWachtwoord", "testVoornaam", "testAchternaam", -7);
 
         Date date = new Date();
         Reis reis = new Reis(date,25.4, 132.4,"auto", gebruiker);
@@ -26,7 +26,7 @@ class ReisTest {
 
     @Test
     void testGetVervoersMiddel() {
-        Gebruiker gebruiker = new Gebruiker("testGebruiker", "testWachtwoord", "testVoornaam", "testAchternaam");
+        Gebruiker gebruiker = new Gebruiker("testGebruiker", "testWachtwoord", "testVoornaam", "testAchternaam", -8);
         Date date = new Date();
         Reis reis = new Reis(date,25.4, 132.4,"auto", gebruiker);
         assertEquals("auto", reis.getVervoersMiddel());

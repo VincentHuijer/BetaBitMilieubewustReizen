@@ -17,4 +17,5 @@ public class CO2Test {
         Assertions.assertEquals(auto.getUitstoot(), autoUitstoot);
         Assertions.assertEquals(bus.getUitstoot(), busUitstoot);
     }
+
 }

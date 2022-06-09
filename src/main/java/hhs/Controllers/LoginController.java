@@ -22,6 +22,8 @@ public class LoginController {
     @FXML
     TextField wachtwoordField;
     @FXML
+    TextField MedID;
+    @FXML
     Text errorText;
 
 
@@ -32,7 +34,7 @@ public class LoginController {
             errorText.setText("Vul alle velden in!");
         }
         for(Persoon gebruiker : bedrijf.getGebruikers()){
-            if(auth(gebruiker, wachtwoordField.getText(), gebruikersnaamField.getText())){
+            if(auth(gebruiker, wachtwoordField.getText(), gebruikersnaamField.getText(),Integer.parseInt(MedID.getText()))){
                 errorText.setText("");
                 Stage stage = (Stage) loginKnop.getScene().getWindow();
                 stage.close();
@@ -41,10 +43,10 @@ public class LoginController {
                 reisSysteemScherm.start();
             }
         }
-        errorText.setText("Verkeerd wachtwoord of gebruikersnaam!");
+        errorText.setText("Account wordt niet herkend!");
     }
-    private boolean auth(Persoon gebruiker, String password, String username){
-        return gebruiker.getUsername().equals(username) && gebruiker.getWachtwoord().equals(password);
+    private boolean auth(Persoon gebruiker, String password, String username, int MedID){
+        return gebruiker.getUsername().equals(username) && gebruiker.getWachtwoord().equals(password) && gebruiker.getId() == MedID;
     }
 
     @FXML

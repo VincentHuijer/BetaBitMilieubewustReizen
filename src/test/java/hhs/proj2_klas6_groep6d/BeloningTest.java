@@ -14,7 +14,7 @@ public class BeloningTest {
     @Test
     public void testRewardClaimen(){
         BeloningScherm beloningScherm = new BeloningScherm();
-        Gebruiker gebruiker = new Gebruiker("test", "test", "test", "test");
+        Gebruiker gebruiker = new Gebruiker("test", "test", "test", "test", -4);
         beloningScherm.setLoggedIn(gebruiker);
         BeloningController controller = new BeloningController();
         RewardsList rewards = beloningScherm.getRewardsList();

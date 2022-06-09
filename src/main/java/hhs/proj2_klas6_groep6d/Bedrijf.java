@@ -8,8 +8,8 @@ public class Bedrijf {
 
     public Bedrijf(){
         if(gebruikers.size() == 0) {
-            gebruikers.add(new Gebruiker("1", "1", "1", "1"));
-            gebruikers.add(new Admin("admin", "admin", "admin", "admin"));
+            gebruikers.add(new Gebruiker("1", "1", "1", "1", 1));
+            gebruikers.add(new Admin("admin", "admin", "admin", "admin", 0));
         }
     }
 

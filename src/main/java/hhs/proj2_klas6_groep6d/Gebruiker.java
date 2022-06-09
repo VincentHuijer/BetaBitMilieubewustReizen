@@ -24,10 +24,11 @@ public class Gebruiker extends Persoon {
     private double Monthco2Uitstoot;
     private double Monthpunten;
 
-    public Gebruiker(String username, String wachtwoord, String voornaam, String achternaam){
-        super(username, wachtwoord, voornaam, achternaam);
+    public Gebruiker(String username, String wachtwoord, String voornaam, String achternaam, int id){
+        super(username, wachtwoord, voornaam, achternaam, id);
         this.voornaam = voornaam;
         this.achternaam = achternaam;
+        this.id = id;
         //this.adres = adres;
         this.username = username;
         this.wachtwoord = wachtwoord;
@@ -88,7 +89,6 @@ public class Gebruiker extends Persoon {
     }
 
     public void initialiseerGebruiker(){
-        this.id = generateId();
         //afstandVanWerkInKm eventueel uitrekenen dmv api voor afstand
         this.puntenSaldo = punten.getAantalPunten();
         this.co2Uitstoot = 0; //Hier moet nog een methode voor gemaakt worden.

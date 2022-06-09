@@ -1,11 +1,8 @@
 package hhs.Controllers;
 
 import hhs.Schermen.*;
+import hhs.proj2_klas6_groep6d.*;
 import hhs.proj2_klas6_groep6d.Persoon;
-import hhs.proj2_klas6_groep6d.Gebruiker;
-import hhs.proj2_klas6_groep6d.Persoon;
-import hhs.proj2_klas6_groep6d.Punten;
-import hhs.proj2_klas6_groep6d.Reis;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -59,19 +56,21 @@ public class ReisSysteemController extends Observable implements Initializable{
 
     @FXML
     public void onOverzichtKnopClick() throws Exception { // Opent overzicht scherm
-        OverzichtScherm overzichtScherm = new OverzichtScherm();
-        overzichtScherm.setLoggedIn(gebruiker);
-        Stage stage = (Stage) overzichtKnop.getScene().getWindow();
-        stage.close();
-        overzichtScherm.start();
+        MenuKnoppen.onOverzichtKnopClick(gebruiker, overzichtKnop);
+    }
+
+    @FXML
+    public void onBeloningKnopClick() throws Exception {
+        MenuKnoppen.onBeloningKnopClick(gebruiker, beloningKnop);
+    }
+
+    @FXML
+    public void onLogoutClick() throws Exception {
+        MenuKnoppen.onLogoutKnopClick(logoutKnop);
     }
 
     public void onScorebordKnopClick() throws Exception { // Opent scorebord scherm
-        ScorebordScherm scorebordScherm = new ScorebordScherm();
-        scorebordScherm.setLoggedIn(gebruiker);
-        Stage stage = (Stage) scorebordKnop.getScene().getWindow();
-        stage.close();
-        scorebordScherm.start();
+        MenuKnoppen.onScorebordKnopClick(gebruiker, scorebordKnop);
     }
 
     public void onReisKnopClick(){ // Maakt een reis aan die aan de gebruiker wordt toegevoegd op het moment dat hij/zij een reis toevoegt. Geeft ook de juiste hoeveelheid punten aan gebruiker.
@@ -121,29 +120,6 @@ public class ReisSysteemController extends Observable implements Initializable{
         onTextChanged();
     }
 
-    @FXML
-    public void onBeloningKnopClick() throws Exception { // Opent beloning scherm. Als gebruiker een admin is opent het het admin scherm voor beloningen.
-        Stage stage = (Stage) beloningKnop.getScene().getWindow();
-        stage.close();
-        if(!gebruiker.isAdmin()) {
-            BeloningScherm beloningScherm = new BeloningScherm();
-            beloningScherm.setLoggedIn(gebruiker);
-            beloningScherm.start();
-        }
-        else if(gebruiker.isAdmin()){
-            BeloningAdminScherm beloningAdminScherm = new BeloningAdminScherm();
-            beloningAdminScherm.setLoggedIn(gebruiker);
-            beloningAdminScherm.start();
-        }
-    }
-
-    @FXML
-    public void onLogoutClick() throws Exception { // Logt gebruiker uit.
-        Stage stage = (Stage) logoutKnop.getScene().getWindow();
-        LoginScherm loginScherm = new LoginScherm();
-        loginScherm.start(new Stage());
-        stage.close();
-    }
     @FXML
     public void onTextChanged(){ // Toepassing observer pattern
         String vervoer = vervoersMiddel;

@@ -1,10 +1,7 @@
 package hhs.Controllers;
 
 import hhs.Schermen.*;
-import hhs.proj2_klas6_groep6d.Bedrijf;
-import hhs.proj2_klas6_groep6d.Gebruiker;
-import hhs.proj2_klas6_groep6d.Persoon;
-import hhs.proj2_klas6_groep6d.Reis;
+import hhs.proj2_klas6_groep6d.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -109,45 +106,22 @@ public class OverzichtController implements Initializable {
 
     @FXML
     public void onReisSchermKnopClick() throws Exception { // Opent reis scherm.
-        Stage stage = (Stage) reisSchermKnop.getScene().getWindow();
-        Persoon gebruiker = overzichtScherm.getLoggedIn();
-        stage.close();
-        ReisSysteemScherm reisSysteemScherm = new ReisSysteemScherm();
-        reisSysteemScherm.setLoggedIn(gebruiker);
-        reisSysteemScherm.start();
+        MenuKnoppen.onReisSchermKnopClick(gebruiker, reisSchermKnop);
     }
 
     @FXML
     public void onBeloningKnopClick() throws Exception { // Opent beloning scherm. Als gebruiker een admin is opent het het admin scherm voor beloningen.
-        Stage stage = (Stage) beloningKnop.getScene().getWindow();
-        stage.close();
-        if(!gebruiker.isAdmin()) {
-            BeloningScherm beloningScherm = new BeloningScherm();
-            beloningScherm.setLoggedIn(gebruiker);
-            beloningScherm.start();
-        }
-        else if(gebruiker.isAdmin()){
-            BeloningAdminScherm beloningAdminScherm = new BeloningAdminScherm();
-            beloningAdminScherm.setLoggedIn(gebruiker);
-            beloningAdminScherm.start();
-        }
+        MenuKnoppen.onBeloningKnopClick(gebruiker, beloningKnop);
     }
 
     @FXML
     public void onScorebordKnopClick() throws Exception { // Opent scorebord scherm
-        ScorebordScherm scorebordScherm = new ScorebordScherm();
-        scorebordScherm.setLoggedIn(gebruiker);
-        Stage stage = (Stage) scorebordKnop.getScene().getWindow();
-        stage.close();
-        scorebordScherm.start();
+        MenuKnoppen.onScorebordKnopClick(gebruiker, scorebordKnop);
     }
 
     @FXML
     public void onLogoutClick() throws Exception { // Logt gebruiker uit.
-        Stage stage = (Stage) logoutKnop.getScene().getWindow();
-        LoginScherm loginScherm = new LoginScherm();
-        loginScherm.start(new Stage());
-        stage.close();
+        MenuKnoppen.onLogoutKnopClick(logoutKnop);
     }
 }
 

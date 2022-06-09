@@ -2,6 +2,7 @@ package hhs.Controllers;
 
 import hhs.Schermen.*;
 import hhs.proj2_klas6_groep6d.Gebruiker;
+import hhs.proj2_klas6_groep6d.MenuKnoppen;
 import hhs.proj2_klas6_groep6d.Persoon;
 import hhs.proj2_klas6_groep6d.Rewards;
 import javafx.event.ActionEvent;
@@ -79,34 +80,19 @@ public class BeloningAdminController implements Initializable {
 
     @FXML
     public void onOverzichtKnopClick() throws Exception { // Opent overzicht scherm
-        OverzichtScherm overzichtScherm = new OverzichtScherm();
-        overzichtScherm.setLoggedIn(gebruiker);
-        Stage stage = (Stage) overzichtKnop.getScene().getWindow();
-        stage.close();
-        overzichtScherm.start();
+        MenuKnoppen.onOverzichtKnopClick(gebruiker, overzichtKnop);
     }
 
     public void onScorebordKnopClick() throws Exception { // Opent scorebord scherm
-        ScorebordScherm scorebordScherm = new ScorebordScherm();
-        scorebordScherm.setLoggedIn(gebruiker);
-        Stage stage = (Stage) scorebordKnop.getScene().getWindow();
-        stage.close();
-        scorebordScherm.start();
+        MenuKnoppen.onScorebordKnopClick(gebruiker, scorebordKnop);
     }
 
     public void onReisschermKnop() throws Exception { // Opent reis scherm
-        Stage stage = (Stage) reisschermKnop.getScene().getWindow();
-        stage.close();
-        ReisSysteemScherm reisSysteemScherm = new ReisSysteemScherm();
-        reisSysteemScherm.setLoggedIn(gebruiker);
-        reisSysteemScherm.start();
+        MenuKnoppen.onReisSchermKnopClick(gebruiker, reisschermKnop);
     }
 
     public void onLogoutClick() throws Exception { // Logt gebruiker uit
-        Stage stage = (Stage) logoutKnop.getScene().getWindow();
-        LoginScherm loginScherm = new LoginScherm();
-        loginScherm.start(new Stage());
-        stage.close();
+        MenuKnoppen.onLogoutKnopClick(logoutKnop);
     }
 
     public void onDelete(ActionEvent event){ //Verwijdert reward waarbij op "verwijderen" is geklikt en schuift alle rewards op zodat alles netjes achter elkaar is gevuld.

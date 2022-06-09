@@ -1,15 +1,13 @@
 package hhs.Controllers;
 
 import hhs.Schermen.*;
-import hhs.proj2_klas6_groep6d.Gebruiker;
-import hhs.proj2_klas6_groep6d.Persoon;
-import hhs.proj2_klas6_groep6d.Rewards;
-import hhs.proj2_klas6_groep6d.RewardsList;
+import hhs.proj2_klas6_groep6d.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Menu;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -70,20 +68,12 @@ public class BeloningController extends Observable implements Initializable {
 
     @FXML
     public void onOverzichtKnopClick() throws Exception { // Opent overzicht scherm
-        OverzichtScherm overzichtScherm = new OverzichtScherm();
-        overzichtScherm.setLoggedIn(gebruiker);
-        Stage stage = (Stage) overzichtKnop.getScene().getWindow();
-        stage.close();
-        overzichtScherm.start();
+        MenuKnoppen.onOverzichtKnopClick(gebruiker, overzichtKnop);
     }
 
     @FXML
     public void onScorebordKnopClick() throws Exception { // Opent scorebord scherm
-        ScorebordScherm scorebordScherm = new ScorebordScherm();
-        scorebordScherm.setLoggedIn(gebruiker);
-        Stage stage = (Stage) scorebordKnop.getScene().getWindow();
-        stage.close();
-        scorebordScherm.start();
+        MenuKnoppen.onScorebordKnopClick(gebruiker, scorebordKnop);
     }
 
     @FXML
@@ -93,6 +83,7 @@ public class BeloningController extends Observable implements Initializable {
         int rewardNummer = Integer.parseInt(data);
         claimReward(rewardNummer); //Nummer is gelijk aan knopnummer. Links boven is 1, rechts boven 2 etc.
     }
+
     @FXML
     private void claimReward(int nummer){ //Controleert of gebruiker genoeg punten heeft. Zo ja, dan koopt de gebruiker deze reward.
         double prijsInPunten = rewardsList.getRewardsLijst().get(nummer-1).getPunten();
@@ -136,20 +127,12 @@ public class BeloningController extends Observable implements Initializable {
 
     @FXML
     public void onReisSchermKnop() throws Exception { // Opent reis scherm.
-        Stage stage = (Stage) reisschermKnop.getScene().getWindow();
-        Persoon gebruiker = beloningScherm.getLoggedIn();
-        stage.close();
-        ReisSysteemScherm reisSysteemScherm = new ReisSysteemScherm();
-        reisSysteemScherm.setLoggedIn(gebruiker);
-        reisSysteemScherm.start();
+        MenuKnoppen.onReisSchermKnopClick(gebruiker, reisschermKnop);
     }
 
     @FXML
     public void onLogoutClick() throws Exception { // Logt gebruiker uit.
-        Stage stage = (Stage) logoutKnop.getScene().getWindow();
-        LoginScherm loginScherm = new LoginScherm();
-        loginScherm.start(new Stage());
-        stage.close();
+        MenuKnoppen.onLogoutKnopClick(logoutKnop);
     }
     private void refresh(){ // Herlaad alle rewards en vult de velden die erbij horen in.
         int size = alleRewards.size();

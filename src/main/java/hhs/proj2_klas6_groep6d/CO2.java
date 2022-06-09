@@ -21,6 +21,9 @@ public class CO2 {
         if(vervoersmiddel.equalsIgnoreCase("auto")){
             return this.km * 224;
         }
+        if(vervoersmiddel.equalsIgnoreCase("elektrische auto")){
+            return this.km * 107;
+        }
         if(vervoersmiddel.equalsIgnoreCase("RegionaalOV")){
             return this.km * 116;
             //Bus

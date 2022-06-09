@@ -14,7 +14,7 @@ public class Reis {
         this.date = date;
         this.punten = punten;
         this.afstand = afstand;
-        this.cO2 = new CO2(afstand);
+        this.cO2 = new CO2(afstand,vervoersMiddel);
         this.vervoersMiddel = vervoersMiddel;
         this.loggedIn = loggedIn;
     }

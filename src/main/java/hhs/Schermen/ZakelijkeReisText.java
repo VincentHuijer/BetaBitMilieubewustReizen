@@ -16,10 +16,10 @@ public class ZakelijkeReisText{
             tramPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Tram", elektrisch)));
             fietsPuntenText.setText(String.format("%.0f Punten", loggedIn.getPunten().berekenAantalPuntenZakelijkVerkeer(km, "Fiets", elektrisch)));
         } else {
-            autoPuntenText.setText(String.format("%.0f gram CO2", new CO2(km,"auto").getUitstoot()));
-            regionaalPuntenText.setText(String.format("%.0f gram CO2", new CO2(km,"regionaalOV").getUitstoot()));
-            tramPuntenText.setText(String.format("%.0f gram CO2", new CO2(km,"tram").getUitstoot()));
-            fietsPuntenText.setText(String.format("%.0f gram CO2", new CO2(km,"fiets").getUitstoot()));
+            autoPuntenText.setText(String.format("%.0f gram CO2", new CO2(km,"auto", elektrisch).getUitstoot()));
+            regionaalPuntenText.setText(String.format("%.0f gram CO2", new CO2(km,"regionaalOV", elektrisch).getUitstoot()));
+            tramPuntenText.setText(String.format("%.0f gram CO2", new CO2(km,"tram", elektrisch).getUitstoot()));
+            fietsPuntenText.setText(String.format("%.0f gram CO2", new CO2(km,"fiets", elektrisch).getUitstoot()));
         }
     }
 }

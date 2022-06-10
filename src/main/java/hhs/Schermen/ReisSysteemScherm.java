@@ -86,11 +86,11 @@ public class ReisSysteemScherm implements Observer {
             //TODO Hier nog code maken om te bepalen hoe ver van werk de medewerker woont die verst weg woont.
             Double puntenDouble = loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
             new WoonWerkReisText().setText(choicebox, autoPuntenText, regionaalPuntenText, tramPuntenText, fietsPuntenText, text, km, elektrisch, arg, loggedIn);
-            new WoonWerkReis(new Date(),puntenDouble,km,arg.toString(), loggedIn).kiesAlternatiefVervoer(alternatief, km, elektrisch, arg);
+            new WoonWerkReis(new Date(),puntenDouble,km,arg.toString(), loggedIn, elektrisch).kiesAlternatiefVervoer(alternatief, km, elektrisch, arg);
         } else if (zakelijk.isSelected()) {
             Double puntenDouble = loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
             new ZakelijkeReisText().setText(choicebox,autoPuntenText,regionaalPuntenText,tramPuntenText,fietsPuntenText,text,km,elektrisch,arg,loggedIn);
-            new ZakelijkeReis(new Date(), puntenDouble, km, arg.toString() ,loggedIn).kiesAlternatiefVervoer(alternatief, km, elektrisch, arg);
+            new ZakelijkeReis(new Date(), puntenDouble, km, arg.toString() ,loggedIn, elektrisch).kiesAlternatiefVervoer(alternatief, km, elektrisch, arg);
         }
     }
 }

@@ -9,14 +9,16 @@ public class Reis {
     private String vervoersMiddel;
     private CO2 cO2;
     protected Persoon loggedIn;
+    private boolean elektrisch;
 
-    public Reis(Date date, double punten, double afstand, String vervoersMiddel, Persoon loggedIn) {
+    public Reis(Date date, double punten, double afstand, String vervoersMiddel, Persoon loggedIn, boolean elektrisch) {
         this.date = date;
         this.punten = punten;
         this.afstand = afstand;
-        this.cO2 = new CO2(afstand,vervoersMiddel);
+        this.cO2 = new CO2(afstand,vervoersMiddel, elektrisch);
         this.vervoersMiddel = vervoersMiddel;
         this.loggedIn = loggedIn;
+        this.elektrisch = elektrisch;
     }
 
     public CO2 getCO2(){

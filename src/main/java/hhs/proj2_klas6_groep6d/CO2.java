@@ -4,11 +4,13 @@ public class CO2 {
     double km;
     double uitstoot;
     String vervoersmiddel;
-
-    public CO2(double km, String vervoersmiddel){
+    boolean elektrisch;
+    public CO2(double km, String vervoersmiddel, boolean elektrisch){
         this.km = km;
         this.vervoersmiddel = vervoersmiddel;
+        this.elektrisch = elektrisch;
         this.uitstoot = berekenUitstoot();
+        
     }
 
     public double getUitstoot(){
@@ -19,11 +21,13 @@ public class CO2 {
         //formule voor t berekenen van de CO2 uitstoot
 
         if(vervoersmiddel.equalsIgnoreCase("auto")){
-            return this.km * 224;
+            if(elektrisch){
+                return this.km * 107;
+            }else {
+                return this.km * 224;
+            }
         }
-        if(vervoersmiddel.equalsIgnoreCase("elektrische auto")){
-            return this.km * 107;
-        }
+
         if(vervoersmiddel.equalsIgnoreCase("RegionaalOV")){
             return this.km * 116;
             //Bus

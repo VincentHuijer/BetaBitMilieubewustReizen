@@ -77,9 +77,9 @@
             </children>
         </Pane><AnchorPane layoutX="126.0" layoutY="174.0" prefHeight="79.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-radius: 20; -fx-background-radius: 4;" translateY="10.0">
         <children>
-            <Text fx:id="currentCO2" layoutX="10.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100 g" textAlignment="CENTER" wrappingWidth="146.600830078125" y="-5.0">
+            <Text fx:id="currentCO2" layoutX="10.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100 kg" textAlignment="CENTER" wrappingWidth="146.600830078125" y="-5.0">
                 <font>
-                    <Font name="System Bold" size="32.0" />
+                    <Font name="System Bold" size="28.0" />
                 </font>
             </Text>
             <Text layoutX="10.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAAL CO2 UITSTOOT" textAlignment="CENTER" wrappingWidth="146.600830078125">
@@ -98,7 +98,7 @@
                 </Text>
                 <Text fx:id="currentPunten" layoutX="10.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" textAlignment="CENTER" wrappingWidth="146.600830078125" y="-5.0">
                     <font>
-                        <Font name="System Bold" size="32.0" />
+                        <Font name="System Bold" size="28.0" />
                     </font>
                 </Text>
             </children>
@@ -112,7 +112,7 @@
                 </Text>
                 <Text fx:id="currentKM" layoutX="12.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100 KM" textAlignment="CENTER" wrappingWidth="146.600830078125" y="-5.0">
                     <font>
-                        <Font name="System Bold" size="32.0" />
+                        <Font name="System Bold" size="28.0" />
                     </font>
                 </Text>
             </children>
@@ -134,9 +134,9 @@
         </Text>
         <AnchorPane layoutX="126.0" layoutY="309.0" prefHeight="79.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-radius: 20; -fx-background-radius: 4;" translateY="10.0">
             <children>
-                <Text fx:id="oldCO2" layoutX="10.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100 g" textAlignment="CENTER" wrappingWidth="146.600830078125" y="-5.0">
+                <Text fx:id="oldCO2" layoutX="10.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100 kg" textAlignment="CENTER" wrappingWidth="146.600830078125" y="-5.0">
                     <font>
-                        <Font name="System Bold" size="32.0" />
+                        <Font name="System Bold" size="28.0" />
                     </font>
                 </Text>
                 <Text layoutX="10.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAAL CO2 UITSTOOT" textAlignment="CENTER" wrappingWidth="146.600830078125">
@@ -155,7 +155,7 @@
                 </Text>
                 <Text fx:id="oldPunten" layoutX="10.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" textAlignment="CENTER" wrappingWidth="146.600830078125" y="-5.0">
                     <font>
-                        <Font name="System Bold" size="32.0" />
+                        <Font name="System Bold" size="28.0" />
                     </font>
                 </Text>
             </children>
@@ -169,7 +169,7 @@
                 </Text>
                 <Text fx:id="oldKM" layoutX="12.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100 KM" textAlignment="CENTER" wrappingWidth="146.600830078125" y="-5.0">
                     <font>
-                        <Font name="System Bold" size="32.0" />
+                        <Font name="System Bold" size="28.0" />
                     </font>
                 </Text>
             </children>

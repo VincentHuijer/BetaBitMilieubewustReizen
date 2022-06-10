@@ -61,7 +61,7 @@ public class Gebruiker extends Persoon {
     }
 
     public String getMonthco2UitstootString(){
-        return (getOldMonthco2Uitstoot() / 1000) + " kg";
+        return (getMonthco2Uitstoot() / 1000) + " kg";
     }
 
 
@@ -79,7 +79,7 @@ public class Gebruiker extends Persoon {
     }
 
     public String getOldMonthco2UitstootString(){
-        return (getMonthco2Uitstoot() / 1000) + " kg";
+        return (getOldMonthco2Uitstoot() / 1000) + " kg";
     }
 
     public double getMonthpunten() {

@@ -46,7 +46,7 @@ public class ScorebordController implements Initializable {
     @FXML
     private TableColumn<Gebruiker, Double> Current = new TableColumn<>("CO2 Current");
     @FXML
-    private TableColumn<Gebruiker, Double> Totaal_KM = new TableColumn<>("Totaal KM");
+    private TableColumn<Gebruiker, String> Totaal_KM = new TableColumn<>("Totaal KM");
 
     @FXML
     public void onOverzichtKnopClick() throws Exception { // Opent overzicht scherm
@@ -95,9 +95,9 @@ public class ScorebordController implements Initializable {
         fillList();
         Gebruikersnaam.setCellValueFactory(new PropertyValueFactory<>("username"));
         Punten.setCellValueFactory(new PropertyValueFactory<>("Monthpunten"));
-        Old.setCellValueFactory(new PropertyValueFactory<>("OldMonthco2Uitstoot"));
-        Current.setCellValueFactory(new PropertyValueFactory<>("Monthco2Uitstoot"));
-        Totaal_KM.setCellValueFactory(new PropertyValueFactory<>("MonthtotaalKm"));
+        Old.setCellValueFactory(new PropertyValueFactory<>("OldMonthco2UitstootString"));
+        Current.setCellValueFactory(new PropertyValueFactory<>("Monthco2UitstootString"));
+        Totaal_KM.setCellValueFactory(new PropertyValueFactory<>("MonthTotaalKmString"));
         tableView.getItems().setAll(alleGebruikersScorebord);
     }
 }

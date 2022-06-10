@@ -91,10 +91,10 @@ public class ReisSysteemController extends Observable implements Initializable{
             elektrisch = true;
         }
         if(woonwerkCheck.isSelected()){
-            punten = gebruiker.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, vervoersMiddel, elektrisch);
+            punten = BerekenPunten.berekenAantalPuntenWoonWerkVerkeer(100, km, vervoersMiddel, elektrisch);
             reis = new Reis(new Date(dtf.format(datePicker.getValue())), punten, km, vervoersMiddel, gebruiker, elektrisch);
         }else if(zakelijkCheck.isSelected()){
-            punten = gebruiker.getPunten().berekenAantalPuntenZakelijkVerkeer(km, vervoersMiddel, elektrisch);
+            punten = BerekenPunten.berekenAantalPuntenZakelijkVerkeer(km, vervoersMiddel, elektrisch);
             reis = new Reis(new Date(dtf.format(datePicker.getValue())), punten, km, vervoersMiddel, gebruiker, elektrisch);
         }
         gebruiker.getAlleReizen().add(reis);

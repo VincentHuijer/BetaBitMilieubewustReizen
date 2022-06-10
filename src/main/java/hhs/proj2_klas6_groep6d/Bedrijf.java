@@ -1,7 +1,7 @@
 package hhs.proj2_klas6_groep6d;
 
 import java.util.ArrayList;
-
+//TODO Bedrijf is niet een goede naam voor een class die alleen gaat over het toevoegen en verwijderen van gebruikers.
 public class Bedrijf {
     private String naam;
     private static ArrayList<Persoon> gebruikers = new ArrayList<>();

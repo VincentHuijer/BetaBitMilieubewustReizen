@@ -74,11 +74,11 @@ public class OverzichtController implements Initializable {
         Stats currentMonthStats = getMonthStats(currentMonth, alleGebruikersScorebord);
         Stats lastMonthStats = getMonthStats(lastMonth, alleGebruikersScorebord);
 
-        currentCO2.setText(String.format("%.2f g",currentMonthStats.uitstoot));
+        currentCO2.setText(String.format("%.2f kg",currentMonthStats.uitstoot / 1000));
         currentPunten.setText(String.format("%.0f",currentMonthStats.punten));
         currentKM.setText(String.format("%.1f KM",currentMonthStats.km));
 
-        oldCO2.setText(String.format("%.2f g",lastMonthStats.uitstoot));
+        oldCO2.setText(String.format("%.2f kg",lastMonthStats.uitstoot / 1000));
         oldPunten.setText(String.format("%.0f",lastMonthStats.punten));
         oldKM.setText(String.format("%.1f KM",lastMonthStats.km));
     }

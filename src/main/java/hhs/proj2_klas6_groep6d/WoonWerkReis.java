@@ -22,7 +22,7 @@ public class WoonWerkReis extends Reis {
     }
     private void alternatiefWoonWerkVerkeer(String vervoersmiddel, double km, boolean elektrisch, Object arg, Text alternatief) { //Zet tekst neer om gebruiker op de hoogte te stellen van een betere optie die meer punten oplevert
         alternatief.setText("Voor meer punten kunt u met de duurzamere optie gaan want dan krijgt u "
-                + (loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, vervoersmiddel, elektrisch) - loggedIn.getPunten().berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch))
+                + (BerekenPunten.berekenAantalPuntenWoonWerkVerkeer(100, km, vervoersmiddel, elektrisch) - BerekenPunten.berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch))
                 + " punten meer.");
     }
 }

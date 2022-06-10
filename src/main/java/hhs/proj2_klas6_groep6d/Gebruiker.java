@@ -19,11 +19,6 @@ public class Gebruiker extends Persoon {
     private double afstandVanWerkInKm; // Eventueel later nodig voor API met afstand berekenen
     private double totaalKm = 0;
 
-    private double MonthtotaalKm;
-    private double OldMonthco2Uitstoot;
-    private double Monthco2Uitstoot;
-    private double Monthpunten;
-
     public Gebruiker(String username, String wachtwoord, String voornaam, String achternaam, int id){
         super(username, wachtwoord, voornaam, achternaam, id);
         this.voornaam = voornaam;
@@ -48,6 +43,10 @@ public class Gebruiker extends Persoon {
         return count;
     }
 
+    public String getMonthTotaalKmString(){
+        return getMonthtotaalKm() + " km";
+    }
+
     public double getMonthco2Uitstoot() {
         int month = new Date().getMonth();
 
@@ -59,6 +58,10 @@ public class Gebruiker extends Persoon {
         }
 
         return count;
+    }
+
+    public String getMonthco2UitstootString(){
+        return (getOldMonthco2Uitstoot() / 1000) + " kg";
     }
 
 
@@ -73,6 +76,10 @@ public class Gebruiker extends Persoon {
         }
 
         return count;
+    }
+
+    public String getOldMonthco2UitstootString(){
+        return (getMonthco2Uitstoot() / 1000) + " kg";
     }
 
     public double getMonthpunten() {

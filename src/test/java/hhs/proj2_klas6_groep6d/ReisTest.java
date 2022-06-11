@@ -21,7 +21,10 @@ class ReisTest {
 
         Date date = new Date();
         Reis reis = new Reis(date,25.4, 132.4,"auto", gebruiker, false);
-        assertEquals(25.4, reis.getPunten());
+        gebruiker.getPunten().addPunten(reis.getPunten());
+
+        assertEquals(25.4, reis.getPunten(), 0.1);
+        assertEquals(25.4, gebruiker.getPunten().getAantalPunten(), 0.1);
     }
 
     @Test

@@ -7,6 +7,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -41,7 +42,21 @@ public class ReisSysteemScherm implements Observer {
         DatePicker datePicker = (DatePicker) scene.lookup("#datePicker");
         datePicker.setValue(LocalDate.now());
 
-        stage.setTitle("ReisSysteem");
+        Text alternatief = (Text) scene.lookup("#AlternatieveText");
+        alternatief.setText("Vul een waarde in");
+
+        Text autoPuntenText = (Text) scene.lookup("#autoPuntenText");
+        Text regionaalPuntenText = (Text) scene.lookup("#regionaalPuntenText");
+        Text tramPuntenText = (Text) scene.lookup("#tramPuntenText");
+        Text fietsPuntenText = (Text) scene.lookup("#fietsPuntenText");
+
+        autoPuntenText.setText("0 Punten");
+        regionaalPuntenText.setText("0 Punten");
+        tramPuntenText.setText("0 Punten");
+        fietsPuntenText.setText("0 Punten");
+
+        stage.setTitle("Reis Toevoegen");
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("images/logoT.png")));
         stage.setScene(scene);
         stage.show();
     }

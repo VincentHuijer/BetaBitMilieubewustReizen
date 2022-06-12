@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.image.Image;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -38,6 +39,7 @@ public class ScorebordScherm {
         scorebordTitel.setText("OVERZICHT - " + maanden[new Date().getMonth()].toUpperCase());
 
         stage.setTitle("Scorebord");
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("images/logoT.png")));
         stage.setScene(scene);
         stage.show();
     }

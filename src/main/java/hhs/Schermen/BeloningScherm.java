@@ -6,6 +6,7 @@ import hhs.proj2_klas6_groep6d.Persoon;
 import hhs.proj2_klas6_groep6d.RewardsList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -31,7 +32,9 @@ public class BeloningScherm implements Observer {
         welkomText.setText("Welkom " + loggedIn.getUsername());
         Text punten = (Text) scene.lookup("#puntensaldoText");
         punten.setText(String.format("%.0f PUNTEN", loggedIn.getPunten().getAantalPunten()));
+
         stage.setTitle("Beloningen");
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("images/logoT.png")));
         stage.setScene(scene);
         stage.show();
     }

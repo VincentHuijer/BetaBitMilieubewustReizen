@@ -6,6 +6,7 @@ import hhs.proj2_klas6_groep6d.Persoon;
 import hhs.proj2_klas6_groep6d.RewardsList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -24,7 +25,10 @@ public class BeloningAdminScherm {
         scene = new Scene(fxmlLoader.load(), 700, 530);
         Text welkomText = (Text) scene.lookup("#welkomText");
         welkomText.setText("Welkom " + loggedIn.getUsername());
-        stage.setTitle("BeloningenAdmin");
+
+
+        stage.setTitle("Beloningen - Admin");
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("images/logoT.png")));
         stage.setScene(scene);
         stage.show();
     }

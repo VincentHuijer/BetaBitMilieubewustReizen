@@ -26,8 +26,6 @@ public class BeloningController extends Observable implements Initializable {
     @FXML
     Button logoutKnop;
     @FXML
-    Button beloning1Knop;
-    @FXML
     Text naam1;
     @FXML
     Text naam2;
@@ -39,6 +37,10 @@ public class BeloningController extends Observable implements Initializable {
     Text naam5;
     @FXML
     Text naam6;
+
+    @FXML
+    Text[] namen;
+
     @FXML
     Text punt1;
     @FXML
@@ -51,6 +53,12 @@ public class BeloningController extends Observable implements Initializable {
     Text punt5;
     @FXML
     Text punt6;
+
+    @FXML
+    Text[] punten;
+
+    @FXML
+    Button beloning1Knop;
     @FXML
     Button beloning2Knop;
     @FXML
@@ -67,6 +75,9 @@ public class BeloningController extends Observable implements Initializable {
     Button overzichtKnop;
 
     @FXML
+    Button[] knoppen;
+
+    @FXML
     public void onOverzichtKnopClick() throws Exception { // Opent overzicht scherm
         MenuKnoppen.onOverzichtKnopClick(gebruiker, overzichtKnop);
     }
@@ -77,7 +88,7 @@ public class BeloningController extends Observable implements Initializable {
     }
 
     @FXML
-    public void onBeloningKnopClick(ActionEvent event){ // Geeft gekozen reward door aan claimreward methode.
+    public void onBeloningKnopClick(ActionEvent event) { // Geeft gekozen reward door aan claimreward methode.
         Node node = (Node) event.getSource();
         String data = (String) node.getUserData();
         int rewardNummer = Integer.parseInt(data);
@@ -85,42 +96,28 @@ public class BeloningController extends Observable implements Initializable {
     }
 
     @FXML
-    private void claimReward(int nummer){ //Controleert of gebruiker genoeg punten heeft. Zo ja, dan koopt de gebruiker deze reward.
-        double prijsInPunten = rewardsList.getRewardsLijst().get(nummer-1).getPunten();
-        if(claimRewardCheck(nummer)){
-            if(nummer == 1){
-                beloning1Knop.setText("GEKOCHT");
-                beloning1Knop.setDisable(true);
-            }else if(nummer == 2){
-                beloning2Knop.setText("GEKOCHT");
-                beloning2Knop.setDisable(true);
-            }else if(nummer == 3){
-                beloning3Knop.setText("GEKOCHT");
-                beloning3Knop.setDisable(true);
-            }else if(nummer == 4){
-                beloning4Knop.setText("GEKOCHT");
-                beloning4Knop.setDisable(true);
-            }else if(nummer == 5){
-                beloning5Knop.setText("GEKOCHT");
-                beloning5Knop.setDisable(true);
-            }else if(nummer == 6){
-                beloning6Knop.setText("GEKOCHT");
-                beloning6Knop.setDisable(true);
-            }
+    private void claimReward(int nummer) { //Controleert of gebruiker genoeg punten heeft. Zo ja, dan koopt de gebruiker deze reward.
+        double prijsInPunten = rewardsList.getRewardsLijst().get(nummer - 1).getPunten();
+        if (claimRewardCheck(nummer)) {
+            nummer = nummer - 1;
+
+            Button knop = knoppen[nummer];
+            knop.setText("GEKOCHT");
+            knop.setDisable(true);
+
             gebruiker.getPunten().removePunten(prijsInPunten);
             setChanged();
             notifyObservers();
-        }
-        else{
+        } else {
             return;
         }
     }
 
-    public boolean claimRewardCheck(int nummer){
-        double prijsInPunten = rewardsList.getRewardsLijst().get(nummer-1).getPunten();
-        if(gebruiker.getPunten().getAantalPunten() >= prijsInPunten){
+    public boolean claimRewardCheck(int nummer) {
+        double prijsInPunten = rewardsList.getRewardsLijst().get(nummer - 1).getPunten();
+        if (gebruiker.getPunten().getAantalPunten() >= prijsInPunten) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -134,63 +131,33 @@ public class BeloningController extends Observable implements Initializable {
     public void onLogoutClick() throws Exception { // Logt gebruiker uit.
         MenuKnoppen.onLogoutKnopClick(logoutKnop);
     }
-    private void refresh(){ // Herlaad alle rewards en vult de velden die erbij horen in.
+
+    private void refresh() { // Herlaad alle rewards en vult de velden die erbij horen in.
         int size = alleRewards.size();
-        for(int i =0; i<6; i++){
-            if(i==0 && size>0){
-                naam1.setText(alleRewards.get(i).getNaam());
-                punt1.setText(String.format("%.0f Punten", alleRewards.get(i).getPunten()));
-                beloning1Knop.setDisable(false);
-            }else if(i==1 && size>1){
-                naam2.setText(alleRewards.get(i).getNaam());
-                punt2.setText(String.format("%.0f Punten", alleRewards.get(i).getPunten()));
-                beloning2Knop.setDisable(false);
-            }else if(i==2 && size>2){
-                naam3.setText(alleRewards.get(i).getNaam());
-                punt3.setText(String.format("%.0f Punten", alleRewards.get(i).getPunten()));
-                beloning3Knop.setDisable(false);
-            }else if(i==3 && size>3){
-                naam4.setText(alleRewards.get(i).getNaam());
-                punt4.setText(String.format("%.0f Punten", alleRewards.get(i).getPunten()));
-                beloning4Knop.setDisable(false);
-            }else if(i==4 && size>4){
-                naam5.setText(alleRewards.get(i).getNaam());
-                punt5.setText(String.format("%.0f Punten", alleRewards.get(i).getPunten()));
-                beloning5Knop.setDisable(false);
-            }else if(i==5 && size>5){
-                naam6.setText(alleRewards.get(i).getNaam());
-                punt6.setText(String.format("%.0f Punten", alleRewards.get(i).getPunten()));
-                beloning6Knop.setDisable(false);
-            }else if(i==0 && size<1){
-                naam1.setText("N/A");
-                punt1.setText("N/A");
-                beloning1Knop.setDisable(true);
-            }else if(i==1 && size<2){
-                naam2.setText("N/A");
-                punt2.setText("N/A");
-                beloning2Knop.setDisable(true);
-            }else if(i==2 && size<3){
-                naam3.setText("N/A");
-                punt3.setText("N/A");
-                beloning3Knop.setDisable(true);
-            }else if(i==3 && size<4){
-                naam4.setText("N/A");
-                punt4.setText("N/A");
-                beloning4Knop.setDisable(true);
-            }else if(i==4 && size<5){
-                naam5.setText("N/A");
-                punt5.setText("N/A");
-                beloning5Knop.setDisable(true);
-            }else if(i==5 && size<6){
-                naam6.setText("N/A");
-                punt6.setText("N/A");
-                beloning6Knop.setDisable(true);
+
+        for (int i = 0; i < 6; i++) {
+            if(size > i){
+                namen[i].setText(alleRewards.get(i).getNaam());
+                punten[i].setText(String.format("%.0f Punten", alleRewards.get(i).getPunten()));
+                knoppen[i].setDisable(false);
+            }
+
+            if(size < (i + 1)){
+                namen[i].setText("N/A");
+                punten[i].setText("N/A");
+                knoppen[i].setDisable(true);
             }
         }
     }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) { // Toevoegen observer aan beloningscherm om aantal punten gebruiker live te updaten.
         addObserver(beloningScherm);
+
+        namen = new Text[]{naam1, naam2, naam3, naam4, naam5, naam6};
+        punten = new Text[]{punt1, punt2, punt3, punt4, punt5, punt6};
+        knoppen = new Button[]{beloning1Knop, beloning2Knop, beloning3Knop, beloning4Knop, beloning5Knop, beloning6Knop};
+
         refresh();
     }
 }

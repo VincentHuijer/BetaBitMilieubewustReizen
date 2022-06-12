@@ -54,7 +54,7 @@
                   <Image url="@images/Vector.png" />
                </image>
             </ImageView>
-            <Text disable="true" layoutX="67.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regionaal OV" wrappingWidth="147.93121337890625">
+            <Text disable="true" layoutX="67.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bus" wrappingWidth="147.93121337890625">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

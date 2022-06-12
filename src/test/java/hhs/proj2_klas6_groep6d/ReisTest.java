@@ -1,5 +1,6 @@
 package hhs.proj2_klas6_groep6d;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
@@ -33,5 +34,23 @@ class ReisTest {
         Date date = new Date();
         Reis reis = new Reis(date,25.4, 132.4,"auto", gebruiker, false);
         assertEquals("auto", reis.getVervoersMiddel());
+    }
+
+    @Test
+    public void testGetCo2(){
+        Gebruiker gebruiker = new Gebruiker("testGebruiker", "testWachtwoord", "testVoornaam", "testAchternaam", -1);
+        Date date = new Date();
+
+        //Auto niet elektrisch
+        Reis autoReis = new WoonWerkReis(date,1, 25,"auto", gebruiker, false);
+        Assertions.assertEquals(5600, autoReis.getCO2().getUitstoot(), 0.01);
+
+        //Auto wel elektrisch
+        Reis elektrischAutoReis = new WoonWerkReis(date,1, 25,"auto", gebruiker, true);
+        Assertions.assertEquals(2675, elektrischAutoReis.getCO2().getUitstoot(), 0.01);
+
+        //Bus
+        Reis bus = new WoonWerkReis(date,1, 25,"regionaalOV", gebruiker, false);
+        Assertions.assertEquals(2900, bus.getCO2().getUitstoot(), 0.01);
     }
 }

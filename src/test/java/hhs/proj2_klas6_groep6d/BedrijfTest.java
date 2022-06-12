@@ -22,12 +22,12 @@ public class BedrijfTest {
     @Test
     public void testRemoveGebruiker() {
         Bedrijf bedrijf = new Bedrijf();
-        assertEquals(2, bedrijf.getGebruikers().size());
+        assertEquals(1, bedrijf.getGebruikers().size());
         Gebruiker testGebruiker = new Gebruiker("testNaam", "testWachtwoord", "testVoornaam", "testAchternaam", -1);
         bedrijf.addGebruiker(testGebruiker); //TODO In de bedrijf class zit al een testGebruiker/testAdmin met als parameters voor alles 1. Daarom is de actual 2 nadat we een gebruiker toevoegen.
-        assertEquals(3, bedrijf.getGebruikers().size());
-        bedrijf.removeGebruiker(testGebruiker);
         assertEquals(2, bedrijf.getGebruikers().size());
+        bedrijf.removeGebruiker(testGebruiker);
+        assertEquals(1, bedrijf.getGebruikers().size());
 
     }
 }

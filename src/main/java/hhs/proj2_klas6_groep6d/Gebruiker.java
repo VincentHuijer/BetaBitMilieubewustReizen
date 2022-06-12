@@ -43,10 +43,6 @@ public class Gebruiker extends Persoon {
         return count;
     }
 
-    public String getMonthTotaalKmString(){
-        return getMonthtotaalKm() + " km";
-    }
-
     public double getMonthco2Uitstoot() {
         int month = new Date().getMonth();
 
@@ -57,11 +53,7 @@ public class Gebruiker extends Persoon {
             }
         }
 
-        return count;
-    }
-
-    public String getMonthco2UitstootString(){
-        return (getMonthco2Uitstoot() / 1000) + " kg";
+        return count / 1000;
     }
 
 
@@ -75,11 +67,7 @@ public class Gebruiker extends Persoon {
             }
         }
 
-        return count;
-    }
-
-    public String getOldMonthco2UitstootString(){
-        return (getOldMonthco2Uitstoot() / 1000) + " kg";
+        return count / 1000;
     }
 
     public double getMonthpunten() {

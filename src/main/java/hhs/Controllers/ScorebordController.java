@@ -87,17 +87,17 @@ public class ScorebordController implements Initializable {
         String[] maanden = {"Jan", "Feb", "Maa", "Apr", "Mei", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"};
         int month = new Date().getMonth();
 
-        Old.setText("CO2 " + maanden[month - 1]);
-        Current.setText("CO2 " + maanden[month]);
+        Old.setText("CO2 " + maanden[month - 1] + " (kg)");
+        Current.setText("CO2 " + maanden[month] + " (kg)");
     }
 
     public void update() {
         fillList();
         Gebruikersnaam.setCellValueFactory(new PropertyValueFactory<>("username"));
         Punten.setCellValueFactory(new PropertyValueFactory<>("Monthpunten"));
-        Old.setCellValueFactory(new PropertyValueFactory<>("OldMonthco2UitstootString"));
-        Current.setCellValueFactory(new PropertyValueFactory<>("Monthco2UitstootString"));
-        Totaal_KM.setCellValueFactory(new PropertyValueFactory<>("MonthTotaalKmString"));
+        Old.setCellValueFactory(new PropertyValueFactory<>("OldMonthco2Uitstoot"));
+        Current.setCellValueFactory(new PropertyValueFactory<>("Monthco2Uitstoot"));
+        Totaal_KM.setCellValueFactory(new PropertyValueFactory<>("MonthtotaalKm"));
         tableView.getItems().setAll(alleGebruikersScorebord);
     }
 }

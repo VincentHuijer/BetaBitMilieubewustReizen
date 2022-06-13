@@ -14,6 +14,9 @@ public class BerekenPunten {
         else if(vervoersMiddel.equalsIgnoreCase("RegionaalOV")){
             multiplier = 0.69;
         }
+        else if(afstand > 10 && !vervoersMiddel.equalsIgnoreCase("Tram")){
+            multiplier = 1.5;
+        }
         if (grootsteAfstandInKm < afstand){
             return -1;
         }
@@ -31,6 +34,8 @@ public class BerekenPunten {
         }
         else if(vervoersMiddel.equalsIgnoreCase("RegionaalOV")){
             multiplier = 0.69;
+        }else if(afstand > 10 && !vervoersMiddel.equalsIgnoreCase("Tram")){
+            multiplier = 1.5;
         }
 
         return (Math.round(afstand * multiplier));

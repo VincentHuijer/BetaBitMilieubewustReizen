@@ -19,7 +19,7 @@ public class ZakelijkeReisText{
         } else {
             autoPuntenText.setText(String.format("%.1f kg CO2", new CO2(km,"auto", elektrisch).getUitstoot() / 1000));
             regionaalPuntenText.setText(String.format("%.1f kg CO2", new CO2(km,"regionaalOV", elektrisch).getUitstoot() / 1000));
-            tramPuntenText.setText(String.format("%.01 kg CO2", new CO2(km,"tram", elektrisch).getUitstoot() / 1000));
+            tramPuntenText.setText(String.format("%.1f kg CO2", new CO2(km,"tram", elektrisch).getUitstoot() / 1000));
             fietsPuntenText.setText(String.format("%.1f kg CO2", new CO2(km,"fiets", elektrisch).getUitstoot() / 1000));
         }
     }

@@ -8,8 +8,8 @@ public class Bedrijf {
 
     public Bedrijf(){
         if(gebruikers.size() == 0) {
-            gebruikers.add(new Gebruiker("1", "1", "1", "1", 1));
-            gebruikers.add(new Admin("admin", "admin", "admin", "admin", 0));
+            gebruikers.add(new Gebruiker("1", "1", "1", "1", 1)); //TODO verwijderen in definitieve code.
+            gebruikers.add(new Admin("admin", "admin", "admin", "admin", 0)); //Admin accounts kunnen niet registreren. Ze moeten als het waren door iemand hoger in het bedrijf toegevoegd worden voor veiligheidsregelen.
         }
     }
 

@@ -2,7 +2,7 @@ package hhs.proj2_klas6_groep6d;
 
 import java.util.Date;
 
-public class Reis {
+public class Reis { //een reis bevat een datum, aantal punten die je verdient voor de reis, afstand, vervoersmiddel, de persoon die de rit heeft uitgevoerd en er word gekeken of de persoon elektrische vervoer heeft gebruikt als relevant.
     private Date date;
     private double punten;
     private double afstand;

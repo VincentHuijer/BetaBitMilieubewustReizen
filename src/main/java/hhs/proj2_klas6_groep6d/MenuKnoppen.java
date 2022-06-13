@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-public class MenuKnoppen {
+public class MenuKnoppen { //JavaFX class voor de knoppen in het menu.
 
     @FXML
     public static void onOverzichtKnopClick(Persoon gebruiker, Button overzichtKnop) throws Exception { // Opent overzicht scherm

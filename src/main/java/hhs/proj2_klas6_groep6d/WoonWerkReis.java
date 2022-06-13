@@ -4,7 +4,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import java.util.Date;
 
-public class WoonWerkReis extends Reis {
+public class WoonWerkReis extends Reis { //Woonwerk verkeer houd in van huis naar werk.
     public WoonWerkReis(Date date, double punten, double afstand, String vervoersMiddel, Persoon loggedIn, boolean elektrisch){
         super(date, punten, afstand, vervoersMiddel, loggedIn, elektrisch);
     }

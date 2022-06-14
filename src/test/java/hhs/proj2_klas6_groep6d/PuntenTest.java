@@ -27,4 +27,13 @@ class PuntenTest {
         assertEquals(0.0, BerekenPunten.berekenAantalPuntenZakelijkVerkeer(0.1, "RegionaalOV", false), 0.01);
         assertEquals(4.0, BerekenPunten.berekenAantalPuntenZakelijkVerkeer(5.41, "RegionaalOV", false), 0.01);
     }
+    @Test
+    public void testBerekenPuntenMultiplierEquivalentie(){
+        //Als de gebruiker loopt of fietst, krijgt hij/zij 1.5x zoveel punten als hij/zij meer dan 10km afstand aflegt en 2x zoveel punten bij meer dan 20km.
+        assertEquals(1, BerekenPunten.berekenMultiplier(10, "fiets", false));
+        assertEquals(1.5, BerekenPunten.berekenMultiplier(11, "fiets", false));
+        assertEquals(1.5, BerekenPunten.berekenMultiplier(20, "fiets", false));
+        assertEquals(2.0, BerekenPunten.berekenMultiplier(21, "fiets", false));
+    }
+
 }

@@ -20,12 +20,11 @@ public class MenuKnoppen { //JavaFX class voor de knoppen in het menu.
     public static void onBeloningKnopClick(Persoon gebruiker, Button beloningKnop) throws Exception {
         Stage stage = (Stage) beloningKnop.getScene().getWindow();
         stage.close();
-        if(!gebruiker.isAdmin()) {
+        if (!gebruiker.isAdmin()) {
             BeloningScherm beloningScherm = new BeloningScherm();
             beloningScherm.setLoggedIn(gebruiker);
             beloningScherm.start();
-        }
-        else if(gebruiker.isAdmin()){
+        } else if (gebruiker.isAdmin()) {
             BeloningAdminScherm beloningAdminScherm = new BeloningAdminScherm();
             beloningAdminScherm.setLoggedIn(gebruiker);
             beloningAdminScherm.start();

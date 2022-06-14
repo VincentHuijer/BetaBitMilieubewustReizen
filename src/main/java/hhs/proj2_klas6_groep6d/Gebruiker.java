@@ -11,14 +11,11 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
     private String username;
     private String wachtwoord;
     private int id; // Medewerkers van betabit krijgen vanuit het bedrijf al een id. Dit onderdeel schrappen we misschien nog.
-    private double co2Uitstoot;
-    private int totaalAantalVerdiendePunten; // Nodig voor scorebord
     private Punten punten = new Punten();
     private double puntenSaldo;
-    private double afstandVanWerkInKm; // Eventueel later nodig voor API met afstand berekenen
     private double totaalKm = 0;
 
-    public Gebruiker(String username, String wachtwoord, String voornaam, String achternaam, int id){
+    public Gebruiker(String username, String wachtwoord, String voornaam, String achternaam, int id) {
         super(username, wachtwoord, voornaam, achternaam, id);
         this.voornaam = voornaam;
         this.achternaam = achternaam;
@@ -32,8 +29,8 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
         int month = new Date().getMonth();
 
         double count = 0;
-        for(Reis trip: alleReizen){
-            if(trip.getDate().getMonth() == month){
+        for (Reis trip : alleReizen) {
+            if (trip.getDate().getMonth() == month) {
                 count += trip.getAfstand();
             }
         }
@@ -45,8 +42,8 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
         int month = new Date().getMonth();
 
         double count = 0;
-        for(Reis trip: alleReizen){
-            if(trip.getDate().getMonth() == month){
+        for (Reis trip : alleReizen) {
+            if (trip.getDate().getMonth() == month) {
                 count += trip.getCO2().getUitstoot();
             }
         }
@@ -56,11 +53,11 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
 
 
     public double getOldMonthco2Uitstoot() {
-        int month = new Date().getMonth()-1;
+        int month = new Date().getMonth() - 1;
 
         double count = 0;
-        for(Reis trip: alleReizen){
-            if(trip.getDate().getMonth() == month){
+        for (Reis trip : alleReizen) {
+            if (trip.getDate().getMonth() == month) {
                 count += trip.getCO2().getUitstoot();
             }
         }
@@ -72,8 +69,8 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
         int month = new Date().getMonth();
 
         double count = 0;
-        for(Reis trip: alleReizen){
-            if(trip.getDate().getMonth() == month){
+        for (Reis trip : alleReizen) {
+            if (trip.getDate().getMonth() == month) {
                 count += trip.getPunten();
             }
         }
@@ -81,10 +78,9 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
         return count;
     }
 
-    public void initialiseerGebruiker(){
+    public void initialiseerGebruiker() {
         //afstandVanWerkInKm eventueel uitrekenen dmv api voor afstand
         this.puntenSaldo = punten.getAantalPunten();
-        this.co2Uitstoot = 0; //Hier moet nog een methode voor gemaakt worden.
     }
 
     @Override
@@ -102,14 +98,10 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
         return id;
     }
 
-    public double getAfstandVanWerkInKm() {
-        return afstandVanWerkInKm;
-    }
-
     @Override
     public double getCo2Uitstoot() {
         double count = 0;
-        for(Reis trip: alleReizen){
+        for (Reis trip : alleReizen) {
             count += trip.getCO2().getUitstoot();
         }
 
@@ -119,10 +111,6 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
     @Override
     public double getPuntenSaldo() {
         return puntenSaldo;
-    }
-
-    public int getTotaalAantalVerdiendePunten() {
-        return totaalAantalVerdiendePunten;
     }
 
     @Override
@@ -141,7 +129,7 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
     }
 
     @Override
-    public boolean isAdmin(){
+    public boolean isAdmin() {
         return false;
     }
 
@@ -149,10 +137,11 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
     public ArrayList<Reis> getAlleReizen() {
         return alleReizen;
     }
+
     @Override
-    public void berekenTotaalKM(){
+    public void berekenTotaalKM() {
         double sum = 0;
-        for(Reis reis : alleReizen){
+        for (Reis reis : alleReizen) {
             sum += reis.getAfstand();
         }
         this.totaalKm = sum;
@@ -160,11 +149,5 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
 
     public double getTotaalKm() {
         return totaalKm;
-    }
-
-    public int generateId(){
-        int id = currentId;
-        currentId++;
-        return id;
     }
 }

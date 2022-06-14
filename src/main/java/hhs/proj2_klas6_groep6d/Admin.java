@@ -27,9 +27,7 @@ public class Admin extends Persoon { //Een admin heeft extra machtigingen om bij
 
 
     @Override
-    public boolean isAdmin(){
+    public boolean isAdmin() {
         return true;
     }
-
-
-    }
+}

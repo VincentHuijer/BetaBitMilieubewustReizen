@@ -33,5 +33,4 @@ public final class Rewards { //beloningen kunnen verkregen worden door het uitge
     }
 
 
-
 }

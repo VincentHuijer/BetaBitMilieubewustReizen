@@ -15,7 +15,6 @@ public abstract class Persoon { //Deze class bevat eigenschappen die iedere pers
     protected double totaalKm = 0;
     protected double puntenSaldo;
 
-
     public Persoon(String username, String wachtwoord, String voornaam, String achternaam, int id) {
         this.username = username;
         this.wachtwoord = wachtwoord;
@@ -24,36 +23,41 @@ public abstract class Persoon { //Deze class bevat eigenschappen die iedere pers
         this.id = id;
     }
 
-
     public abstract String getVoornaam();
+
     public abstract String getAchternaam();
+
     public abstract String getWachtwoord();
+
     public abstract String getUsername();
-    public Punten getPunten(){
+
+    public Punten getPunten() {
         return punten;
     }
-    public int getId(){
+
+    public int getId() {
         return id;
     }
-    public double getAantalPunten(){
+
+    public double getAantalPunten() {
         return aantalPunten;
     }
 
-    public double getMonthtotaalKm(){
+    public double getMonthtotaalKm() {
         return monthtotaalKm;
     }
 
     public abstract boolean isAdmin();
 
-    public void berekenTotaalKM(){
+    public void berekenTotaalKM() {
         double sum = 0;
-        for(Reis reis : alleReizen){
+        for (Reis reis : alleReizen) {
             sum += reis.getAfstand();
         }
         this.totaalKm = sum;
     }
 
-    public double getTotaalKm(){
+    public double getTotaalKm() {
         return totaalKm;
     }
 
@@ -63,12 +67,13 @@ public abstract class Persoon { //Deze class bevat eigenschappen die iedere pers
 
     public double getCo2Uitstoot() {
         double count = 0;
-        for(Reis trip: alleReizen){
+        for (Reis trip : alleReizen) {
             count += trip.getCO2().getUitstoot();
         }
 
         return count;
     }
+
     public double getPuntenSaldo() {
         return puntenSaldo;
     }

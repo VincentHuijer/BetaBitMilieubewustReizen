@@ -15,13 +15,13 @@ public class Reis { //een reis bevat een datum, aantal punten die je verdient vo
         this.date = date;
         this.punten = punten;
         this.afstand = afstand;
-        this.cO2 = new CO2(afstand,vervoersMiddel, elektrisch);
+        this.cO2 = new CO2(afstand, vervoersMiddel, elektrisch);
         this.vervoersMiddel = vervoersMiddel;
         this.loggedIn = loggedIn;
         this.elektrisch = elektrisch;
     }
 
-    public CO2 getCO2(){
+    public CO2 getCO2() {
         return this.cO2;
     }
 

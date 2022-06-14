@@ -9,21 +9,13 @@ public class Punten { //deze class is verantwoordelijk voor het ophalen, toevoeg
         return aantalPunten;
     }
 
-    public void addPunten(double aantalPunten){
+    public void addPunten(double aantalPunten) {
         this.aantalPunten += aantalPunten;
     }
 
-    public void setAantalPunten(double aantalPunten) {
-        this.aantalPunten = aantalPunten;
-    }
-
-    public void removePunten(double aantalPunten){
+    public void removePunten(double aantalPunten) {
         this.aantalPunten -= aantalPunten;
     }
-
-
-
-
 
     @Override
     public String toString() {

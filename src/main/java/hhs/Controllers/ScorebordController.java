@@ -27,13 +27,7 @@ public class ScorebordController implements Initializable {
     ObservableList<Persoon> alleGebruikersScorebord = FXCollections.observableArrayList();
 
     @FXML
-    Button logoutKnop;
-    @FXML
-    Button beloningKnop;
-    @FXML
-    Button reisSchermKnop;
-    @FXML
-    Button overzichtKnop;
+    Button logoutKnop,beloningKnop,reisSchermKnop,overzichtKnop;
 
     @FXML
     private TableView<Persoon> tableView = new TableView<>();

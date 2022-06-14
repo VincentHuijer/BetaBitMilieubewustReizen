@@ -22,32 +22,13 @@ public class OverzichtController implements Initializable {
     ObservableList<Persoon> alleGebruikersScorebord = FXCollections.observableArrayList();
 
     @FXML
-    Button logoutKnop;
+    Button logoutKnop,reisSchermKnop,beloningKnop,scorebordKnop;
     @FXML
-    Button reisSchermKnop;
+    Text currentCO2,currentPunten,currentKM;
     @FXML
-    Button beloningKnop;
+    Text oldCO2,oldPunten,oldKM;
     @FXML
-    Button scorebordKnop;
-
-    @FXML
-    Text currentCO2;
-    @FXML
-    Text currentPunten;
-    @FXML
-    Text currentKM;
-
-    @FXML
-    Text oldCO2;
-    @FXML
-    Text oldPunten;
-    @FXML
-    Text oldKM;
-
-    @FXML
-    Text currentMonthTitle;
-    @FXML
-    Text lastMonthTitle;
+    Text currentMonthTitle,lastMonthTitle;
 
     public void init(){
         Date date = new Date();

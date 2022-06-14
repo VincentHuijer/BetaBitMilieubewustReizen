@@ -20,20 +20,11 @@ public class RegisterController{
     @FXML
     Button registerKnop;
     @FXML
-    TextField voornaamField;
+    TextField voornaamField,achternaamField,gebruikersnaamField,MedIDField;
     @FXML
-    TextField achternaamField;
-    @FXML
-    TextField gebruikersnaamField;
-    @FXML
-    PasswordField wachtwoordField;
-    @FXML
-    PasswordField herhaalField;
-    @FXML
-    TextField MedIDField;
+    PasswordField wachtwoordField,herhaalField;
     @FXML
     Text errorText;
-
 
     @FXML
     public void onRegisterClick() throws Exception {

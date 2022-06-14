@@ -21,75 +21,25 @@ public class BeloningAdminController implements Initializable {
     BeloningAdminScherm beloningAdminScherm = new BeloningAdminScherm();
     ArrayList<Rewards> alleRewards = beloningAdminScherm.getRewardsList().getRewardsLijst();
     Persoon gebruiker = beloningAdminScherm.getLoggedIn();
-    @FXML
-    TextField beloning1TF;
-    @FXML
-    TextField beloning2TF;
-    @FXML
-    TextField beloning3TF;
-    @FXML
-    TextField beloning4TF;
-    @FXML
-    TextField beloning5TF;
-    @FXML
-    TextField beloning6TF;
 
+    @FXML
+    TextField beloning1TF,beloning2TF, beloning3TF,beloning4TF,beloning5TF,beloning6TF;
     TextField[] beloningTextFields;
 
     @FXML
-    TextField beloning1TFP;
-    @FXML
-    TextField beloning2TFP;
-    @FXML
-    TextField beloning3TFP;
-    @FXML
-    TextField beloning4TFP;
-    @FXML
-    TextField beloning5TFP;
-    @FXML
-    TextField beloning6TFP;
-
+    TextField beloning1TFP,beloning2TFP,beloning3TFP, beloning4TFP,beloning5TFP, beloning6TFP;
     TextField[] beloningPuntenTextFields;
 
     @FXML
-    Button confirm1;
-    @FXML
-    Button confirm2;
-    @FXML
-    Button confirm3;
-    @FXML
-    Button confirm4;
-    @FXML
-    Button confirm5;
-    @FXML
-    Button confirm6;
-
+    Button confirm1,confirm2,confirm3,confirm4,confirm5,confirm6;
     Button[] confirmButtons;
 
     @FXML
-    Button delete1;
-    @FXML
-    Button delete2;
-    @FXML
-    Button delete3;
-    @FXML
-    Button delete4;
-    @FXML
-    Button delete5;
-    @FXML
-    Button delete6;
-
+    Button delete1,delete2,delete3,delete4,delete5,delete6;
     Button[] deleteButtons;
 
     @FXML
-    Button scorebordKnop;
-    @FXML
-    Button overzichtKnop;
-
-    @FXML
-    Button logoutKnop;
-    @FXML
-    Button reisschermKnop;
+    Button scorebordKnop,overzichtKnop,logoutKnop,reisschermKnop;
 
     @FXML
     public void onOverzichtKnopClick() throws Exception { // Opent overzicht scherm

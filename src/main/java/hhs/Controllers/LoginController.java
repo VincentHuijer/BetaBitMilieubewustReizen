@@ -13,20 +13,13 @@ import javafx.stage.Stage;
 
 public class LoginController {
     private Bedrijf bedrijf = new Bedrijf();
+
     @FXML
-    Button loginKnop;
+    Button loginKnop,registerKnop;
     @FXML
-    Button registerKnop;
-    @FXML
-    TextField gebruikersnaamField;
-    @FXML
-    TextField wachtwoordField;
-    @FXML
-    TextField MedID;
+    TextField gebruikersnaamField,wachtwoordField,MedID;
     @FXML
     Text errorText;
-
-
 
     @FXML
     public void onLoginClick() throws Exception {

@@ -10,7 +10,6 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
     private String achternaam;
     private String username;
     private String wachtwoord;
-    private Adres adres; // Eventueel later nodig voor API met afstand berekenen
     private int id; // Medewerkers van betabit krijgen vanuit het bedrijf al een id. Dit onderdeel schrappen we misschien nog.
     private double co2Uitstoot;
     private int totaalAantalVerdiendePunten; // Nodig voor scorebord
@@ -24,7 +23,6 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
         this.voornaam = voornaam;
         this.achternaam = achternaam;
         this.id = id;
-        //this.adres = adres;
         this.username = username;
         this.wachtwoord = wachtwoord;
         initialiseerGebruiker();
@@ -87,10 +85,6 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
         //afstandVanWerkInKm eventueel uitrekenen dmv api voor afstand
         this.puntenSaldo = punten.getAantalPunten();
         this.co2Uitstoot = 0; //Hier moet nog een methode voor gemaakt worden.
-    }
-
-    public Adres getAdres() {
-        return adres;
     }
 
     @Override

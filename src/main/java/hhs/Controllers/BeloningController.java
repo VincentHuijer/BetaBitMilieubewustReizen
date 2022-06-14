@@ -21,61 +21,24 @@ public class BeloningController extends Observable implements Initializable {
     RewardsList rewardsList = beloningScherm.getRewardsList();
     Persoon gebruiker = beloningScherm.getLoggedIn();
     ArrayList<Rewards> alleRewards = beloningScherm.getRewardsList().getRewardsLijst();
-    @FXML
-    Button reisschermKnop;
-    @FXML
-    Button logoutKnop;
-    @FXML
-    Text naam1;
-    @FXML
-    Text naam2;
-    @FXML
-    Text naam3;
-    @FXML
-    Text naam4;
-    @FXML
-    Text naam5;
-    @FXML
-    Text naam6;
 
     @FXML
+    Button reisschermKnop,logoutKnop;
+
+    @FXML
+    Text naam1,naam2,naam3,naam4,naam5,naam6;
     Text[] namen;
 
     @FXML
-    Text punt1;
-    @FXML
-    Text punt2;
-    @FXML
-    Text punt3;
-    @FXML
-    Text punt4;
-    @FXML
-    Text punt5;
-    @FXML
-    Text punt6;
-
-    @FXML
+    Text punt1,punt2,punt3,punt4,punt5,punt6;
     Text[] punten;
 
     @FXML
-    Button beloning1Knop;
-    @FXML
-    Button beloning2Knop;
-    @FXML
-    Button beloning3Knop;
-    @FXML
-    Button beloning4Knop;
-    @FXML
-    Button beloning5Knop;
-    @FXML
-    Button beloning6Knop;
-    @FXML
-    Button scorebordKnop;
-    @FXML
-    Button overzichtKnop;
+    Button beloning1Knop,beloning2Knop,beloning3Knop,beloning4Knop,beloning5Knop,beloning6Knop;
+    Button[] knoppen;
 
     @FXML
-    Button[] knoppen;
+    Button scorebordKnop,overzichtKnop;
 
     @FXML
     public void onOverzichtKnopClick() throws Exception { // Opent overzicht scherm

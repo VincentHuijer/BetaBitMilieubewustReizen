@@ -22,36 +22,16 @@ public class ReisSysteemController extends Observable implements Initializable{
     private String vervoersMiddel = "Auto";
     double punten = 0;
     @FXML
-    Button logoutKnop;
+    Button logoutKnop,autoKnop,regionaalKnop,tramKnop,fietsKnop,beloningKnop;
+
     @FXML
-    Text puntensaldoText;
+    Text puntensaldoText,berekenPuntenText;
     @FXML
-    Button autoKnop;
+    CheckBox elektrischeAutoCheck,woonwerkCheck,zakelijkCheck;
     @FXML
-    Button regionaalKnop;
-    @FXML
-    Button tramKnop;
-    @FXML
-    Button fietsKnop;
-    @FXML
-    Button beloningKnop;
-    @FXML
-    CheckBox elektrischeAutoCheck;
-    @FXML
-    CheckBox woonwerkCheck;
-    @FXML
-    CheckBox zakelijkCheck;
-    @FXML
-    Button addReisKnop;
-    @FXML
-    Text berekenPuntenText;
+    Button addReisKnop,scorebordKnop,overzichtKnop;
     @FXML
     TextField kmTextField;
-    @FXML
-    Button scorebordKnop;
-    @FXML
-    Button overzichtKnop;
-
     @FXML
     DatePicker datePicker;
 

@@ -150,21 +150,19 @@ public class ReisSysteemController extends Observable implements Initializable{
             b.setStyle(styling);
         }
     }
-
-    public String changeAddReisKnopKleur(double punten){
+    public String generateReisKnopKleur(double punten){
         String styling = "";
-        if (punten < 1000) {
-                    styling += "-fx-background-color: #63D13c;";
-            addReisKnop.setStyle(styling);
-                } else if (punten >= 1000 && gebruiker.getPunten().getAantalPunten()  < 3000) {
-                    styling = "-fx-background-color: #0033ff;";
-                    addReisKnop.setStyle(styling);
-                }
-        else {
+        if(punten < 1000){
+            styling = "-fx-background-color: #63D13c;";
+        }else if(punten >= 1000 && punten < 3000){
+            styling = "-fx-background-color: #0033ff;";
+        }else if(punten >= 3000){
             styling = "-fx-background-color: #ff4400;";
-            addReisKnop.setStyle(styling);
         }
         return styling;
+    }
+    public void changeAddReisKnopKleur(double punten){
+        addReisKnop.setStyle(generateReisKnopKleur(punten));
     }
 
     @Override

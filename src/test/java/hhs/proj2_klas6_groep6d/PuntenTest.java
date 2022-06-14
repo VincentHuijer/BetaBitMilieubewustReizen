@@ -1,6 +1,7 @@
 package hhs.proj2_klas6_groep6d;
 
 import hhs.Controllers.ReisSysteemController;
+import hhs.Schermen.ReisSysteemScherm;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -37,15 +38,16 @@ class PuntenTest {
 
     @Test
     public void testVeranderKleurKnop(){
+        ReisSysteemScherm rs = new ReisSysteemScherm();
+        rs.setLoggedIn(new Gebruiker("test", "test", "test", "test", -1));
         ReisSysteemController reisSysteemController = new ReisSysteemController();
-        reisSysteemController.changeAddReisKnopKleur(0);
-        assertEquals("-fx-background-color: #63D13c;", reisSysteemController.changeAddReisKnopKleur(0));
-        assertEquals("-fx-background-color: #0033ff;", reisSysteemController.changeAddReisKnopKleur(999));
-        assertEquals("-fx-background-color: #0033ff;", reisSysteemController.changeAddReisKnopKleur(1000));
-        assertEquals("-fx-background-color: #0033ff;", reisSysteemController.changeAddReisKnopKleur(1001));
-        assertEquals("-fx-background-color: #0033ff;", reisSysteemController.changeAddReisKnopKleur(2999));
-        assertEquals("-fx-background-color: #ff4400;", reisSysteemController.changeAddReisKnopKleur(3000));
-        assertEquals("-fx-background-color: #ff4400;", reisSysteemController.changeAddReisKnopKleur(3001));
+        reisSysteemController.generateReisKnopKleur(0);
+        assertEquals("-fx-background-color: #63D13c;", reisSysteemController.generateReisKnopKleur(0));
+        assertEquals("-fx-background-color: #63D13c;", reisSysteemController.generateReisKnopKleur(999));
+        assertEquals("-fx-background-color: #0033ff;", reisSysteemController.generateReisKnopKleur(1000));
+        assertEquals("-fx-background-color: #0033ff;", reisSysteemController.generateReisKnopKleur(2999));
+        assertEquals("-fx-background-color: #ff4400;", reisSysteemController.generateReisKnopKleur(3000));
+
     }
 
 }

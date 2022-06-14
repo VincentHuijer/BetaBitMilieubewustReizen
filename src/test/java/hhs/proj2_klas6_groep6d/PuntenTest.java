@@ -39,12 +39,13 @@ class PuntenTest {
     public void testVeranderKleurKnop(){
         ReisSysteemController reisSysteemController = new ReisSysteemController();
         reisSysteemController.changeAddReisKnopKleur(0);
-        assertEquals("#63D13c", reisSysteemController.changeAddReisKnopKleur(0));
-        assertEquals("#0033ff", reisSysteemController.changeAddReisKnopKleur(999));
-        assertEquals("#0033ff", reisSysteemController.changeAddReisKnopKleur(1000));
-        assertEquals("#0033ff", reisSysteemController.changeAddReisKnopKleur(1001));
-        assertEquals("#0033ff", reisSysteemController.changeAddReisKnopKleur(2999));
-        assertEquals("#ff4400", reisSysteemController.changeAddReisKnopKleur(3000));
-        assertEquals("#ff4400", reisSysteemController.changeAddReisKnopKleur(3001));
+        assertEquals("-fx-background-color: #63D13c;", reisSysteemController.changeAddReisKnopKleur(0));
+        assertEquals("-fx-background-color: #0033ff;", reisSysteemController.changeAddReisKnopKleur(999));
+        assertEquals("-fx-background-color: #0033ff;", reisSysteemController.changeAddReisKnopKleur(1000));
+        assertEquals("-fx-background-color: #0033ff;", reisSysteemController.changeAddReisKnopKleur(1001));
+        assertEquals("-fx-background-color: #0033ff;", reisSysteemController.changeAddReisKnopKleur(2999));
+        assertEquals("-fx-background-color: #ff4400;", reisSysteemController.changeAddReisKnopKleur(3000));
+        assertEquals("-fx-background-color: #ff4400;", reisSysteemController.changeAddReisKnopKleur(3001));
     }
+
 }

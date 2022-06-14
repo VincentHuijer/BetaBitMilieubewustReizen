@@ -169,6 +169,7 @@ public class ReisSysteemController extends Observable implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        changeAddReisKnopKleur(gebruiker.getPunten().getAantalPunten());
         addObserver(reisSysteemScherm);
     } // Toevoegen observer aan reissysteemscherm.
 }

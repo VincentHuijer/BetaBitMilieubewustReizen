@@ -15,7 +15,7 @@ public class Main extends Application {//Applicatie kan gestart worden vanaf Log
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setScene(scene);
         stage.show();
-    }//Dit verwijderen in Master
+    }
 
     public static void main(String[] args) {
         launch();

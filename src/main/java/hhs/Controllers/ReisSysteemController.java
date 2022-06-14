@@ -20,6 +20,7 @@ public class ReisSysteemController extends Observable implements Initializable{
     ReisSysteemScherm reisSysteemScherm = new ReisSysteemScherm();
     Persoon gebruiker = reisSysteemScherm.getLoggedIn();
     private String vervoersMiddel = "Auto";
+    double punten = 0;
     @FXML
     Button logoutKnop;
     @FXML
@@ -80,7 +81,6 @@ public class ReisSysteemController extends Observable implements Initializable{
         Persoon gebruiker = reisSysteemScherm.getLoggedIn();
         Punten puntenGebruiker = gebruiker.getPunten();
         double km;
-        double punten = 0;
         if (kmTextField.getText().equals("")) {
             km = 0;
         } else {
@@ -102,6 +102,7 @@ public class ReisSysteemController extends Observable implements Initializable{
         puntenGebruiker.addPunten(punten);
         setChanged();
         notifyObservers(vervoersMiddel);
+        changeAddReisKnopKleur(gebruiker.getPunten().getAantalPunten());
     }
 
     public void onWoonwerkClick(){ // Toepassing observer pattern
@@ -142,7 +143,7 @@ public class ReisSysteemController extends Observable implements Initializable{
     }
 
     @FXML
-    public void changeColors(Button clickButton){ // Veranderen kleur knoppen bij kiezen.
+    public void changeColors(Button clickButton) { // Veranderen kleur knoppen bij kiezen.
         Stage scene = (Stage) logoutKnop.getScene().getWindow();
 
         ArrayList<Button> buttons = new ArrayList<>();
@@ -159,16 +160,31 @@ public class ReisSysteemController extends Observable implements Initializable{
 
         String styling = "";
 
-        for (Button b: buttons){
-            if(b == clickButton){
-                styling += "-fx-border-color: #63D13C;";
-            }else{
-                styling += "-fx-border-color: #FFFFFF;";
+        for (Button b : buttons) {
+            if (b == clickButton) {
+                styling += "-fx-border-color: #63D13c;";
+            } else {
+                styling += "-fx-border-color: #ffffff;";
             }
-
-            styling += "-fx-background-color: #FFFFFF; -fx-border-radius: 4;";
+            styling += "-fx-background-color: #ffffff; -fx-border-radius: 5;";
             b.setStyle(styling);
         }
+    }
+
+    public String changeAddReisKnopKleur(double punten){
+        String styling = "";
+        if (punten < 1000) {
+                    styling += "-fx-background-color: #63D13c;";
+            addReisKnop.setStyle(styling);
+                } else if (punten >= 1000 && gebruiker.getPunten().getAantalPunten()  < 3000) {
+                    styling = "-fx-background-color: #0033ff;";
+                    addReisKnop.setStyle(styling);
+                }
+        else {
+            styling = "-fx-background-color: #ff4400;";
+            addReisKnop.setStyle(styling);
+        }
+        return styling;
     }
 
     @Override

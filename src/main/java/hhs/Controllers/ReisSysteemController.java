@@ -82,6 +82,8 @@ public class ReisSysteemController extends Observable implements Initializable{
         puntenGebruiker.addPunten(punten);
         setChanged();
         notifyObservers(vervoersMiddel);
+        //Zodra een reis is toegevoegd, wordt de observer op de hoogte gesteld.
+        //Op deze manier worden de punten van de gebruiker meteen geupdate.
         changeAddReisKnopKleur(gebruiker.getPunten().getAantalPunten());
     }
 
@@ -89,12 +91,15 @@ public class ReisSysteemController extends Observable implements Initializable{
         zakelijkCheck.setSelected(!woonwerkCheck.isSelected());
         setChanged();
         notifyObservers(vervoersMiddel);
+        //Zodra er op woon werk verkeer is geklikt zal de punten berekening worden aangepast op basis van de formule
+        //voor woon werk verkeer. De observer wordt hiervan op de hoogte gesteld.
     }
 
     public void onZakelijkClick(){ // Toepassing observer pattern
         woonwerkCheck.setSelected(!zakelijkCheck.isSelected());
         setChanged();
         notifyObservers(vervoersMiddel);
+        //Hier geldt hetzelfde als hierboven bij woon werk verkeer.
     }
 
     public void onElektrischeAutoCheckBoxClick(){
@@ -106,6 +111,8 @@ public class ReisSysteemController extends Observable implements Initializable{
         String vervoer = vervoersMiddel;
         setChanged();
         notifyObservers(vervoer);
+        //Zodra het aantal kilometers dat een gebruiker invult gewijzigd wordt, wordt de observer op de hoogte gesteld.
+        //De hoeveelheid punten die bij de verschillende opties staat worden dan aangepast.
     }
 
     @FXML public void onKnopClick(ActionEvent event){ // Kiezen van gebruikt vervoersmiddel.
@@ -120,6 +127,9 @@ public class ReisSysteemController extends Observable implements Initializable{
 
         Button button = (Button) event.getTarget();
         changeColors(button);
+        //Zodra een bepaald vervoersmiddel is geselecteerd, wordt de observer op de hoogte gesteld en zal de puntenberekening
+        //Die overeenkomt met dat vervoersmiddel worden uitgevoerd. De hoeveelheid punten die de gebruiker zal krijgen wordt dan
+        //op het scherm getoond.
     }
 
     @FXML

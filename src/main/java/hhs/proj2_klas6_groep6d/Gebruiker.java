@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Gebruiker extends Persoon { //een gebruiker is een standaard persooneelslid van BetaBit
     private static int currentId = 0;
-    private ArrayList<Reis> alleReizen = new ArrayList<>(); //alle Reizen van een gebruiker met wanneer het gebeurd is en de hoeveelheid KM.
+    private ArrayList<Reis> alleReizen = new ArrayList<>(); //alle Reizen van een gebruiker met de datum en de hoeveelheid KM.
     private String voornaam;
     private String achternaam;
     private String username;

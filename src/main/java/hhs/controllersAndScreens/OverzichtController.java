@@ -76,6 +76,7 @@ public class OverzichtController implements Initializable {
         return stats;
     }
 
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         init();
@@ -102,8 +103,3 @@ public class OverzichtController implements Initializable {
     }
 }
 
-class Stats{
-    public double uitstoot;
-    public double punten;
-    public double km;
-}

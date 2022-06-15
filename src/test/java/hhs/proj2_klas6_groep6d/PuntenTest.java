@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PuntenTest {
+public class PuntenTest {
 
 
     @Test
@@ -37,9 +37,9 @@ class PuntenTest {
     }
 
     @Test
-    public void testVeranderKleurKnop(){
+    public void testVeranderKleurKnop(){ //De kleur van het toevoegen van een reis verandert naar mate je meer punten hebt. 0/999 is groen, 1000/2999 is blauw. 3000+ = oranje.
         ReisSysteemScherm rs = new ReisSysteemScherm();
-        rs.setLoggedIn(new Gebruiker("test", "test", "test", "test", -1));
+        rs.setLoggedIn(new Gebruiker("testUsername", "testWachtwoord", "testVoornaam", "testAchternaam", -1));
         ReisSysteemController reisSysteemController = new ReisSysteemController();
         reisSysteemController.generateReisKnopKleur(0);
         assertEquals("-fx-background-color: #63D13c;", reisSysteemController.generateReisKnopKleur(0));
@@ -47,7 +47,7 @@ class PuntenTest {
         assertEquals("-fx-background-color: #0033ff;", reisSysteemController.generateReisKnopKleur(1000));
         assertEquals("-fx-background-color: #0033ff;", reisSysteemController.generateReisKnopKleur(2999));
         assertEquals("-fx-background-color: #ff4400;", reisSysteemController.generateReisKnopKleur(3000));
-
+        assertEquals("-fx-background-color: #ff4400;", reisSysteemController.generateReisKnopKleur(3001));
     }
 
 }

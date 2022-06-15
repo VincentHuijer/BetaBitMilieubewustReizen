@@ -43,7 +43,7 @@ public class LoginController {
     }
 
     @FXML
-    public void onRegisterClick() throws Exception {
+    public void onRegisterClick() throws Exception { //registreer knop in het login scherm.
         Stage stage = (Stage) registerKnop.getScene().getWindow();
         stage.close();
         RegisterScherm registerScherm = new RegisterScherm();

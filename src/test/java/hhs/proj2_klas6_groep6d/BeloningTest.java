@@ -1,7 +1,7 @@
 package hhs.proj2_klas6_groep6d;
 
-import hhs.Controllers.BeloningController;
-import hhs.Schermen.BeloningScherm;
+import hhs.controllersAndScreens.BeloningController;
+import hhs.controllersAndScreens.BeloningScherm;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.*;
 

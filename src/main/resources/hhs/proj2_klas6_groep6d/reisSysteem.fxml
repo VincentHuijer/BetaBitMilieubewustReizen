@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="700.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hhs.Controllers.ReisSysteemController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="700.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hhs.controllersAndScreens.ReisSysteemController">
    <children>
       <Text layoutX="135.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welke reis gaat u vandaag afleggen?" wrappingWidth="516.7311134338379">
          <font>

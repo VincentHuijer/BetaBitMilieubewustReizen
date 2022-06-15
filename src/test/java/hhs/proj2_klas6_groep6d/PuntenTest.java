@@ -1,7 +1,7 @@
 package hhs.proj2_klas6_groep6d;
 
-import hhs.Controllers.ReisSysteemController;
-import hhs.Schermen.ReisSysteemScherm;
+import hhs.controllersAndScreens.ReisSysteemController;
+import hhs.controllersAndScreens.ReisSysteemScherm;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

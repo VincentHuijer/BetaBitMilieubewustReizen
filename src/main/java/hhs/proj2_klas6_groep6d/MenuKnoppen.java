@@ -1,6 +1,6 @@
 package hhs.proj2_klas6_groep6d;
 
-import hhs.Schermen.*;
+import hhs.controllersAndScreens.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;

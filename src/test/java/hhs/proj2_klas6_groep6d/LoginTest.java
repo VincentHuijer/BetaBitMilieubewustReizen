@@ -1,5 +1,5 @@
 package hhs.proj2_klas6_groep6d;
-import hhs.Controllers.LoginController;
+import hhs.controllersAndScreens.LoginController;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 public class LoginTest {

@@ -47,7 +47,6 @@ public class PuntenTest {
         assertEquals("-fx-background-color: #0033ff;", reisSysteemController.generateReisKnopKleur(1000));
         assertEquals("-fx-background-color: #0033ff;", reisSysteemController.generateReisKnopKleur(2999));
         assertEquals("-fx-background-color: #ff4400;", reisSysteemController.generateReisKnopKleur(3000));
-        assertEquals("-fx-background-color: #ff4400;", reisSysteemController.generateReisKnopKleur(3001));
     }
 
 }

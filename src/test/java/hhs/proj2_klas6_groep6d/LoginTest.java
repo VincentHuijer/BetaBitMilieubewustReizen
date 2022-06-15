@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 public class LoginTest {
     @Test
     public void loginTest(){
-        Bedrijf bedrijf = new Bedrijf();
+        Gebruikers gebruikers = new Gebruikers();
         Gebruiker gebruiker = new Gebruiker("Username", "Password", "Test", "Test", -1);
-        bedrijf.addGebruiker(gebruiker);
+        gebruikers.addGebruiker(gebruiker);
         LoginController login = new LoginController();
         // Condition/Decision Coverage
         Assertions.assertTrue(login.auth(gebruiker, "Password", "Username", -1)); // C=111 D=1

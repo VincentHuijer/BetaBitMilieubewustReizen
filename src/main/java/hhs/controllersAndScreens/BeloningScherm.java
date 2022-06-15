@@ -19,9 +19,6 @@ public class BeloningScherm implements Observer {
     private static Scene scene;
     private static Stage stage;
     public void start() throws Exception {
-        if(rewardsList.getRewardsLijst().size() == 0){
-            System.out.println("reward list empty @beloningscherm");
-        }
         if(stage == null){
             stage = new Stage();
         }

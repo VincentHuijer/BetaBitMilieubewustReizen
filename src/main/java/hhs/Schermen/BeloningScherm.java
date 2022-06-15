@@ -51,7 +51,7 @@ public class BeloningScherm implements Observer {
     }
 
     @Override
-    public void update(Observable o, Object arg) {
+    public void update(Observable o, Object arg) { //Zodra een gebruiker een beloning koopt, worden zijn/haar punten geupdate.
         Text puntensaldo = (Text) scene.lookup("#puntensaldoText");
         puntensaldo.setText(String.format("%.0f PUNTEN", loggedIn.getPunten().getAantalPunten()));
     }

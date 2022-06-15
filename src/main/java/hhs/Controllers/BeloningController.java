@@ -71,6 +71,7 @@ public class BeloningController extends Observable implements Initializable {
             gebruiker.getPunten().removePunten(prijsInPunten);
             setChanged();
             notifyObservers();
+            //Observer wordt op de hoogte gesteld dat een beloning is gekocht.
         } else {
             return;
         }

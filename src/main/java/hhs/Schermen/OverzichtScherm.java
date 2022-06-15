@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 import java.util.Observable;
 import java.util.Observer;
 
-public class OverzichtScherm implements Observer {
+public class OverzichtScherm{
     private static Persoon loggedIn;
     private static Scene scene;
     private static Stage stage;
@@ -42,7 +42,4 @@ public class OverzichtScherm implements Observer {
         return loggedIn;
     }
 
-    @Override
-    public void update(Observable o, Object arg) {
-    }
 }

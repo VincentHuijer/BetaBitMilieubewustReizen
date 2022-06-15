@@ -44,7 +44,7 @@ public class LoginController {
         Stage stage = (Stage) registerKnop.getScene().getWindow();
         stage.close();
         RegisterScherm registerScherm = new RegisterScherm();
-        registerScherm.start(new Stage());
+        registerScherm.start();
     }
 
 }

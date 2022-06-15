@@ -7,11 +7,17 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class RegisterScherm extends Application {
-    @Override
-    public void start(Stage stage) throws Exception {
+public class RegisterScherm {
+
+    protected static Scene scene;
+    protected static Stage stage;
+
+    public void start() throws Exception {
+        if (stage == null) {
+            stage = new Stage();
+        }
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("register.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 700, 530);
+        scene = new Scene(fxmlLoader.load(), 700, 530);
 
         stage.setTitle("Register");
         stage.getIcons().add(new Image(Main.class.getResourceAsStream("images/logoT.png")));

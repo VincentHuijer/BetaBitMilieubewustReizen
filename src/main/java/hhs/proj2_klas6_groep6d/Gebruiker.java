@@ -3,14 +3,14 @@ package hhs.proj2_klas6_groep6d;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Gebruiker extends Persoon { //een gebruiker is een standaard persooneelslid van BetaBit
+public class Gebruiker extends Persoon { //Een gebruiker is een standaard werknemer van Betabit.
     private static int currentId = 0;
-    private ArrayList<Reis> alleReizen = new ArrayList<>(); //alle Reizen van een gebruiker met de datum en de hoeveelheid KM.
+    private ArrayList<Reis> alleReizen = new ArrayList<>(); //Alle Reizen van een gebruiker inclusief de datum en de aantal KM.
     private String voornaam;
     private String achternaam;
     private String username;
     private String wachtwoord;
-    private int id; // Medewerkers van betabit krijgen vanuit het bedrijf al een id. Dit onderdeel schrappen we misschien nog.
+    private int id; // Medewerkers van Betabit krijgen vanuit het bedrijf een ID.
     private Punten punten = new Punten();
     private double puntenSaldo;
     private double totaalKm = 0;
@@ -24,7 +24,7 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
         this.wachtwoord = wachtwoord;
         initialiseerGebruiker();
     }
-
+    // Hieronder wordt de totale uitstoot/punten van één maand vergeleken met het totaal van de maand ervoor.
     public double getMonthtotaalKm() {
         int month = new Date().getMonth();
 
@@ -79,7 +79,7 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
     }
 
     public void initialiseerGebruiker() {
-        //afstandVanWerkInKm eventueel uitrekenen dmv api voor afstand
+        //afstandVanWerkInKm eventueel uitrekenen dmv api voor afstand.
         this.puntenSaldo = punten.getAantalPunten();
     }
 

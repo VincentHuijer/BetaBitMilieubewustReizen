@@ -1,6 +1,6 @@
 package hhs.proj2_klas6_groep6d;
 
-public class BerekenPunten {
+public class BerekenPunten {  // In deze class worden de punten berekend
     private static double multiplier;
 
     public static double berekenMultiplier(double afstand, String vervoersMiddel, boolean elektrisch) {
@@ -20,7 +20,7 @@ public class BerekenPunten {
         return multi;
     }
 
-    //Formule voor berekenen aantal punten bij woon werkverkeer.
+    //Formule voor berekenen aantal punten bij woon-werkverkeer.
     public static double berekenAantalPuntenWoonWerkVerkeer(double grootsteAfstandInKm, double afstand, String vervoersMiddel, boolean elektrisch) {
         multiplier = berekenMultiplier(afstand, vervoersMiddel, elektrisch);
         if (grootsteAfstandInKm < afstand) {

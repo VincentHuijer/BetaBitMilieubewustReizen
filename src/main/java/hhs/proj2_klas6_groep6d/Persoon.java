@@ -2,7 +2,7 @@ package hhs.proj2_klas6_groep6d;
 
 import java.util.ArrayList;
 
-public abstract class Persoon { //Deze class bevat eigenschappen die iedere persoon; voor nu een Gebruiker en Admin moet hebben.
+public abstract class Persoon { //Deze class bevat eigenschappen die elke gebruiker, voorlopig een Gebruiker en Admin moet hebben.
     protected String voornaam;
     protected String achternaam;
     protected String wachtwoord;

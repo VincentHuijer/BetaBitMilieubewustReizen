@@ -2,7 +2,7 @@ package hhs.proj2_klas6_groep6d;
 
 import java.util.ArrayList;
 
-public final class Rewards { //beloningen kunnen verkregen worden door het uitgeven van punten.
+public final class Rewards { //Beloningen kunnen ingeruild worden voor punten.
     private String naam;
     private String beschrijving;
     private int rewardID;

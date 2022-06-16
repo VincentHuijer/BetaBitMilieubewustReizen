@@ -26,7 +26,7 @@ public class MenuKnoppen { //JavaFX class voor de knoppen in het menu.
             beloningScherm.start();
         } else if (gebruiker.isAdmin()) {
             BeloningAdminScherm beloningAdminScherm = new BeloningAdminScherm();
-            beloningAdminScherm.setLoggedIn(gebruiker);
+            BeloningAdminScherm.setLoggedIn(gebruiker);
             beloningAdminScherm.start();
         }
     }
@@ -51,7 +51,7 @@ public class MenuKnoppen { //JavaFX class voor de knoppen in het menu.
     @FXML
     public static void onScorebordKnopClick(Persoon gebruiker, Button scorebordKnop) throws Exception { // Opent scorebord scherm
         ScorebordScherm scorebordScherm = new ScorebordScherm();
-        scorebordScherm.setLoggedIn(gebruiker);
+        ScorebordScherm.setLoggedIn(gebruiker);
         Stage stage = (Stage) scorebordKnop.getScene().getWindow();
         stage.close();
         scorebordScherm.start();

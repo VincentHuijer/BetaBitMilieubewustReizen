@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 //TODO Bedrijf is niet een goede naam voor een class die alleen gaat over het toevoegen en verwijderen van gebruikers.
 public class Gebruikers {
-    private static ArrayList<Persoon> gebruikers = new ArrayList<>();
+    private static final ArrayList<Persoon> gebruikers = new ArrayList<>();
 
     public Gebruikers() {
         if (gebruikers.size() == 0) {

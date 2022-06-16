@@ -65,10 +65,7 @@ public class ReisSysteemController extends Observable implements Initializable{
         } else {
             km = Double.parseDouble(kmTextField.getText());
         }
-        boolean elektrisch = false;
-        if (elektrischeAutoCheck.isSelected()) {
-            elektrisch = true;
-        }
+        boolean elektrisch = elektrischeAutoCheck.isSelected();
         if(woonwerkCheck.isSelected()){
             punten = BerekenPunten.berekenAantalPuntenWoonWerkVerkeer(100, km, vervoersMiddel, elektrisch);
             reis = new Reis(new Date(dtf.format(datePicker.getValue())), punten, km, vervoersMiddel, gebruiker, elektrisch);
@@ -118,11 +115,10 @@ public class ReisSysteemController extends Observable implements Initializable{
         Node node = (Node) event.getSource() ;
         String data = (String) node.getUserData();
 
-        String vervoer  = data;
         vervoersMiddel = data;
 
         setChanged();
-        notifyObservers(vervoer);
+        notifyObservers(data);
 
         Button button = (Button) event.getTarget();
         changeColors(button);

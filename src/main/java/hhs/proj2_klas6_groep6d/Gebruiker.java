@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Gebruiker extends Persoon { //een gebruiker is een standaard persooneelslid van BetaBit
-    private static int currentId = 0;
-    private ArrayList<Reis> alleReizen = new ArrayList<>(); //alle Reizen van een gebruiker met de datum en de hoeveelheid KM.
-    private String voornaam;
-    private String achternaam;
-    private String username;
-    private String wachtwoord;
-    private int id; // Medewerkers van betabit krijgen vanuit het bedrijf al een id. Dit onderdeel schrappen we misschien nog.
-    private Punten punten = new Punten();
+    private static final int currentId = 0;
+    private final ArrayList<Reis> alleReizen = new ArrayList<>(); //alle Reizen van een gebruiker met de datum en de hoeveelheid KM.
+    private final String voornaam;
+    private final String achternaam;
+    private final String username;
+    private final String wachtwoord;
+    private final int id; // Medewerkers van betabit krijgen vanuit het bedrijf al een id. Dit onderdeel schrappen we misschien nog.
+    private final Punten punten = new Punten();
     private double puntenSaldo;
     private double totaalKm = 0;
 

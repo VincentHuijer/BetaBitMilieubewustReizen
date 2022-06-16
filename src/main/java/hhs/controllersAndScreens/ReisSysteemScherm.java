@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.Objects;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -56,7 +57,7 @@ public class ReisSysteemScherm implements Observer {
         fietsPuntenText.setText("0 Punten");
 
         stage.setTitle("Reis Toevoegen");
-        stage.getIcons().add(new Image(Main.class.getResourceAsStream("images/logoT.png")));
+        stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("images/logoT.png"))));
         stage.setScene(scene);
         stage.show();
     }
@@ -98,11 +99,11 @@ public class ReisSysteemScherm implements Observer {
             elektrisch = true;
         }
         if (woonWerk.isSelected()) {
-            Double puntenDouble = BerekenPunten.berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
+            double puntenDouble = BerekenPunten.berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
             new WoonWerkReisText().setText(choicebox, autoPuntenText, regionaalPuntenText, tramPuntenText, fietsPuntenText, text, km, elektrisch, arg, loggedIn);
             new WoonWerkReis(new Date(),puntenDouble,km,arg.toString(), loggedIn, elektrisch).kiesAlternatiefVervoer(alternatief, km, elektrisch, arg);
         } else if (zakelijk.isSelected()) {
-            Double puntenDouble = BerekenPunten.berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
+            double puntenDouble = BerekenPunten.berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
             new ZakelijkeReisText().setText(choicebox,autoPuntenText,regionaalPuntenText,tramPuntenText,fietsPuntenText,text,km,elektrisch,arg,loggedIn);
             new ZakelijkeReis(new Date(), puntenDouble, km, arg.toString() ,loggedIn, elektrisch).kiesAlternatiefVervoer(alternatief, km, elektrisch, arg);
         }

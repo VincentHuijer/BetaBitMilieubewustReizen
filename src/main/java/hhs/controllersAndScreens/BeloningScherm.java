@@ -10,11 +10,12 @@ import javafx.scene.image.Image;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.util.Objects;
 import java.util.Observable;
 import java.util.Observer;
 
 public class BeloningScherm implements Observer {
-    private static RewardsList rewardsList = new RewardsList();
+    private static final RewardsList rewardsList = new RewardsList();
     private static Persoon loggedIn;
     private static Scene scene;
     private static Stage stage;
@@ -31,7 +32,7 @@ public class BeloningScherm implements Observer {
         punten.setText(String.format("%.0f PUNTEN", loggedIn.getPunten().getAantalPunten()));
 
         stage.setTitle("Beloningen");
-        stage.getIcons().add(new Image(Main.class.getResourceAsStream("images/logoT.png")));
+        stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("images/logoT.png"))));
         stage.setScene(scene);
         stage.show();
     }

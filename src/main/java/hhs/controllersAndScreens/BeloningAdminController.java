@@ -15,9 +15,8 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class BeloningAdminController implements Initializable {
-    BeloningAdminScherm beloningAdminScherm = new BeloningAdminScherm();
-    ArrayList<Rewards> alleRewards = beloningAdminScherm.getRewardsList().getRewardsLijst();
-    Persoon gebruiker = beloningAdminScherm.getLoggedIn();
+    ArrayList<Rewards> alleRewards = BeloningAdminScherm.getRewardsList().getRewardsLijst();
+    Persoon gebruiker = BeloningAdminScherm.getLoggedIn();
 
     @FXML
     TextField beloning1TF,beloning2TF, beloning3TF,beloning4TF,beloning5TF,beloning6TF;

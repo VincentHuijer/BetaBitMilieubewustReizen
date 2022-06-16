@@ -18,7 +18,7 @@ public class BeloningTest {
         Gebruiker gebruiker = new Gebruiker("test", "test", "test", "test", -1);
         beloningScherm.setLoggedIn(gebruiker);
         BeloningController controller = new BeloningController();
-        RewardsList rewards = beloningScherm.getRewardsList();
+        RewardsList rewards = BeloningScherm.getRewardsList();
         ArrayList<Rewards> alleRewards = rewards.getRewardsLijst();
         alleRewards.add(new Rewards("test", "test", 0, 100.0)); // 100 is de prijs in punten.
         alleRewards.add(new Rewards("test2", "test2", 1, 200.0));

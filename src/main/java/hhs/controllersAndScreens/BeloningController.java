@@ -15,9 +15,9 @@ import java.util.ResourceBundle;
 
 public class BeloningController extends Observable implements Initializable {
     BeloningScherm beloningScherm = new BeloningScherm();
-    RewardsList rewardsList = beloningScherm.getRewardsList();
-    Persoon gebruiker = beloningScherm.getLoggedIn();
-    ArrayList<Rewards> alleRewards = beloningScherm.getRewardsList().getRewardsLijst();
+    RewardsList rewardsList = BeloningScherm.getRewardsList();
+    Persoon gebruiker = BeloningScherm.getLoggedIn();
+    ArrayList<Rewards> alleRewards = BeloningScherm.getRewardsList().getRewardsLijst();
 
     @FXML
     Button reisschermKnop,logoutKnop;
@@ -69,18 +69,12 @@ public class BeloningController extends Observable implements Initializable {
             setChanged();
             notifyObservers();
             //Observer wordt op de hoogte gesteld dat een beloning is gekocht.
-        } else {
-            return;
         }
     }
 
     public boolean claimRewardCheck(int nummer) {
         double prijsInPunten = rewardsList.getRewardsLijst().get(nummer - 1).getPunten();
-        if (gebruiker.getPunten().getAantalPunten() >= prijsInPunten) {
-            return true;
-        } else {
-            return false;
-        }
+        return gebruiker.getPunten().getAantalPunten() >= prijsInPunten;
     }
 
     @FXML

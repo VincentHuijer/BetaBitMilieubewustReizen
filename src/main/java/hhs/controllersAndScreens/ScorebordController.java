@@ -17,8 +17,7 @@ import java.net.URL;
 import java.util.*;
 
 public class ScorebordController implements Initializable {
-    ScorebordScherm scorebordScherm = new ScorebordScherm();
-    Persoon gebruiker = scorebordScherm.getLoggedIn();
+    Persoon gebruiker = ScorebordScherm.getLoggedIn();
     ObservableList<Persoon> alleGebruikersScorebord = FXCollections.observableArrayList();
 
     @FXML
@@ -60,9 +59,7 @@ public class ScorebordController implements Initializable {
     public void fillList(){
         alleGebruikersScorebord.clear();
         Gebruikers gebruikers = new Gebruikers();
-        for(int i = 0; i< gebruikers.getGebruikers().size(); i++){
-                alleGebruikersScorebord.add(gebruikers.getGebruikers().get(i));
-        }
+        alleGebruikersScorebord.addAll(gebruikers.getGebruikers());
         for(int j = 0; j<alleGebruikersScorebord.size(); j++){
             if(alleGebruikersScorebord.get(j).isAdmin()){
                 alleGebruikersScorebord.remove(j);

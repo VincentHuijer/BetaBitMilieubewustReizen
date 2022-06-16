@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class RegisterScherm {
 
     protected static Scene scene;
@@ -20,7 +22,7 @@ public class RegisterScherm {
         scene = new Scene(fxmlLoader.load(), 700, 530);
 
         stage.setTitle("Register");
-        stage.getIcons().add(new Image(Main.class.getResourceAsStream("images/logoT.png")));
+        stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("images/logoT.png"))));
         stage.setScene(scene);
         stage.show();
     }

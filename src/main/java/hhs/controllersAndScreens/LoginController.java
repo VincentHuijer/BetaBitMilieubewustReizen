@@ -9,7 +9,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class LoginController {
-    private Gebruikers gebruikers = new Gebruikers();
+    private final Gebruikers gebruikers = new Gebruikers();
 
     @FXML
     Button loginKnop,registerKnop;

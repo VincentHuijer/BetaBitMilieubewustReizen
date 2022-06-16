@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="700.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hhs.Controllers.BeloningController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="700.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hhs.controllersAndScreens.BeloningController">
    <children>
       <AnchorPane layoutX="98.0" layoutY="57.0" prefHeight="473.0" prefWidth="601.0">
          <children>
@@ -30,11 +30,6 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Text layoutX="138.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KWGA-129J" wrappingWidth="108.00000000000011">
-                     <font>
-                        <Font name="Arial Bold" size="14.0" />
-                     </font>
-                  </Text>
                </children>
             </Pane>
             <Pane layoutX="306.0" layoutY="77.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
@@ -57,11 +52,6 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Text layoutX="138.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KWGA-129J" wrappingWidth="108.00000000000011">
-                     <font>
-                        <Font name="Arial Bold" size="14.0" />
-                     </font>
-                  </Text>
                </children>
             </Pane>
             <Pane layoutX="29.0" layoutY="198.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
@@ -84,11 +74,6 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Text layoutX="138.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KWGA-129J" wrappingWidth="108.00000000000011">
-                     <font>
-                        <Font name="Arial Bold" size="14.0" />
-                     </font>
-                  </Text>
                </children>
             </Pane>
             <Pane layoutX="307.0" layoutY="198.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
@@ -111,11 +96,6 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Text layoutX="138.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KWGA-129J" wrappingWidth="108.00000000000011">
-                     <font>
-                        <Font name="Arial Bold" size="14.0" />
-                     </font>
-                  </Text>
                </children>
             </Pane>
             <Pane layoutX="29.0" layoutY="321.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
@@ -138,11 +118,6 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Text layoutX="138.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KWGA-129J" wrappingWidth="108.00000000000011">
-                     <font>
-                        <Font name="Arial Bold" size="14.0" />
-                     </font>
-                  </Text>
                </children>
             </Pane>
             <Pane layoutX="307.0" layoutY="321.0" prefHeight="106.0" prefWidth="265.0" style="-fx-background-color: white; -fx-border-radius: 4px; -fx-border-color: #63d13c; -fx-border-width: 2px;">
@@ -165,11 +140,6 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Text layoutX="138.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KWGA-129J" wrappingWidth="108.00000000000011">
-                     <font>
-                        <Font name="Arial Bold" size="14.0" />
-                     </font>
-                  </Text>
                </children>
             </Pane>
          </children>

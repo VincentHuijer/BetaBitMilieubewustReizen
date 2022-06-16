@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="700.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hhs.Controllers.ScorebordController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="700.0" style="-fx-background-color: #EFEFEF;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hhs.controllersAndScreens.ScorebordController">
     <children>
         <Pane layoutY="1.0" prefHeight="56.0" prefWidth="700.0" style="-fx-background-color: white;">
             <children>
@@ -79,7 +79,7 @@
         <Pane layoutX="99.0" layoutY="57.0" prefHeight="16.0" prefWidth="602.0" />
         <Pane layoutX="99.0" layoutY="51.0" prefHeight="473.0" prefWidth="602.0">
             <children>
-                <Text layoutX="44.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCOREBORD">
+                <Text fx:id="scorebordTitel" layoutX="44.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCOREBORD">
                     <font>
                         <Font name="System Bold" size="24.0" />
                     </font>
@@ -87,9 +87,10 @@
                 <TableView id="table" fx:id="tableView" layoutX="45.0" layoutY="96.0" prefHeight="282.0" prefWidth="517.0" style="-fx-background-color: white;" stylesheets="@css/scorebord.css">
                     <columns>
                         <TableColumn id="Gebruikersnaam" fx:id="Gebruikersnaam" prefWidth="136.0" resizable="false" sortable="false" styleClass="tableText" text="Gebruikersnaam" />
-                        <TableColumn id="Punten" fx:id="Punten" minWidth="2.39996337890625" prefWidth="133.60003662109375" resizable="false" styleClass="tableText" text="Punten" />
-                        <TableColumn id="CO2_Uitstoot" fx:id="CO2_Uitstoot" minWidth="2.39996337890625" prefWidth="131.20001220703125" resizable="false" styleClass="tableText" text="CO2 Uitstoot" />
-                        <TableColumn id="Totaal_KM" fx:id="Totaal_KM" minWidth="2.39996337890625" prefWidth="110.79998779296875" resizable="false" styleClass="tableText" text="Totaal KM" />
+                        <TableColumn id="Punten" fx:id="Punten" minWidth="2.39996337890625" prefWidth="86.4000244140625" resizable="false" styleClass="tableText" text="Punten" />
+                        <TableColumn id="Old" fx:id="Old" minWidth="2.39996337890625" prefWidth="82.0" resizable="false" styleClass="tableText" text="CO2 Mei" />
+                        <TableColumn id="Current" fx:id="Current" minWidth="2.39996337890625" prefWidth="98.39996337890625" resizable="false" styleClass="tableText" text="CO2 Mei" />
+                        <TableColumn id="Totaal_KM" fx:id="Totaal_KM" minWidth="2.39996337890625" prefWidth="110.0" resizable="false" styleClass="tableText" text="Totaal KM" />
                     </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

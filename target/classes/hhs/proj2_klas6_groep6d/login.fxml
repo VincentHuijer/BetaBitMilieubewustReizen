@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hhs.Controllers.LoginController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hhs.controllersAndScreens.LoginController">
    <children>
       <Pane prefHeight="530.0" prefWidth="350.0">
          <children>
@@ -19,28 +19,35 @@
       </Pane>
       <Pane layoutX="350.0" prefHeight="531.0" prefWidth="350.0" style="-fx-background-color: #25333D; -fx-text-inner-color: #FFFFFF;">
          <children>
-            <Text fill="WHITE" layoutX="49.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INLOGGEN" wrappingWidth="253.0">
+            <Text fill="WHITE" layoutX="49.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INLOGGEN" wrappingWidth="253.0">
                <font>
                   <Font name="System Bold" size="32.0" />
                </font>
             </Text>
-            <TextField fx:id="gebruikersnaamField" layoutX="49.0" layoutY="204.0" prefHeight="35.0" prefWidth="253.0" promptText="Gebruikersnaam" style="-fx-text-inner-color: #FFFFFF; -fx-border-color: #63D13C; -fx-border-width: 1.5px; -fx-border-radius: 4px; -fx-background-color: transparent; -fx-focus-traversable: false;">
+            <TextField fx:id="gebruikersnaamField" layoutX="49.0" layoutY="195.0" prefHeight="35.0" prefWidth="253.0" promptText="Gebruikersnaam" style="-fx-text-inner-color: #FFFFFF; -fx-border-color: #63D13C; -fx-border-width: 1.5px; -fx-border-radius: 4px; -fx-background-color: transparent; -fx-focus-traversable: false;">
                <font>
                   <Font size="16.0" />
                </font>
             </TextField>
-            <Button fx:id="loginKnop" layoutX="49.0" layoutY="325.0" mnemonicParsing="false" onAction="#onLoginClick" prefHeight="30.0" prefWidth="253.0" style="-fx-background-color: #63D13C; -fx-background-radius: 4px; -fx-font-weight: 900;" text="Log In" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="loginKnop" layoutX="49.0" layoutY="353.0" mnemonicParsing="false" onAction="#onLoginClick" prefHeight="30.0" prefWidth="253.0" style="-fx-background-color: #63D13C; -fx-background-radius: 4px; -fx-font-weight: 900;" text="Log In" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="registerKnop" layoutX="49.0" layoutY="355.0" mnemonicParsing="false" onAction="#onRegisterClick" prefHeight="30.0" prefWidth="253.0" style="-fx-background-color: transparent;" text="Nog geen account? Registreer hier" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="registerKnop" layoutX="49.0" layoutY="383.0" mnemonicParsing="false" onAction="#onRegisterClick" prefHeight="30.0" prefWidth="253.0" style="-fx-background-color: transparent;" text="Nog geen account? Registreer hier" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
             </Button>
-            <PasswordField fx:id="wachtwoordField" layoutX="49.0" layoutY="248.0" prefHeight="35.0" prefWidth="253.0" promptText="Wachtwoord" style="-fx-text-inner-color: #FFFFFF; -fx-border-color: #63D13C; -fx-border-width: 1.5px; -fx-border-radius: 4px; -fx-background-color: transparent; -fx-focus-traversable: false;" />
-            <Text fx:id="errorText" fill="RED" layoutX="49.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="253.0" />
+            <PasswordField fx:id="wachtwoordField" layoutX="49.0" layoutY="239.0" prefHeight="35.0" prefWidth="253.0" promptText="Wachtwoord" style="-fx-text-inner-color: #FFFFFF; -fx-border-color: #63D13C; -fx-border-width: 1.5px; -fx-border-radius: 4px; -fx-background-color: transparent; -fx-focus-traversable: false;">
+               <font>
+                  <Font size="16.0" />
+               </font></PasswordField>
+            <Text fx:id="errorText" fill="RED" layoutX="49.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="253.0" />
+            <PasswordField fx:id="MedID" layoutX="49.0" layoutY="283.0" prefHeight="39.0" prefWidth="253.0" promptText="MedID" style="-fx-text-inner-color: #FFFFFF; -fx-border-color: #63D13C; -fx-border-width: 1.5px; -fx-border-radius: 4px; -fx-background-color: transparent; -fx-focus-traversable: false;">
+               <font>
+                  <Font size="16.0" />
+               </font></PasswordField>
          </children>
       </Pane>
    </children>

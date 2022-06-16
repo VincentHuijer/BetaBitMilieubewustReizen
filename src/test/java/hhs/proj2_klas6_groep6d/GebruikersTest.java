@@ -10,6 +10,7 @@ public class GebruikersTest {
 
     @Test
     public void testAddGebruiker() {
+        //Test of een gebruiker toevoegen goed gaat.
         Gebruikers gebruikers = new Gebruikers();
         assertEquals(1, gebruikers.getGebruikers().size());
         Gebruiker testGebruiker = new Gebruiker("testNaam", "testWachtwoord", "testVoornaam", "testAchternaam", -1);
@@ -21,6 +22,7 @@ public class GebruikersTest {
 
     @Test
     public void testRemoveGebruiker() {
+        //Test of een gebruiker verwijderen goed gaat.
         Gebruikers gebruikers = new Gebruikers();
         assertEquals(1, gebruikers.getGebruikers().size());
         Gebruiker testGebruiker = new Gebruiker("testNaam", "testWachtwoord", "testVoornaam", "testAchternaam", -1);

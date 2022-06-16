@@ -9,6 +9,7 @@ public class CO2Test {
 
     @Test
     public void berekenCO2() {
+        //Test of het berekenen van CO2 uitstoot juist gedaan wordt.
         double autoUitstootExpected = 2240;
         double elektrischeAutoUitstootExpected = 1070;
         double busUitstootExpected = 1160;

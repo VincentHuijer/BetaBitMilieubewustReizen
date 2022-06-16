@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 public class LoginTest {
     @Test
     public void loginTest(){
+        //Test om te kijken of een gebruiker kan inloggen.
         Gebruikers gebruikers = new Gebruikers();
         Gebruiker gebruiker = new Gebruiker("Username", "Password", "Test", "Test", -1);
         gebruikers.addGebruiker(gebruiker);

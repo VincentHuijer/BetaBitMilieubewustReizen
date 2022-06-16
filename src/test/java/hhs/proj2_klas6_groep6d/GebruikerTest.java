@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 public class GebruikerTest {
     @Test
     public void testGebruikerData(){
+        //Test voor getters gebruiker. (Worden alle variables goed geinitialiseerd?)
         Gebruiker gebruiker = new Gebruiker("Test_1", "Wachtwoord_1", "Voornaam1", "Achternaam1", -1);
 
         Assertions.assertEquals(gebruiker.getUsername(), "Test_1");

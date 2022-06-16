@@ -13,6 +13,7 @@ public class BeloningTest {
 
     @Test
     public void testRewardClaimen(){
+        //Test of het claimen van een reward werkt als de gebruiker genoeg, of niet genoeg punten heeft.
         BeloningScherm beloningScherm = new BeloningScherm();
         Gebruiker gebruiker = new Gebruiker("test", "test", "test", "test", -1);
         beloningScherm.setLoggedIn(gebruiker);

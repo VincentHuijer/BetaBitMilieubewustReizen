@@ -13,7 +13,7 @@ import static java.lang.String.valueOf;
 public class OverzichtTest {
     @Test
     public void testOverzichtCO2() {
-
+        //Test of de gegevens op het overzichtscherm juist zijn.
         Date date = new Date();
         int lastMonth = date.getMonth();
         int currentMonth = lastMonth + 1;
@@ -40,7 +40,7 @@ public class OverzichtTest {
     }
     @Test
     public void testOverzichtCO2Leeg() {
-
+        //Test of een bepaalde Reis waarbij geen CO2 wordt uitgestoten juist weergegeven wordt.
         Date date = new Date();
         int lastMonth = date.getMonth();
         int currentMonth = lastMonth + 1;

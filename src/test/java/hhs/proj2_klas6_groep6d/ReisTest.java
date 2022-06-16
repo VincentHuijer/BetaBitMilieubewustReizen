@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ReisTest {
     @Test
     void testGetAfstand() {
+        //Test of afstand goed wordt geinitialiseerd bij aanmaken reis object.
         Gebruiker gebruiker = new Gebruiker("testGebruiker", "testWachtwoord", "testVoornaam", "testAchternaam", -1);
         Date date = new Date();
         Reis reis = new Reis(date,25.4, 132.4,"auto", gebruiker, false);
@@ -18,6 +19,7 @@ public class ReisTest {
 
     @Test
     void testGetPunten() {
+        //Test of hoeveelheid punten goed wordt geinitialiseerd bij aanmaken reis object.
         Gebruiker gebruiker = new Gebruiker("testGebruiker", "testWachtwoord", "testVoornaam", "testAchternaam", -1);
 
         Date date = new Date();
@@ -30,6 +32,7 @@ public class ReisTest {
 
     @Test
     void testGetVervoersMiddel() {
+        //Test of vervoersmiddel goed wordt geinitialiseerd bij aanmaken reis object.
         Gebruiker gebruiker = new Gebruiker("testGebruiker", "testWachtwoord", "testVoornaam", "testAchternaam", -1);
         Date date = new Date();
         Reis reis = new Reis(date,25.4, 132.4,"auto", gebruiker, false);
@@ -38,6 +41,7 @@ public class ReisTest {
 
     @Test
     public void testGetCo2(){
+        //Test of de CO2 uitstoot bij specifieke vervoersmiddelen klopt.
         Gebruiker gebruiker = new Gebruiker("testGebruiker", "testWachtwoord", "testVoornaam", "testAchternaam", -1);
         Date date = new Date();
 

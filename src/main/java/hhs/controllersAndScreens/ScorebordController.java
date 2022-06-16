@@ -1,6 +1,6 @@
 package hhs.controllersAndScreens;
 
-import hhs.proj2_klas6_groep6d.Gebruikers;
+import hhs.proj2_klas6_groep6d.GebruikersOpslag;
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.MenuKnoppen;
 import hhs.proj2_klas6_groep6d.Persoon;
@@ -58,8 +58,8 @@ public class ScorebordController implements Initializable {
 
     public void fillList(){
         alleGebruikersScorebord.clear();
-        Gebruikers gebruikers = new Gebruikers();
-        alleGebruikersScorebord.addAll(gebruikers.getGebruikers());
+        GebruikersOpslag gebruikersOpslag = new GebruikersOpslag();
+        alleGebruikersScorebord.addAll(gebruikersOpslag.getGebruikers());
         for(int j = 0; j<alleGebruikersScorebord.size(); j++){
             if(alleGebruikersScorebord.get(j).isAdmin()){
                 alleGebruikersScorebord.remove(j);

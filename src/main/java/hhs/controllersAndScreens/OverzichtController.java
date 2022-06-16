@@ -36,8 +36,8 @@ public class OverzichtController implements Initializable {
         lastMonthTitle.setText(maanden[lastMonth - 1].toUpperCase());
 
         alleGebruikersScorebord.clear();
-        Gebruikers gebruikers = new Gebruikers();
-        alleGebruikersScorebord.addAll(gebruikers.getGebruikers());
+        GebruikersOpslag gebruikersOpslag = new GebruikersOpslag();
+        alleGebruikersScorebord.addAll(gebruikersOpslag.getGebruikers());
 
         for(int j = 0; j<alleGebruikersScorebord.size(); j++){
             if(alleGebruikersScorebord.get(j).isAdmin()){

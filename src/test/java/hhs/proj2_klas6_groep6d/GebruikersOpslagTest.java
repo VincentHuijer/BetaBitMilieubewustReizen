@@ -16,7 +16,6 @@ public class GebruikersOpslagTest {
         Gebruiker testGebruiker = new Gebruiker("testNaam", "testWachtwoord", "testVoornaam", "testAchternaam", -1);
 
         gebruikersOpslag.addGebruiker(testGebruiker);
-        //TODO In de bedrijf class zit al een testGebruiker/testAdmin met als parameters voor alles 1. Daarom is de actual 2 nadat we een gebruiker toevoegen.
         assertEquals(2, gebruikersOpslag.getGebruikers().size());
     }
 
@@ -26,7 +25,7 @@ public class GebruikersOpslagTest {
         GebruikersOpslag gebruikersOpslag = new GebruikersOpslag();
         assertEquals(1, gebruikersOpslag.getGebruikers().size());
         Gebruiker testGebruiker = new Gebruiker("testNaam", "testWachtwoord", "testVoornaam", "testAchternaam", -1);
-        gebruikersOpslag.addGebruiker(testGebruiker); //TODO In de bedrijf class zit al een testGebruiker/testAdmin met als parameters voor alles 1. Daarom is de actual 2 nadat we een gebruiker toevoegen.
+        gebruikersOpslag.addGebruiker(testGebruiker); 
         assertEquals(2, gebruikersOpslag.getGebruikers().size());
         gebruikersOpslag.removeGebruiker(testGebruiker);
         assertEquals(1, gebruikersOpslag.getGebruikers().size());

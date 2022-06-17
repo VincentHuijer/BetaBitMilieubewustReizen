@@ -4,7 +4,7 @@ import javafx.scene.text.Text;
 
 import java.util.Date;
 
-public class ZakelijkeReis extends Reis { //zakelijkReis houd in verkeer van huis naar klant.
+public class ZakelijkeReis extends Reis { //ZakelijkReis (verkeer van huis naar klant)
     public ZakelijkeReis(Date date, double punten, double afstand, String vervoersMiddel, Persoon loggedIn, boolean elektrisch) {
         super(date, punten, afstand, vervoersMiddel, loggedIn, elektrisch);
     }

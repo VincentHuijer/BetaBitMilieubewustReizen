@@ -2,7 +2,7 @@ package hhs.proj2_klas6_groep6d;
 
 import java.math.RoundingMode;
 
-public class Punten { //deze class is verantwoordelijk voor het ophalen, toevoegen en verwijderen van punten.
+public class Punten { //Deze class is verantwoordelijk voor het ophalen, toevoegen en verwijderen van punten.
     private double aantalPunten;
 
     public double getAantalPunten() {

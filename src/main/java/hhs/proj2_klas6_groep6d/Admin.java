@@ -1,6 +1,6 @@
 package hhs.proj2_klas6_groep6d;
 
-public class Admin extends Persoon { //Een admin heeft extra machtigingen om bijvoorbeeld nieuwe beloningen toe te voegen. Admins kunnen niet zelf registreren, maar moeten door een hoger iemand in het systeem geplaatst worden.
+public class Admin extends Persoon { //Een admin heeft extra bevoegdheden, bijvoorbeeld het toevoegen van nieuwe beloningen. Admins kunnen henzelf niet registreren, maar moeten door iemand met een hogere functie aan het systeem toegevoegd worden.
     public Admin(String username, String wachtwoord, String voornaam, String achternaam, int id) {
         super(username, wachtwoord, voornaam, achternaam, id);
     }

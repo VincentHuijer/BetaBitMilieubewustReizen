@@ -3,13 +3,14 @@ package hhs.proj2_klas6_groep6d;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Gebruiker extends Persoon { //een gebruiker is een standaard persooneelslid van BetaBit
+public class Gebruiker extends Persoon { 
+    //een gebruiker is een standaard persooneelslid van BetaBit
     private static final int currentId = 0;
     private final String voornaam;
     private final String achternaam;
     private final String username;
     private final String wachtwoord;
-    private final int id; // Medewerkers van betabit krijgen vanuit het bedrijf al een id. Dit onderdeel schrappen we misschien nog.
+    private final int id;
     private double puntenSaldo;
     private double totaalKm = 0;
 

@@ -6,6 +6,11 @@ public class Admin extends Persoon { //Een admin heeft extra machtigingen om bij
     }
 
     @Override
+    public String displayName() {
+        return "Admin";
+    }
+
+    @Override
     public String getVoornaam() {
         return voornaam;
     }

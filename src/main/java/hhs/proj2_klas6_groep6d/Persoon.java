@@ -22,6 +22,7 @@ public abstract class Persoon { //Deze class bevat eigenschappen die iedere pers
         this.achternaam = achternaam;
         this.id = id;
     }
+    public abstract String displayName();
 
     public abstract String getVoornaam();
 

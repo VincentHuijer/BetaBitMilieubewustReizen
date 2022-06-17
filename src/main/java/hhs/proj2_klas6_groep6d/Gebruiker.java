@@ -23,6 +23,11 @@ public class Gebruiker extends Persoon { //een gebruiker is een standaard persoo
         initialiseerGebruiker();
     }
 
+    @Override
+    public String displayName() {
+        return voornaam + " " + achternaam;
+    }
+
     public double getMonthtotaalKm() {
         int month = new Date().getMonth();
 

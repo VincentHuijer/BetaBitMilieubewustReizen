@@ -30,7 +30,7 @@ public class ReisSysteemScherm implements Observer {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("reisSysteem.fxml"));
         scene = new Scene(fxmlLoader.load(), 700, 530);
         Text welkomText = (Text) scene.lookup("#welkomText");
-        welkomText.setText("Welkom " + loggedIn.getUsername());
+        welkomText.setText("Welkom " + loggedIn.displayName());
         Text punten = (Text) scene.lookup("#puntensaldoText");
         punten.setText(String.format("%.0f PUNTEN", loggedIn.getPunten().getAantalPunten()));
 

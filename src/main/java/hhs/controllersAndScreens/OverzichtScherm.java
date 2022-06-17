@@ -10,12 +10,12 @@ import javafx.scene.image.Image;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.util.Objects;
 import java.util.Observable;
 import java.util.Observer;
 
 public class OverzichtScherm{
     private static Persoon loggedIn;
-    private static Scene scene;
     private static Stage stage;
     public void start() throws Exception {
         if(stage == null){
@@ -23,14 +23,14 @@ public class OverzichtScherm{
         }
 
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("overzicht.fxml"));
-        scene = new Scene(fxmlLoader.load(), 700, 530);
+        Scene scene = new Scene(fxmlLoader.load(), 700, 530);
         Text welkomText = (Text) scene.lookup("#welkomText");
-        welkomText.setText("Welkom " + loggedIn.getUsername());
+        welkomText.setText("Welkom " + loggedIn.displayName());
         Text punten = (Text) scene.lookup("#puntensaldoText");
         punten.setText(String.format("%.0f PUNTEN", loggedIn.getPunten().getAantalPunten()));
 
         stage.setTitle("Overzicht");
-        stage.getIcons().add(new Image(Main.class.getResourceAsStream("images/logoT.png")));
+        stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("images/logoT.png"))));
         stage.setScene(scene);
         stage.show();
     }

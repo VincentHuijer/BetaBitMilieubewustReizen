@@ -13,8 +13,7 @@ import java.util.Date;
 import java.util.ResourceBundle;
 
 public class OverzichtController implements Initializable {
-    OverzichtScherm overzichtScherm = new OverzichtScherm();
-    Persoon gebruiker = overzichtScherm.getLoggedIn();
+    Persoon gebruiker = OverzichtScherm.getLoggedIn();
     ObservableList<Persoon> alleGebruikersScorebord = FXCollections.observableArrayList();
 
     @FXML
@@ -37,10 +36,8 @@ public class OverzichtController implements Initializable {
         lastMonthTitle.setText(maanden[lastMonth - 1].toUpperCase());
 
         alleGebruikersScorebord.clear();
-        Gebruikers gebruikers = new Gebruikers();
-        for(int i = 0; i< gebruikers.getGebruikers().size(); i++){
-            alleGebruikersScorebord.add(gebruikers.getGebruikers().get(i));
-        }
+        GebruikersOpslag gebruikersOpslag = new GebruikersOpslag();
+        alleGebruikersScorebord.addAll(gebruikersOpslag.getGebruikers());
 
         for(int j = 0; j<alleGebruikersScorebord.size(); j++){
             if(alleGebruikersScorebord.get(j).isAdmin()){

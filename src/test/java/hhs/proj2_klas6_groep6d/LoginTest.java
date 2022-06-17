@@ -6,9 +6,9 @@ public class LoginTest {
     @Test
     public void loginTest(){
         //Test om te kijken of een gebruiker kan inloggen.
-        Gebruikers gebruikers = new Gebruikers();
+        GebruikersOpslag gebruikersOpslag = new GebruikersOpslag();
         Gebruiker gebruiker = new Gebruiker("Username", "Password", "Test", "Test", -1);
-        gebruikers.addGebruiker(gebruiker);
+        gebruikersOpslag.addGebruiker(gebruiker);
         LoginController login = new LoginController();
         // Condition/Decision Coverage
         Assertions.assertTrue(login.auth(gebruiker, "Password", "Username", -1)); // C=111 D=1

@@ -1,6 +1,6 @@
 package hhs.controllersAndScreens;
 
-import hhs.proj2_klas6_groep6d.Gebruikers;
+import hhs.proj2_klas6_groep6d.GebruikersOpslag;
 import hhs.proj2_klas6_groep6d.Persoon;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -9,7 +9,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class LoginController {
-    private Gebruikers gebruikers = new Gebruikers();
+    private final GebruikersOpslag gebruikersOpslag = new GebruikersOpslag();
 
     @FXML
     Button loginKnop,registerKnop;
@@ -23,7 +23,7 @@ public class LoginController {
         if(gebruikersnaamField.getText().equals("") || wachtwoordField.getText().equals("")){
             errorText.setText("Vul alle velden in!");
         }
-        for(Persoon gebruiker : gebruikers.getGebruikers()){
+        for(Persoon gebruiker : gebruikersOpslag.getGebruikers()){
             if(auth(gebruiker, wachtwoordField.getText(), gebruikersnaamField.getText(),Integer.parseInt(MedID.getText()))){
                 errorText.setText("");
                 Stage stage = (Stage) loginKnop.getScene().getWindow();

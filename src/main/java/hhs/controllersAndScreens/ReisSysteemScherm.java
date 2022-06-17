@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.Objects;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -29,7 +30,7 @@ public class ReisSysteemScherm implements Observer {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("reisSysteem.fxml"));
         scene = new Scene(fxmlLoader.load(), 700, 530);
         Text welkomText = (Text) scene.lookup("#welkomText");
-        welkomText.setText("Welkom " + loggedIn.getUsername());
+        welkomText.setText("Welkom " + loggedIn.displayName());
         Text punten = (Text) scene.lookup("#puntensaldoText");
         punten.setText(String.format("%.0f PUNTEN", loggedIn.getPunten().getAantalPunten()));
 
@@ -56,7 +57,7 @@ public class ReisSysteemScherm implements Observer {
         fietsPuntenText.setText("0 Punten");
 
         stage.setTitle("Reis Toevoegen");
-        stage.getIcons().add(new Image(Main.class.getResourceAsStream("images/logoT.png")));
+        stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("images/logoT.png"))));
         stage.setScene(scene);
         stage.show();
     }
@@ -70,7 +71,8 @@ public class ReisSysteemScherm implements Observer {
     }
 
     @Override
-    public void update(Observable o, Object arg) { // Zorgt ervoor dat de gebruiker de juiste hoeveelheid punten en de juiste informatie te zien krijgt als hij/zij een bepaalde hoeveelheid kilometers invult.
+    public void update(Observable o, Object arg) {
+        // Zorgt ervoor dat de gebruiker de juiste hoeveelheid punten en de juiste informatie te zien krijgt als hij/zij een bepaalde hoeveelheid kilometers invult.
         Text text = (Text) scene.lookup("#berekenPuntenText");
         Text alternatief = (Text) scene.lookup("#AlternatieveText");
         Text autoPuntenText = (Text) scene.lookup("#autoPuntenText");
@@ -86,24 +88,37 @@ public class ReisSysteemScherm implements Observer {
         ChoiceBox choicebox = (ChoiceBox) scene.lookup("#viewSwitch");
 
         puntensaldo.setText(String.format("%.0f PUNTEN", loggedIn.getPunten().getAantalPunten()));
+
         double km;
+
         if (textField.getText().equals("")) {
             km = 0;
         } else {
             km = Double.parseDouble(textField.getText());
         }
+
         boolean elektrisch = false;
         CheckBox elektrischeCheck = (CheckBox) scene.lookup("#elektrischeAutoCheck");
+
         if (elektrischeCheck.isSelected()) {
             elektrisch = true;
         }
+
         if (woonWerk.isSelected()) {
-            Double puntenDouble = BerekenPunten.berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
-            new WoonWerkReisText().setText(choicebox, autoPuntenText, regionaalPuntenText, tramPuntenText, fietsPuntenText, text, km, elektrisch, arg, loggedIn);
+            double puntenDouble = BerekenPunten.berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
+
+            //update punten text
+            WoonWerkReisText woonWerkReisText = new WoonWerkReisText();
+            woonWerkReisText.setText(choicebox, autoPuntenText, regionaalPuntenText, tramPuntenText, fietsPuntenText, text, km, elektrisch, arg, loggedIn);
+
             new WoonWerkReis(new Date(),puntenDouble,km,arg.toString(), loggedIn, elektrisch).kiesAlternatiefVervoer(alternatief, km, elektrisch, arg);
         } else if (zakelijk.isSelected()) {
-            Double puntenDouble = BerekenPunten.berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
-            new ZakelijkeReisText().setText(choicebox,autoPuntenText,regionaalPuntenText,tramPuntenText,fietsPuntenText,text,km,elektrisch,arg,loggedIn);
+            double puntenDouble = BerekenPunten.berekenAantalPuntenWoonWerkVerkeer(100, km, arg.toString(), elektrisch);
+
+            //update punten text
+            ZakelijkeReisText zakelijkeReisText = new ZakelijkeReisText();
+            zakelijkeReisText.setText(choicebox,autoPuntenText,regionaalPuntenText,tramPuntenText,fietsPuntenText,text,km,elektrisch,arg,loggedIn);
+
             new ZakelijkeReis(new Date(), puntenDouble, km, arg.toString() ,loggedIn, elektrisch).kiesAlternatiefVervoer(alternatief, km, elektrisch, arg);
         }
     }

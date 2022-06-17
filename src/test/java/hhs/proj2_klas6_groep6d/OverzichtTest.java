@@ -29,10 +29,10 @@ public class OverzichtTest {
 
         OverzichtController overzicht = new OverzichtController();
         ObservableList<Persoon> sb = FXCollections.observableArrayList();
-        Gebruikers gebruikers = new Gebruikers();
-        gebruikers.addGebruiker(Guan);
-        for(int i = 0; i< gebruikers.getGebruikers().size(); i++){
-            sb.add(gebruikers.getGebruikers().get(i));
+        GebruikersOpslag gebruikersOpslag = new GebruikersOpslag();
+        gebruikersOpslag.addGebruiker(Guan);
+        for(int i = 0; i< gebruikersOpslag.getGebruikers().size(); i++){
+            sb.add(gebruikersOpslag.getGebruikers().get(i));
         }
         Stats currentMonthStats = overzicht.getMonthStats(currentMonth, sb);
 
@@ -47,9 +47,9 @@ public class OverzichtTest {
 
         OverzichtController overzicht = new OverzichtController();
         ObservableList<Persoon> sb = FXCollections.observableArrayList();
-        Gebruikers gebruikers = new Gebruikers();
-        for(int i = 0; i< gebruikers.getGebruikers().size(); i++){
-            sb.add(gebruikers.getGebruikers().get(i));
+        GebruikersOpslag gebruikersOpslag = new GebruikersOpslag();
+        for(int i = 0; i< gebruikersOpslag.getGebruikers().size(); i++){
+            sb.add(gebruikersOpslag.getGebruikers().get(i));
         }
         Stats currentMonthStats = overzicht.getMonthStats(currentMonth, sb);
 

@@ -9,6 +9,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class ScorebordScherm {
     private static Persoon loggedIn;
@@ -23,7 +24,7 @@ public class ScorebordScherm {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("scorebord.fxml"));
         scene = new Scene(fxmlLoader.load(), 700, 530);
         Text welkomText = (Text) scene.lookup("#welkomText");
-        welkomText.setText("Welkom " + loggedIn.getUsername());
+        welkomText.setText("Welkom " + loggedIn.displayName());
         Text punten = (Text) scene.lookup("#puntensaldoText");
         punten.setText(String.format("%.0f PUNTEN", loggedIn.getPunten().getAantalPunten()));
 
@@ -32,7 +33,7 @@ public class ScorebordScherm {
         scorebordTitel.setText("OVERZICHT - " + maanden[new Date().getMonth()].toUpperCase());
 
         stage.setTitle("Scorebord");
-        stage.getIcons().add(new Image(Main.class.getResourceAsStream("images/logoT.png")));
+        stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("images/logoT.png"))));
         stage.setScene(scene);
         stage.show();
     }

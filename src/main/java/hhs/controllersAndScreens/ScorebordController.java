@@ -1,6 +1,6 @@
 package hhs.controllersAndScreens;
 
-import hhs.proj2_klas6_groep6d.Gebruikers;
+import hhs.proj2_klas6_groep6d.GebruikersOpslag;
 import hhs.proj2_klas6_groep6d.Gebruiker;
 import hhs.proj2_klas6_groep6d.MenuKnoppen;
 import hhs.proj2_klas6_groep6d.Persoon;
@@ -17,8 +17,7 @@ import java.net.URL;
 import java.util.*;
 
 public class ScorebordController implements Initializable {
-    ScorebordScherm scorebordScherm = new ScorebordScherm();
-    Persoon gebruiker = scorebordScherm.getLoggedIn();
+    Persoon gebruiker = ScorebordScherm.getLoggedIn();
     ObservableList<Persoon> alleGebruikersScorebord = FXCollections.observableArrayList();
 
     @FXML
@@ -59,10 +58,8 @@ public class ScorebordController implements Initializable {
 
     public void fillList(){
         alleGebruikersScorebord.clear();
-        Gebruikers gebruikers = new Gebruikers();
-        for(int i = 0; i< gebruikers.getGebruikers().size(); i++){
-                alleGebruikersScorebord.add(gebruikers.getGebruikers().get(i));
-        }
+        GebruikersOpslag gebruikersOpslag = new GebruikersOpslag();
+        alleGebruikersScorebord.addAll(gebruikersOpslag.getGebruikers());
         for(int j = 0; j<alleGebruikersScorebord.size(); j++){
             if(alleGebruikersScorebord.get(j).isAdmin()){
                 alleGebruikersScorebord.remove(j);

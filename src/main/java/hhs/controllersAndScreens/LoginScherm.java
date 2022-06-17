@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class LoginScherm extends Application {
     @Override
     public void start(Stage stage) throws Exception {
@@ -14,7 +16,7 @@ public class LoginScherm extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 700, 530);
 
         stage.setTitle("Login");
-        stage.getIcons().add(new Image(Main.class.getResourceAsStream("images/logoT.png")));
+        stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("images/logoT.png"))));
         stage.setScene(scene);
         stage.show();
     }

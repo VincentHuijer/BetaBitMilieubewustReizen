@@ -28,8 +28,8 @@ public class RegisterController{
             errorText.setText("Wachtwoorden komen niet overeen!");
         }
         else{
-            Gebruikers gebruikers = new Gebruikers();
-            for(Persoon gebruiker : gebruikers.getGebruikers()){
+            GebruikersOpslag gebruikersOpslag = new GebruikersOpslag();
+            for(Persoon gebruiker : gebruikersOpslag.getGebruikers()){
                 if(gebruiker.getUsername().equals(gebruikersnaamField.getText())){
                     errorText.setText("Gebruikersnaam bestaat al!");
                     return;
@@ -40,7 +40,7 @@ public class RegisterController{
             }
             errorText.setText("");
             Gebruiker gebruiker = new Gebruiker(gebruikersnaamField.getText(), wachtwoordField.getText(), voornaamField.getText(), achternaamField.getText(), Integer.parseInt(MedIDField.getText()));
-            gebruikers.addGebruiker(gebruiker);
+            gebruikersOpslag.addGebruiker(gebruiker);
             LoginScherm loginScherm = new LoginScherm();
             Stage stage = (Stage) registerKnop.getScene().getWindow();
             stage.close();

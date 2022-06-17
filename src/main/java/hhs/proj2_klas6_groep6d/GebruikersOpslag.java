@@ -3,10 +3,10 @@ package hhs.proj2_klas6_groep6d;
 import java.util.ArrayList;
 
 //TODO Bedrijf is niet een goede naam voor een class die alleen gaat over het toevoegen en verwijderen van gebruikers.
-public class Gebruikers {
-    private static ArrayList<Persoon> gebruikers = new ArrayList<>();
+public class GebruikersOpslag {
+    private static final ArrayList<Persoon> gebruikers = new ArrayList<>();
 
-    public Gebruikers() {
+    public GebruikersOpslag() {
         if (gebruikers.size() == 0) {
             gebruikers.add(new Gebruiker("1", "1", "1", "1", 1)); //TODO verwijderen in definitieve code.
             gebruikers.add(new Admin("admin", "admin", "admin", "admin", 0)); //Admin accounts kunnen niet registreren. Ze moeten als het waren door iemand hoger in het bedrijf toegevoegd worden voor veiligheidsregelen.
